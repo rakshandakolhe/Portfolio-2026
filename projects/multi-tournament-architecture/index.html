@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Multi-Tournament Component Architecture — Rakshanda Kolhe</title>
+  <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg" />
+  <meta name="description" content="Building a scalable component architecture that supports multiple concurrent tournament formats — a case study by Rakshanda Kolhe." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="../../css/portfolio.css" />
+</head>
+<body>
+
+<nav class="island-nav" aria-label="Primary navigation">
+  <div class="nav-profile" aria-hidden="true">
+    <img src="../../assets/profile.svg" alt="" />
+  </div>
+  <a href="../../index.html" class="nav-link" data-cursor-label="Home">Home</a>
+  <a href="../../index.html#work"  class="nav-link" data-cursor-label="View work">Work</a>
+  <a href="../../index.html#about" class="nav-link" data-cursor-label="About me">About</a>
+  <a href="https://drive.google.com/file/d/1PYxmC6yKE62FCQMmw7hzZY3tdsDJgcpa/view?usp=sharing" class="nav-link" target="_blank" rel="noopener" data-cursor-label="Open resume">Resume</a>
+  <a href="mailto:rakshandakolhe@yahoo.in" class="nav-cta" data-cursor-label="Send email">Let's connect</a>
+  <button class="nav-hamburger" id="navHamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navDropdown">
+    <span class="hb-line"></span>
+    <span class="hb-line"></span>
+    <span class="hb-line"></span>
+  </button>
+</nav>
+<div class="nav-dropdown" id="navDropdown" role="navigation" aria-label="Mobile navigation" aria-hidden="true">
+  <a href="../../index.html" class="dd-link">Home</a>
+  <a href="../../index.html#work"  class="dd-link dd-active">Work</a>
+  <a href="../../index.html#about" class="dd-link">About</a>
+  <a href="https://drive.google.com/file/d/1PYxmC6yKE62FCQMmw7hzZY3tdsDJgcpa/view?usp=sharing" class="dd-link" target="_blank" rel="noopener">Resume ↗</a>
+  <a href="mailto:rakshandakolhe@yahoo.in" class="dd-cta">Let's connect</a>
+</div>
+<div class="custom-cursor" id="customCursor" aria-hidden="true">
+  <svg class="cursor-arrow" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g filter="url(#cs)">
+      <path d="M8.75418 20L5.62291 4.04089L20 11.9182L12.9181 13.9727L8.75418 20Z" fill="black"/>
+      <path d="M8.75418 20L5.62291 4.04089L20 11.9182L12.9181 13.9727L8.75418 20Z" stroke="white"/>
+    </g>
+    <defs><filter id="cs" x="2.9248" y="2.09058" width="20.3721" height="22.1735" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/><feOffset dy="1"/><feGaussianBlur stdDeviation="1"/><feComposite in2="hardAlpha" operator="out"/><feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/><feBlend mode="normal" in2="BackgroundImageFix" result="e1"/><feBlend mode="normal" in="SourceGraphic" in2="e1" result="shape"/></filter></defs>
+  </svg>
+  <div class="cursor-badge" id="cursorBadge"></div>
+</div>
+
+<div class="page">
+
+<!-- ══════════════════════════════════════
+     HERO
+══════════════════════════════════════ -->
+<div class="cs-hero">
+  <div class="cs-hero-inner">
+
+    <a href="../../index.html" class="cs-back">
+      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true" style="transform:scaleX(-1)"><path d="M19 12H5M12 5l7 7-7 7"/></svg>
+      Back to work
+    </a>
+
+    <h1 class="cs-hero-title">
+      Built Scalable Multi-Tournament Component Architecture
+    </h1>
+
+    <p class="cs-hero-desc">
+      Every new tournament format introduced additional design and engineering overhead. Components were recreated, patterns diverged, and delivery slowed as the platform scaled. This project established a flexible component architecture that could accommodate structural differences across tournament types, enabling teams to configure experiences rather than rebuild them.
+    </p>
+
+    <img src="../../assets/hero-image.svg" alt="Hero image" style="width:100%;height:auto;display:block;margin-bottom:32px;" />
+
+    <div class="cs-meta-row">
+      <div class="cs-meta-item">
+        <label>My Role</label>
+        <span class="meta-val">Lead Designer</span>
+      </div>
+      <div class="cs-meta-item">
+        <label>Skills</label>
+        <span class="meta-val">Systems Design · Component Architecture · Design Tokens</span>
+      </div>
+      <div class="cs-meta-item">
+        <label>Platform</label>
+        <span class="meta-val">Web</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     02 · THE ISSUE
+══════════════════════════════════════ -->
+<div style="background: #ffffff;">
+<section class="cs-section">
+  <div class="issue-callout">
+    <h2>The Issue</h2>
+    <p>The platform was responsible for ticketing across all tournaments — yet each experience was built independently, with no shared component system. This created inconsistent user experiences, duplicated design and engineering effort, and fragmented behavior across products. Slower rollout timelines and compounding maintenance overhead meant the team couldn't scale new tournaments efficiently, directly threatening their ability to launch on time and at quality.</p>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     03 · TRY OUT THE SCALABLE COMPONENT
+══════════════════════════════════════ -->
+<section class="cs-section cs-section--full-stroke">
+  <h2>Short on time? Try out the scalable component</h2>
+
+  <p>Toggle the options below to explore how a single card adapts to different tournament contexts for the Event Listing page.</p>
+
+  <div class="demo-controls" role="group" aria-label="Component configuration">
+          <div class="dc-row">
+            <div class="dc-cell">
+              <span class="dc-row-label">Device</span>
+              <div class="dc-device-group" role="group" aria-label="Preview device">
+                <button type="button" class="dc-device-btn active" data-device="desktop">Desktop</button>
+                <button type="button" class="dc-device-btn" data-device="mobile">Mobile</button>
+              </div>
+            </div>
+            <div class="dc-cell dc-cell--border">
+              <label for="tgl-badges" class="dc-row-label">All Badges</label>
+              <button type="button" id="tgl-badges" class="toggle-switch" data-toggle="badges" aria-checked="true" role="switch"><span></span></button>
+            </div>
+          </div>
+          <div class="dc-row">
+            <div class="dc-cell">
+              <label for="tgl-description" class="dc-row-label">Description &amp; Link</label>
+              <button type="button" id="tgl-description" class="toggle-switch" data-toggle="description" aria-checked="true" role="switch"><span></span></button>
+            </div>
+            <div class="dc-cell dc-cell--border">
+              <label for="tgl-medal" class="dc-row-label">Medal</label>
+              <button type="button" id="tgl-medal" class="toggle-switch" data-toggle="medal" aria-checked="true" role="switch"><span></span></button>
+            </div>
+          </div>
+          <div class="dc-row">
+            <div class="dc-cell">
+              <label for="tgl-availBadge" class="dc-row-label">Availability Badge</label>
+              <button type="button" id="tgl-availBadge" class="toggle-switch" data-toggle="availBadge" aria-checked="true" role="switch"><span></span></button>
+            </div>
+            <div class="dc-cell dc-cell--border">
+              <label for="tgl-availability" class="dc-row-label">Session Code</label>
+              <button type="button" id="tgl-availability" class="toggle-switch" data-toggle="availability" aria-checked="true" role="switch"><span></span></button>
+            </div>
+          </div>
+        </div><div class="demo-preview-scroll"><div class="demo-preview" id="demo-preview" aria-live="polite"></div></div><p class="demo-mobile-note">Scroll to Explore. This component was designed for Desktop view.</p>
+
+</section>
+</div>
+
+<!-- ══════════════════════════════════════
+     OUTCOME BANNER
+══════════════════════════════════════ -->
+<div class="outcome-banner">
+  <div class="outcome-inner">
+    <div class="outcome-stat">
+      <label>Build time reduction</label>
+      <div class="big-num">↓ 40%</div>
+      <p>Reduction in design-to-engineering time for new tournament format launches</p>
+    </div>
+    <div class="outcome-stat">
+      <label>Component reuse</label>
+      <div class="big-num">5+</div>
+      <p>Tournament formats fully supported by the shared architecture without new component builds</p>
+    </div>
+    <div class="outcome-stat">
+      <label>Adoption</label>
+      <div class="big-num">3 teams</div>
+      <p>All product teams migrated to the shared architecture within 8 weeks — no mandate required</p>
+    </div>
+    <p class="outcome-note">⚑ Metrics shown are based on post-launch reporting from the Product Management team and are included as shared business outcomes rather than independently measured design metrics.</p>
+  </div>
+</div>
+
+<div style="background: #ffffff;">
+
+<!-- ══════════════════════════════════════
+     04 · ROOT CAUSE ANALYSIS
+══════════════════════════════════════ -->
+<section class="cs-section">
+  <p class="section-label"><span class="num">01</span> Problem Framing</p>
+  <h2>Why the Existing Model Couldn't Scale</h2>
+
+  <p>The component library had grown organically without governance. Every new format left its mark as a new variant, forked component, or one-off implementation. The root causes:</p>
+
+  <div class="flow-map">
+
+    <div class="flow-col-labels" aria-hidden="true">
+      <div class="flow-label-problem">5 Problems</div>
+      <div class="flow-label-center">Unified system</div>
+      <div class="flow-label-success">5 Outcomes</div>
+    </div>
+
+    <div class="flow-body">
+      <div class="flow-spine" aria-hidden="true"></div>
+      <div class="flow-spine-badge" aria-hidden="true">Component system</div>
+
+      <ol class="flow-list">
+
+        <li class="flow-row" style="animation-delay:0s">
+          <div class="flow-problem-card">
+            <span class="flow-num flow-num-problem">01</span>
+            <div><div class="flow-card-title">Isolated flows</div><div class="flow-card-desc">Each tournament ships its own end-to-end experience.</div></div>
+          </div>
+          <div class="flow-connector" aria-hidden="true"></div>
+          <div class="flow-mobile-connector" aria-hidden="true"><div class="flow-mobile-line"></div></div>
+          <div class="flow-success-card">
+            <span class="flow-num flow-num-success">01</span>
+            <div><div class="flow-card-title">Reusable adoption</div><div class="flow-card-desc">Teams compose from shared components instead.</div></div>
+          </div>
+        </li>
+
+        <li class="flow-row" style="animation-delay:0.06s">
+          <div class="flow-problem-card">
+            <span class="flow-num flow-num-problem">02</span>
+            <div><div class="flow-card-title">Repeated effort</div><div class="flow-card-desc">Engineering rebuilds the same primitives every cycle.</div></div>
+          </div>
+          <div class="flow-connector" aria-hidden="true"></div>
+          <div class="flow-mobile-connector" aria-hidden="true"><div class="flow-mobile-line"></div></div>
+          <div class="flow-success-card">
+            <span class="flow-num flow-num-success">02</span>
+            <div><div class="flow-card-title">Less QA &amp; impl.</div><div class="flow-card-desc">One tested surface covers every tournament.</div></div>
+          </div>
+        </li>
+
+        <li class="flow-row" style="animation-delay:0.12s">
+          <div class="flow-problem-card">
+            <span class="flow-num flow-num-problem">03</span>
+            <div><div class="flow-card-title">No config support</div><div class="flow-card-desc">Variants require code changes, not configuration.</div></div>
+          </div>
+          <div class="flow-connector" aria-hidden="true"></div>
+          <div class="flow-mobile-connector" aria-hidden="true"><div class="flow-mobile-line"></div></div>
+          <div class="flow-success-card">
+            <span class="flow-num flow-num-success">03</span>
+            <div><div class="flow-card-title">Faster rollouts</div><div class="flow-card-desc">New tournaments launch from config in days.</div></div>
+          </div>
+        </li>
+
+        <li class="flow-row" style="animation-delay:0.18s">
+          <div class="flow-problem-card">
+            <span class="flow-num flow-num-problem">04</span>
+            <div><div class="flow-card-title">Diverging UX</div><div class="flow-card-desc">Patterns drift between products and platforms.</div></div>
+          </div>
+          <div class="flow-connector" aria-hidden="true"></div>
+          <div class="flow-mobile-connector" aria-hidden="true"><div class="flow-mobile-line"></div></div>
+          <div class="flow-success-card">
+            <span class="flow-num flow-num-success">04</span>
+            <div><div class="flow-card-title">Consistent UX</div><div class="flow-card-desc">Players see one coherent system everywhere.</div></div>
+          </div>
+        </li>
+
+        <li class="flow-row" style="animation-delay:0.24s">
+          <div class="flow-problem-card">
+            <span class="flow-num flow-num-problem">05</span>
+            <div><div class="flow-card-title">Compounding cost</div><div class="flow-card-desc">Every new tournament adds maintenance surface.</div></div>
+          </div>
+          <div class="flow-connector" aria-hidden="true"></div>
+          <div class="flow-mobile-connector" aria-hidden="true"><div class="flow-mobile-line"></div></div>
+          <div class="flow-success-card">
+            <span class="flow-num flow-num-success">05</span>
+            <div><div class="flow-card-title">Fewer redesigns</div><div class="flow-card-desc">Improvements propagate centrally, not per-feature.</div></div>
+          </div>
+        </li>
+
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     05 · CONSTRAINTS THAT SHAPED THE DESIGN
+══════════════════════════════════════ -->
+<section class="cs-section">
+  <p class="section-label"><span class="num">02</span> User Needs</p>
+  <h2>Jobs to be done</h2>
+
+  <img src="../../assets/jobs-sticker.svg" alt="Jobs to be done sticker" style="width:100%;height:auto;display:block;margin-bottom:28px;" />
+
+</section>
+
+<!-- ══════════════════════════════════════
+     06 · RESEARCH INSIGHTS APPLIED
+══════════════════════════════════════ -->
+<section class="cs-section">
+  <p class="section-label"><span class="num">03</span> Research</p>
+  <h2>Research Insights Applied to the Listing Experience</h2>
+
+  <p>Insights from Post-Purchase Fan Interviews and Discovery Research directly informed the information hierarchy, card behavior, and filtering experience.</p>
+
+  <div class="testimonial-grid">
+    <img src="../../assets/testimonial-2.svg" alt="Testimonial insight 1" class="testimonial-img" />
+    <img src="../../assets/testimonial-3.svg" alt="Testimonial insight 2" class="testimonial-img" />
+    <img src="../../assets/testimonial-1.svg" alt="Testimonial insight 3" class="testimonial-img" />
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     07 · CORE EXPERIENCE PRINCIPLES
+══════════════════════════════════════ -->
+<section class="cs-section">
+  <p class="section-label"><span class="num">04</span> Design Principles</p>
+  <h2>Core Experience Principles</h2>
+
+  <p>Every design decision — from card hierarchy to accessibility behavior — was evaluated against three foundational principles.</p>
+
+  <div class="principles-grid">
+    <div class="principle-item">
+      <div class="principle-header">
+        <span class="principle-num">01</span>
+        <div class="principle-header-text">
+          <div class="principle-label-text">Clarity at a Glance</div>
+        </div>
+      </div>
+      <div class="principle-title">Fans should understand an event card instantly.</div>
+      <p class="principle-desc">Sport, venue, date, and ticket availability were designed to be immediately scannable without requiring cognitive effort or secondary interaction.</p>
+    </div>
+    <div class="principle-item">
+      <div class="principle-header">
+        <span class="principle-num">02</span>
+        <div class="principle-header-text">
+          <div class="principle-label-text">One System Across All Sports</div>
+        </div>
+      </div>
+      <div class="principle-title">A single scalable architecture instead of tournament-specific solutions.</div>
+      <p class="principle-desc">The same reusable card and filter system needed to support everything from high-volume Athletics schedules to premium single-session ceremonies without redesigning components per sport.</p>
+    </div>
+    <div class="principle-item">
+      <div class="principle-header">
+        <span class="principle-num">03</span>
+        <div class="principle-header-text">
+          <div class="principle-label-text">Accessibility by Default</div>
+        </div>
+      </div>
+      <div class="principle-title">The experience needed to work seamlessly across devices and assistive technologies.</div>
+      <p class="principle-desc">Layouts, hierarchy, and interactions were designed to support screen readers, responsive scaling, keyboard navigation, and clear information comprehension across accessibility needs.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     08 · DEFINING THE EXPERIENCE STRATEGY
+══════════════════════════════════════ -->
+<section class="cs-section">
+  <p class="section-label"><span class="num">05</span> Strategy</p>
+  <h2>Defining the experience strategy</h2>
+
+  <p>The listing experience was designed around two distinct fan behaviours with fundamentally different browsing and decision-making patterns.</p>
+
+  <div class="fan-table">
+    <div class="fan-col">
+      <div class="fan-col-header">
+        <span class="fan-emoji">🏅</span>
+        <div>
+          <div class="fan-name">The Sport Fan</div>
+          <div class="fan-type">Returning user · Knows exactly what they want</div>
+        </div>
+      </div>
+      <ul class="fan-list">
+        <li>Arrives with a specific sport and session in mind — filtering is their primary action</li>
+        <li>Needs date, venue, and availability confirmed fast before committing</li>
+        <li>Frustrated by unnecessary friction</li>
+      </ul>
+    </div>
+    <div class="fan-col">
+      <div class="fan-col-header">
+        <span class="fan-emoji">🎟️</span>
+        <div>
+          <div class="fan-name">The Experience Seeker</div>
+          <div class="fan-type">New or casual user · Browsing for value</div>
+        </div>
+      </div>
+      <ul class="fan-list">
+        <li>Doesn't have a sport preference — wants to know what's available and affordable</li>
+        <li>Needs enough context from the card to decide without clicking through</li>
+        <li>Likely comparing multiple events simultaneously across the listing</li>
+      </ul>
+    </div>
+  </div>
+
+  <img src="../../assets/user-testing-component.svg" alt="User testing component" class="full-width-img" />
+</section>
+
+<!-- ══════════════════════════════════════
+     09 · SYSTEM ARCHITECTURE STRATEGY
+══════════════════════════════════════ -->
+<section class="cs-section">
+  <p class="section-label"><span class="num">06</span> Architecture</p>
+  <h2>System Architecture Strategy</h2>
+
+  <div class="arch-grid">
+
+    <div class="arch-block">
+      <div class="arch-block-label">Scalable Design Strategy</div>
+      <ul class="arch-list">
+        <li>Configurable component behaviors</li>
+        <li>Reusable theming foundations</li>
+        <li>Localization-ready patterns</li>
+        <li>Accessibility-aligned interaction systems</li>
+      </ul>
+    </div>
+
+    <div class="arch-block">
+      <div class="arch-block-label">Architecture Principles</div>
+      <ul class="arch-list">
+        <li>Consistency across tournaments</li>
+        <li>Scalable implementation logic</li>
+        <li>Future-proofed component behavior</li>
+        <li>Reuse before rebuild</li>
+        <li>Configuration over duplication</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="arch-previews">
+    <div class="arch-preview-item arch-preview--desktop">
+      <img src="../../assets/arch-desktop.svg" alt="Desktop architecture view" class="arch-preview-img" />
+    </div>
+    <div class="arch-preview-item arch-preview--mobile">
+      <img src="../../assets/arch-mobile.svg" alt="Mobile architecture view" class="arch-preview-img" />
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     10 · COMPONENTS AND DESIGN SYSTEM THINKING
+══════════════════════════════════════ -->
+<section class="cs-section">
+  <p class="section-label"><span class="num">07</span> Design System</p>
+  <h2>Components &amp; Design System Thinking</h2>
+
+  <p>Every component decision was grounded in scalability, system alignment, and cross-functional collaboration — building foundations that extend beyond a single tournament.</p>
+
+  <div class="ds-table">
+
+    <div class="ds-row">
+      <div class="ds-col-label">Reusable Foundations</div>
+      <div class="ds-col-body">
+        <p class="ds-body-text">Developed scalable reusable foundations including:</p>
+        <div class="ds-list-cols">
+          <ul class="ds-list">
+            <li>Configurable event cards</li>
+            <li>Scalable layout templates</li>
+          </ul>
+          <ul class="ds-list">
+            <li>Theming-compatible structures</li>
+            <li>Reusable interaction behaviors</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="ds-row">
+      <div class="ds-col-label">Design System Alignment</div>
+      <div class="ds-col-body">
+        <p class="ds-body-text">The work aligned closely with Sports GDS principles and contributed toward creating scalable reusable foundations intended to support future tournament implementations more efficiently.</p>
+      </div>
+    </div>
+
+    <div class="ds-row">
+      <div class="ds-col-label">Engineering Collaboration</div>
+      <div class="ds-col-body">
+        <p class="ds-body-text">Worked closely with engineering to:</p>
+        <div class="ds-list-cols">
+          <ul class="ds-list">
+            <li>Align scalable component behavior</li>
+            <li>Support implementation feasibility</li>
+          </ul>
+          <ul class="ds-list">
+            <li>Reduce ambiguity during handoff</li>
+            <li>Improve reusable architecture consistency</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+</section>
+
+<!-- ══════════════════════════════════════
+     11 · KEY EXPERIENCE FLOWS
+══════════════════════════════════════ -->
+<section class="cs-section">
+  <p class="section-label"><span class="num">08</span> Experience Design</p>
+  <h2>Key Experience Flows</h2>
+
+  <p>Check out the information presented across the cards in the Listing Experience, Checkout Experience and Event Detail Experience.</p>
+
+  <video src="../../assets/section10-video.mp4" autoplay loop muted playsinline style="width:100%;border-radius:12px;margin-top:24px;display:block;"></video>
+
+</section>
+
+<!-- ══════════════════════════════════════
+     12 · FINAL DIRECTION
+══════════════════════════════════════ -->
+<section class="cs-section">
+  <p class="section-label"><span class="num">09</span> Solution</p>
+  <h2>Final Direction</h2>
+
+  <p>The final direction focused on building reusable configuration-driven templates and scalable component structures that could adapt across tournaments while maintaining consistent user experiences and implementation efficiency.</p>
+
+  <div class="final-dir-cols">
+    <div class="final-dir-left">
+      <img src="../../assets/xt-base-theme.svg" alt="XT - Base Theme design" />
+    </div>
+    <div class="final-dir-right">
+      <div class="mode-selector" id="modeSelector">
+        <p class="mode-heading">Mode</p>
+        <ul class="mode-list" role="listbox" aria-label="Select theme mode">
+          <li class="mode-option is-selected" role="option" aria-selected="true" tabindex="0" data-img="../../assets/xt-base-theme.svg">
+            <span class="mode-check" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7L5.5 10.5L11.5 3.5" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <span>XT - Base Theme</span>
+          </li>
+          <li class="mode-option" role="option" aria-selected="false" tabindex="0" data-img="../../assets/mrwc27.svg">
+            <span class="mode-check" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7L5.5 10.5L11.5 3.5" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <span>MRWC27</span>
+          </li>
+          <li class="mode-option" role="option" aria-selected="false" tabindex="0" data-img="../../assets/ag26.svg">
+            <span class="mode-check" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7L5.5 10.5L11.5 3.5" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <span>AG26</span>
+          </li>
+        </ul>
+      </div>
+      <img src="../../assets/mode-message.png" alt="Explore different modes to see how event cards change across tournaments" class="mode-message-img" style="margin-top:10px;width:100%;height:auto;display:block;" />
+    </div>
+  </div>
+
+  <p class="final-dir-quote">"Sometimes, the most meaningful design happens when you go beyond what's asked — and build what's truly needed."</p>
+</section>
+
+<!-- ══════════════════════════════════════
+     13 · OUTCOME AND IMPACT
+══════════════════════════════════════ -->
+<section class="cs-section cs-section--no-stroke">
+  <p class="section-label"><span class="num">10</span> Impact</p>
+  <h2>What happened after we shipped</h2>
+
+  <div class="metric-row">
+    <div class="metric-card">
+      <label>Build time reduction</label>
+      <div class="metric-num">↓ 40%</div>
+      <p>Reduction in design-to-engineering time for new tournament format launches</p>
+    </div>
+    <div class="metric-card">
+      <label>Formats supported</label>
+      <div class="metric-num">5+</div>
+      <p>Tournament formats fully supported by the shared architecture without new component builds</p>
+    </div>
+    <div class="metric-card">
+      <label>Teams adopted</label>
+      <div class="metric-num">3 / 3</div>
+      <p>Product teams now building on the shared component system — previously each maintained their own fork</p>
+    </div>
+  </div>
+  <p class="outcome-note" style="margin-top: 24px; color: var(--muted-fg);">⚑ Metrics shown are based on post-launch reporting from the Product Management team and are included as shared business outcomes rather than independently measured design metrics.</p>
+
+  <div class="cs12-card-wrap">
+  <div class="cs12-card-grid">
+    <div class="cs12-impact-card cs12-impact-card--blue">
+      <span class="cs12-impact-label">Engineering feedback</span>
+      <h3 class="cs12-impact-heading">Zero interpretation requests</h3>
+      <div class="cs12-impact-divider"></div>
+      <ul class="cs12-list">
+        <li>Improved engineering handoff clarity and cross-functional alignment.</li>
+        <li>Created reusable foundations that accelerated future releases.</li>
+        <li>Reduced repeated design, development, and QA effort.</li>
+        <li>Established more predictable implementation workflows across teams.</li>
+        <li>Supported a more consistent fan experience by reducing fragmented interaction patterns and ticketing friction.</li>
+      </ul>
+    </div>
+    <div class="cs12-impact-card cs12-impact-card--dark">
+      <span class="cs12-impact-label">System contribution</span>
+      <h3 class="cs12-impact-heading">Became the platform standard</h3>
+      <div class="cs12-impact-divider"></div>
+      <ul class="cs12-list">
+        <li>Established reusable multi-tournament architecture patterns.</li>
+        <li>Improved consistency and maintainability across tournament experiences.</li>
+        <li>Reduced design debt and duplicated implementation effort.</li>
+        <li>Enabled scalable tournament expansion and future event rollouts.</li>
+        <li>Contributed to the platform's long-term React migration strategy.</li>
+      </ul>
+    </div>
+  </div>
+  </div>
+
+  <div class="cs12-reflection">
+    <h3>Reflection &amp; What Changed</h3>
+    <p>This project shifted tournament experiences from isolated implementations toward a scalable platform mindset. Instead of repeatedly rebuilding tournament-specific experiences, the work established reusable foundations capable of supporting future sports events more efficiently and consistently.</p>
+    <p>The project also strengthened cross-functional collaboration between design and engineering by introducing more scalable workflows, reusable component thinking, and structured implementation alignment.</p>
+  </div>
+</section>
+
+</div>
+
+</div>
+
+<footer class="dark-footer" aria-label="Site footer">
+
+  <div class="df-inner">
+    <div class="df-left">
+      <p class="df-quote">Good design, like a well-tended garden, is built to outlast the hands that shaped it.</p>
+      <p class="df-caption">Made with care <3 and lots of coffee</p>
+    </div>
+    <div class="df-right">
+      <div class="df-contact-section">
+        <h3 class="df-contact-heading">Connect with me</h3>
+        <p class="df-contact">+91 8790575759</p>
+      </div>
+      <div class="df-links">
+        <a href="https://www.linkedin.com/in/rakshanda-kolhe-531687210" class="df-link" target="_blank" rel="noopener" data-cursor-label="Open LinkedIn">LinkedIn</a>
+        <a href="https://www.behance.net/rakshandakolhe1" class="df-link" target="_blank" rel="noopener" data-cursor-label="Open Behance">Behance</a>
+        <a href="https://drive.google.com/file/d/1PYxmC6yKE62FCQMmw7hzZY3tdsDJgcpa/view?usp=sharing" class="df-link" data-cursor-label="Open resume">Resume</a>
+        <a href="mailto:rakshandakolhe@yahoo.in" class="df-link" data-cursor-label="Send email">Email</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="df-garden" aria-hidden="true"></div>
+
+  <div class="df-bottom">
+    <p>© 2026 Rakshanda Kolhe · All work under NDA where noted</p>
+  </div>
+
+</footer>
+
+<script src="../../js/garden.js"></script>
+
+<script>
+/* Demo Component */
+(function () {
+  var state = {
+    badges: true, description: true,
+    medal: true, availBadge: true, availability: true, device: 'desktop'
+  };
+
+  var icons = {
+    calendar: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></svg>',
+    clock:    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>',
+    pin:      '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>'
+  };
+
+  var thumbSvg = '<img src="../../assets/flag-image.svg" alt="" style="height:5rem;width:auto;display:block;" />';
+
+  function medalSvg() {
+    return '<svg width="44" height="23" viewBox="0 0 44 23" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M43.7866 0L37.2667 11.5909H33.6277L40.2824 0H43.7866Z" fill="#CD7F32"/><path d="M26.4004 0L32.9203 11.5909H36.5593L29.9046 0H26.4004Z" fill="#CD7F32"/><path d="M34.9985 10.9648C37.9345 10.9648 40.3257 13.3866 40.3257 16.3867C40.3254 19.3866 37.9344 21.8076 34.9985 21.8076C32.0628 21.8075 29.6726 19.3865 29.6724 16.3867C29.6724 13.3867 32.0627 10.965 34.9985 10.9648Z" fill="#DDC87B" stroke="#CD7F32" stroke-width="0.747801"/><ellipse cx="35.0182" cy="16.386" rx="2.82147" ry="2.89773" fill="#CD7F32"/><path d="M30.585 0L24.0651 11.5909H20.4261L27.0807 0H30.585Z" fill="#C0C0C0"/><path d="M13.1982 0L19.7181 11.5909H23.3571L16.7025 0H13.1982Z" fill="#C0C0C0"/><path d="M21.7964 10.9648C24.7324 10.9648 27.1235 13.3866 27.1235 16.3867C27.1233 19.3866 24.7322 21.8076 21.7964 21.8076C18.8607 21.8075 16.4705 19.3865 16.4702 16.3867C16.4702 13.3867 18.8605 10.965 21.7964 10.9648Z" fill="#E4E4E4" stroke="#C0C0C0" stroke-width="0.747801"/><ellipse cx="21.8161" cy="16.386" rx="2.82147" ry="2.89773" fill="#C0C0C0"/><path d="M17.3862 0L10.8663 11.5909H7.22734L13.882 0H17.3862Z" fill="#D4AF37"/><path d="M0 0L6.51989 11.5909H10.1589L3.50423 0H0Z" fill="#D4AF37"/><path d="M8.59814 10.9648C11.5341 10.9648 13.9253 13.3866 13.9253 16.3867C13.9251 19.3866 11.534 21.8076 8.59814 21.8076C5.66244 21.8075 3.27221 19.3865 3.27197 16.3867C3.27197 13.3867 5.66229 10.965 8.59814 10.9648Z" fill="#F5F5BB" stroke="#D4AF37" stroke-width="0.747801"/><ellipse cx="8.61786" cy="16.386" rx="2.82147" ry="2.89773" fill="#D4AF37"/></svg>';
+  }
+
+  function availabilityBadge() {
+    return '<span class="ec-badge"><span class="dot"></span>HIGH AVAILABILITY</span>';
+  }
+
+  function productCodeBadge() {
+    return '<span class="ec-badge">ATH0605</span>';
+  }
+
+  function metaList() {
+    return '<ul class="ec-meta"><li>' + icons.calendar + ' 2026/09/09</li><li>' + icons.clock + ' 15:00 – 18:30</li><li>' + icons.pin + ' Japan National Stadium</li></ul>';
+  }
+
+  function renderDesktop() {
+    var s = state;
+    return '<div class="ec-card desktop ' + (s.device === 'desktop' ? 'is-active' : '') + '">' +
+      '<div class="ec-thumb">' + thumbSvg + '</div>' +
+      '<div class="ec-body">' +
+        '<div class="ec-main">' +
+          '<h3 class="ec-title">Aquatics</h3>' +
+          metaList() +
+          '<p class="ec-desc-long ' + (s.description ? '' : 'hidden') + '">Men\'s &amp; Women\'s Semi Finals, Men\'s &amp; Women\'s Finals, Men\'s &amp; Women\'s Medal Ceremonies</p>' +
+          '<a href="https://drive.google.com/file/d/1PYxmC6yKE62FCQMmw7hzZY3tdsDJgcpa/view?usp=sharing" class="ec-link ' + (s.description ? '' : 'hidden') + '" onclick="return false;">See Full Event Details</a>' +
+        '</div>' +
+        '<div class="ec-side">' +
+          '<div class="ec-badge-row">' +
+            (s.medal ? medalSvg() : '') +
+            (s.badges && s.availBadge ? availabilityBadge() : '') +
+          '</div>' +
+          (s.badges && s.availability ? productCodeBadge() : '') +
+          '<button type="button" class="ec-cta">Select Tickets</button>' +
+        '</div>' +
+      '</div>' +
+    '</div>';
+  }
+
+  function renderMobile() {
+    var s = state;
+    var badgeContent = (s.badges && s.availBadge ? availabilityBadge() : '') + (s.badges && s.availability ? productCodeBadge() : '');
+    var badgeWrap = badgeContent ? '<div class="ec-mobile-badges">' + badgeContent + '</div>' : '';
+    return '<div class="ec-card mobile ' + (s.device === 'mobile' ? 'is-active' : '') + '">' +
+      '<div class="ec-thumb">' + thumbSvg + '</div>' +
+      '<div class="ec-body">' +
+        '<div class="ec-mobile-head"><h3 class="ec-title">Aquatics</h3>' + (s.medal ? medalSvg() : '') + '</div>' +
+        badgeWrap +
+        metaList() +
+        '<p class="ec-desc-long ' + (s.description ? '' : 'hidden') + '">Men\'s &amp; Women\'s Semi Finals, Men\'s &amp; Women\'s Finals, Men\'s &amp; Women\'s Medal Ceremonies</p>' +
+        '<a href="https://drive.google.com/file/d/1PYxmC6yKE62FCQMmw7hzZY3tdsDJgcpa/view?usp=sharing" class="ec-link ' + (s.description ? '' : 'hidden') + '" onclick="return false;">See Full Event Details</a>' +
+        '<button type="button" class="ec-cta">Select Tickets</button>' +
+      '</div>' +
+    '</div>';
+  }
+
+  function renderPreview() {
+    var el = document.getElementById('demo-preview');
+    if (!el) return;
+    el.innerHTML = renderDesktop() + renderMobile();
+  }
+
+  function updateToggles() {
+    document.querySelectorAll('[data-toggle]').forEach(function (btn) {
+      btn.setAttribute('aria-checked', state[btn.dataset.toggle] ? 'true' : 'false');
+    });
+  }
+
+  function updateDeviceBtns() {
+    document.querySelectorAll('[data-device]').forEach(function (btn) {
+      btn.classList.toggle('active', btn.dataset.device === state.device);
+      btn.classList.toggle('dc-device-btn', true);
+    });
+    var note = document.querySelector('.demo-mobile-note');
+    if (note) note.style.display = state.device === 'mobile' ? 'none' : '';
+  }
+
+  function bind() {
+    document.querySelectorAll('[data-toggle]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        state[btn.dataset.toggle] = !state[btn.dataset.toggle];
+        if (btn.dataset.toggle === 'badges') {
+          state.availBadge = state.badges;
+          state.availability = state.badges;
+        }
+        updateToggles();
+        renderPreview();
+      });
+    });
+    document.querySelectorAll('[data-device]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        state.device = btn.dataset.device;
+        updateDeviceBtns();
+        renderPreview();
+      });
+    });
+  }
+
+  updateToggles();
+  updateDeviceBtns();
+  renderPreview();
+  bind();
+})();
+
+/* Mode Selector */
+(function () {
+  var opts = document.querySelectorAll('#modeSelector .mode-option');
+  var previewImg = document.querySelector('.final-dir-left img');
+  opts.forEach(function (opt) {
+    opt.addEventListener('click', function () {
+      opts.forEach(function (o) { o.classList.remove('is-selected'); o.setAttribute('aria-selected', 'false'); });
+      opt.classList.add('is-selected');
+      opt.setAttribute('aria-selected', 'true');
+      if (previewImg && opt.dataset.img) previewImg.src = opt.dataset.img;
+    });
+    opt.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); opt.click(); }
+    });
+  });
+})();
+
+/* Reveal */
+const revealEls = document.querySelectorAll('.reveal');
+const revObs = new IntersectionObserver(
+  (entries) => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); revObs.unobserve(e.target); } }),
+  { threshold: 0.06, rootMargin: '0px 0px -32px 0px' }
+);
+revealEls.forEach(el => revObs.observe(el));
+
+/* Mobile dropdown */
+const hamburger = document.getElementById('navHamburger');
+const dropdown  = document.getElementById('navDropdown');
+function openDD()  { hamburger.classList.add('is-open'); hamburger.setAttribute('aria-expanded','true'); hamburger.setAttribute('aria-label','Close navigation menu'); dropdown.classList.add('is-open'); dropdown.setAttribute('aria-hidden','false'); }
+function closeDD() { hamburger.classList.remove('is-open'); hamburger.setAttribute('aria-expanded','false'); hamburger.setAttribute('aria-label','Open navigation menu'); dropdown.classList.remove('is-open'); dropdown.setAttribute('aria-hidden','true'); }
+hamburger.addEventListener('click', e => { e.stopPropagation(); dropdown.classList.contains('is-open') ? closeDD() : openDD(); });
+document.addEventListener('click', e => { if (!hamburger.contains(e.target) && !dropdown.contains(e.target)) closeDD(); });
+dropdown.querySelectorAll('a').forEach(a => a.addEventListener('click', closeDD));
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDD(); });
+
+/* Custom cursor */
+if (window.matchMedia('(pointer: fine)').matches) {
+  const cursor = document.getElementById('customCursor');
+  const badge  = document.getElementById('cursorBadge');
+  let mx = -200, my = -200, rid;
+  cursor.classList.add('visible');
+  function move() { cursor.style.transform = `translate(${mx-6}px,${my-4}px)`; rid = null; }
+  document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; if (!rid) rid = requestAnimationFrame(move); });
+  document.addEventListener('mouseleave', () => cursor.classList.remove('visible'));
+  document.addEventListener('mouseenter', () => cursor.classList.add('visible'));
+  document.querySelectorAll('[data-cursor-label],a,button,.cs-back,.cs-footer-nav a,.dd-link,.dd-cta').forEach(el => {
+    el.addEventListener('mouseenter', () => { const t = el.getAttribute('data-cursor-label') || ''; if (t) { badge.textContent = t; badge.classList.add('show'); } });
+    el.addEventListener('mouseleave', () => badge.classList.remove('show'));
+  });
+}
+</script>
+
+</body>
+</html>

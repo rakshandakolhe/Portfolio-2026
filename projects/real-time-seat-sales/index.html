@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Real-Time Seat Sales — Rakshanda Kolhe</title>
+  <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg" />
+  <meta name="description" content="Designing high-stakes B2B purchasing for inventory that disappears in minutes — a case study by Rakshanda Kolhe." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="../../css/portfolio.css" />
+</head>
+<body>
+
+<!-- ══════════════════════════════════════
+     NAVIGATION
+══════════════════════════════════════ -->
+<nav class="island-nav" aria-label="Primary navigation">
+  <div class="nav-profile" aria-hidden="true">
+    <img src="../../assets/profile.svg" alt="" />
+  </div>
+  <a href="../../index.html" class="nav-link" data-cursor-label="Home">Home</a>
+  <a href="../../index.html#work"  class="nav-link" data-cursor-label="View work">Work</a>
+  <a href="../../index.html#about" class="nav-link" data-cursor-label="About me">About</a>
+  <a href="https://drive.google.com/file/d/1PYxmC6yKE62FCQMmw7hzZY3tdsDJgcpa/view?usp=sharing" class="nav-link" target="_blank" rel="noopener" data-cursor-label="Open resume">Resume</a>
+  <a href="mailto:rakshandakolhe@yahoo.in" class="nav-cta" data-cursor-label="Send email">Let's connect</a>
+  <button class="nav-hamburger" id="navHamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navDropdown">
+    <span class="hb-line"></span>
+    <span class="hb-line"></span>
+    <span class="hb-line"></span>
+  </button>
+</nav>
+<div class="nav-dropdown" id="navDropdown" role="navigation" aria-label="Mobile navigation" aria-hidden="true">
+  <a href="../../index.html" class="dd-link">Home</a>
+  <a href="../../index.html#work"  class="dd-link dd-active">Work</a>
+  <a href="../../index.html#about" class="dd-link">About</a>
+  <a href="https://drive.google.com/file/d/1PYxmC6yKE62FCQMmw7hzZY3tdsDJgcpa/view?usp=sharing" class="dd-link" target="_blank" rel="noopener">Resume ↗</a>
+  <a href="mailto:rakshandakolhe@yahoo.in" class="dd-cta">Let's connect</a>
+</div>
+<div class="custom-cursor" id="customCursor" aria-hidden="true">
+  <svg class="cursor-arrow" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g filter="url(#cs)">
+      <path d="M8.75418 20L5.62291 4.04089L20 11.9182L12.9181 13.9727L8.75418 20Z" fill="black"/>
+      <path d="M8.75418 20L5.62291 4.04089L20 11.9182L12.9181 13.9727L8.75418 20Z" stroke="white"/>
+    </g>
+    <defs><filter id="cs" x="2.9248" y="2.09058" width="20.3721" height="22.1735" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/><feOffset dy="1"/><feGaussianBlur stdDeviation="1"/><feComposite in2="hardAlpha" operator="out"/><feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/><feBlend mode="normal" in2="BackgroundImageFix" result="e1"/><feBlend mode="normal" in="SourceGraphic" in2="e1" result="shape"/></filter></defs>
+  </svg>
+  <div class="cursor-badge" id="cursorBadge"></div>
+</div>
+
+<div class="page">
+
+<!-- ══════════════════════════════════════
+     HERO
+══════════════════════════════════════ -->
+<div class="cs-hero">
+  <div class="cs-hero-inner">
+
+    <a href="../../index.html" class="cs-back">
+      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true" style="transform: scaleX(-1);"><path d="M19 12H5M12 5l7 7-7 7"/></svg>
+      Back to work
+    </a>
+
+    <img src="../../assets/RTSS-Image.svg" alt="Real-Time Seat Sales" style="width: 100%; height: auto; display: block; margin-bottom: 24px;" />
+
+    <h1 class="cs-hero-title">
+      Real-Time Seat Sales: Designing high-stakes B2B purchasing for inventory that disappears in minutes
+    </h1>
+
+    <p class="cs-hero-desc">
+      Converted a stakeholder-focused platform into a transactional purchasing experience, creating a complete end-to-end journey for corporate clients to secure Rugby World Cup 2027 inventory in real time.
+    </p>
+
+    <div class="cs-meta-row">
+      <div class="cs-meta-item">
+        <label>My Role</label>
+        <span class="meta-val">Lead Designer</span>
+      </div>
+      <div class="cs-meta-item">
+        <label>Skills</label>
+        <span class="meta-val">UX Strategy</span>
+        <span class="meta-val">Interaction Design</span>
+        <span class="meta-val">Systems Thinking</span>
+      </div>
+      <div class="cs-meta-item">
+        <label>Platform</label>
+        <span class="meta-val">Web</span>
+      </div>
+    </div>
+
+    <div style="margin-top: 40px; padding: 24px 28px; background: #FFF8F0; border: 1px solid #F5D9B0; border-left: 4px solid #F59E0B; border-radius: 12px; display: flex; gap: 16px; align-items: flex-start;">
+      <div>
+        <p style="font-size: 13px; font-weight: 600; color: #92400E; margin: 0 0 6px 0; text-transform: uppercase; letter-spacing: 0.08em;">The Problem</p>
+        <p style="font-size: 14px; color: #78350F; line-height: 1.7; margin: 0;">Corporate clients had no way to purchase Rugby World Cup 2027 seat inventory directly — the platform was built for stakeholder visibility, not transactional commerce. B2B buyers were forced through manual processes, causing delays, errors, and lost sales during time-critical inventory windows.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+<div style="padding-bottom: 50px; background: #ffffff;"></div>
+
+<!-- ══════════════════════════════════════
+     OUTCOME BANNER
+══════════════════════════════════════ -->
+<div class="outcome-banner">
+  <div class="outcome-inner">
+    <div class="outcome-stat">
+      <label>Audit resolved</label>
+      <div class="big-num">18</div>
+      <p>9 heuristic violations and 9 WCAG failures across contrast, colour use, labelling, and error guidance — resolved before a single new screen was built</p>
+    </div>
+    <div class="outcome-stat">
+      <label>Net-new screens</label>
+      <div class="big-num">4</div>
+      <p>Basket, payment, order confirmation, and a redesigned Best Available selection view — for a flow with no existing pattern to extend from</p>
+    </div>
+    <div class="outcome-stat">
+      <label>Edge case states</label>
+      <div class="big-num">25</div>
+      <p>Across all screens — sold-out inventory, session timeout, payment failure, over-limit errors, and pending confirmation</p>
+    </div>
+    <p class="outcome-note">⚑ Pre-launch. Quantitative time-to-purchase and conversion data will be captured post-RWC 2027 against the existing Request → Approval flow baseline.</p>
+  </div>
+</div>
+
+<div style="background: #ffffff;">
+
+<!-- ══════════════════════════════════════
+     01 · CONTEXT & STAKES
+══════════════════════════════════════ -->
+<section class="cs-section">
+  <p class="section-label"><span class="num">01</span> Context &amp; Stakes</p>
+  <h2>Why this mattered to the business</h2>
+
+  <p>
+    The B2B seat sales flow handled purchases from account managers, corporate clients, and group booking coordinators who were allocating large blocks of seats across live sports and entertainment events. Unlike consumer ticketing, these buyers were responsible for pre-selling those seats to their own clients — meaning a failed, slow, or error-prone purchase had downstream commercial consequences.
+  </p>
+
+  <div class="context-table" style="display: flex; flex-direction: column; gap: 0; margin-top: 48px; border: 1px solid var(--border); border-radius: 16px; overflow: hidden;">
+    <div style="display: grid; grid-template-columns: 200px 1fr; border-bottom: 1px solid var(--border);">
+      <div style="padding: 28px 24px; background: #F7F7F7; border-right: 1px solid var(--border); display: flex; align-items: flex-start;">
+        <span style="font-size: 13px; font-weight: 600; color: var(--fg);">Platform Overview</span>
+      </div>
+      <div style="padding: 28px 32px;">
+        <p style="font-size: 13px; color: var(--muted-fg); line-height: 1.75; margin: 0;">CTP (Client Ticketing Platform) is Ticketmaster's business-to-business ticketing platform, used by sponsors, corporate partners, and participating rugby unions to manage ticket allocations for major tournaments. Unlike consumer ticketing platforms designed for fans, CTP supports organizations purchasing tickets on behalf of clients, guests, and hospitality programs.</p>
+      </div>
+    </div>
+    <div style="display: grid; grid-template-columns: 200px 1fr; border-bottom: 1px solid var(--border);">
+      <div style="padding: 28px 24px; background: #F7F7F7; border-right: 1px solid var(--border); display: flex; align-items: flex-start;">
+        <span style="font-size: 13px; font-weight: 600; color: var(--fg);">The Operational Reality</span>
+      </div>
+      <div style="padding: 28px 32px;">
+        <p style="font-size: 13px; color: var(--muted-fg); line-height: 1.75; margin: 0;">During live tournaments, ticket availability is highly dynamic. Stadium reconfigurations, returned allocations, and reclaimed sponsor inventory can release new seats at any time—often just hours before an event. These releases frequently involve high-demand matches and limited availability.</p>
+      </div>
+    </div>
+    <div style="display: grid; grid-template-columns: 200px 1fr; border-bottom: 1px solid var(--border);">
+      <div style="padding: 28px 24px; background: #F7F7F7; border-right: 1px solid var(--border); display: flex; align-items: flex-start;">
+        <span style="font-size: 13px; font-weight: 600; color: var(--fg);">The Existing Experience</span>
+      </div>
+      <div style="padding: 28px 32px;">
+        <p style="font-size: 13px; color: var(--muted-fg); line-height: 1.75; margin: 0;">At the time, CTP operated on a Request → Approval model. Users could request available inventory, but purchases were not completed in real time. Instead, requests were reviewed and approved manually before tickets could be secured. While effective for planned allocation management, the workflow was not designed for inventory releases where availability could change within minutes.</p>
+      </div>
+    </div>
+    <div style="display: grid; grid-template-columns: 200px 1fr;">
+      <div style="padding: 28px 24px; background: #F7F7F7; border-right: 1px solid var(--border); display: flex; align-items: flex-start;">
+        <span style="font-size: 13px; font-weight: 600; color: var(--fg);">The Opportunity</span>
+      </div>
+      <div style="padding: 28px 32px;">
+        <p style="font-size: 13px; color: var(--muted-fg); line-height: 1.75; margin: 0;">For Rugby World Cup 2027, Ticketmaster wanted to enable eligible stakeholders to purchase approved inventory directly within the platform, reducing operational overhead while creating a faster and more transparent purchasing experience. Achieving this required transforming a platform built for allocation management into a transactional purchasing experience supporting inventory discovery, seat selection, basket management, and checkout.</p>
+      </div>
+    </div>
+  </div>
+
+
+</section>
+
+<!-- ══════════════════════════════════════
+     02 · PROBLEM DEFINITION
+══════════════════════════════════════ -->
+<section class="cs-section">
+  <p class="section-label"><span class="num">02</span> Problem Definition</p>
+  <h2>What was broken, and why it mattered</h2>
+
+  <p>Before designing anything new, a heuristic and accessibility audit was conducted across the existing CTP experience. The goal was to surface the violations already present in the platform — issues that would follow us into the new purchasing flow if left unresolved. What emerged wasn't a list of cosmetic issues. Each finding mapped to a real failure mode in a high-stakes purchasing context.</p>
+
+  <div class="three-col-layout" style="display: grid; grid-template-columns: 200px 550px 200px; gap: 40px; align-items: center; justify-content: center; margin-top: 48px; margin-bottom: 48px; margin-left: -200px; margin-right: -200px;">
+    <!-- Left column -->
+    <div style="display: flex; flex-direction: column; gap: 40px;">
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <h3 style="font-size: 14px; font-weight: 700; color: var(--fg); margin: 0; line-height: 1.4;">1. The approval model is incompatible with real-time inventory</h3>
+        <p style="font-size: 13px; color: var(--muted-fg); line-height: 1.75; margin: 0;">When inventory drops unpredictably, the Request→Approval flow introduces too much latency. By the time approval completes, high-demand seats are gone. There is no mechanism for eligible stakeholders to act immediately.</p>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <h3 style="font-size: 14px; font-weight: 700; color: var(--fg); margin: 0; line-height: 1.4;">2. No transactional infrastructure exists on CTP</h3>
+        <p style="font-size: 13px; color: var(--muted-fg); line-height: 1.75; margin: 0;">CTP generates a "request entity" for payments — not an order entity. Basket, payment, and confirmation flows are net-new surfaces with no pattern to extend. Every design decision either creates a scalable foundation or a fragile workaround. This was not in the original brief — it surfaced through platform analysis.</p>
+      </div>
+    </div>
+
+    <!-- Center image -->
+    <div style="display: flex; justify-content: center;">
+      <img src="../../assets/EDP-old.svg" alt="EDP Old Experience" style="width: 550px; height: auto; display: block; border-radius: 8px; box-shadow: 0 4px 24px rgba(0,0,0,0.1);" />
+    </div>
+
+    <!-- Right column -->
+    <div style="display: flex; flex-direction: column; gap: 40px; align-items: flex-start; text-align: left;">
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <h3 style="font-size: 14px; font-weight: 700; color: var(--fg); margin: 0; line-height: 1.4;">3. Dual-mode stakeholder management creates collision risk</h3>
+        <p style="font-size: 13px; color: var(--muted-fg); line-height: 1.75; margin: 0;">Non-union corporates (RTSS) and participating unions (Request→Approval) operate differently. Nothing in the current design explicitly differentiates these flows — a corporate stakeholder could land in the wrong journey entirely.</p>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <h3 style="font-size: 14px; font-weight: 700; color: var(--fg); margin: 0; line-height: 1.4;">4. Platform decisions need to scale beyond RWC</h3>
+        <p style="font-size: 13px; color: var(--muted-fg); line-height: 1.75; margin: 0;">Market segments, CRC seat pools, and workflow routing are all configurable systems. Design decisions made for RWC 2027 will either scale across the platform or create tournament-specific debt for every subsequent client.</p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="cs-card" style="margin-top: 28px;">
+    <h3>Scope &amp; Constraints</h3>
+    <p style="margin-top: 8px;">To meet the Rugby World Cup 2027 delivery timeline, the MVP focused on enabling a complete end-to-end purchasing journey for eligible stakeholders. Several adjacent capabilities were intentionally deferred, handled by existing systems, or owned by separate teams to keep the project focused on the highest-impact user and business outcomes.</p>
+    <p style="font-size: 13px; font-weight: 600; color: var(--fg); margin: 16px 0 10px 0;">MVP Constraints</p>
+    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px;">
+      <li style="font-size: 13px; color: var(--muted-fg); line-height: 1.6; padding-left: 16px; position: relative;"><span style="position: absolute; left: 0; color: #2d67e4; font-size: 16px; line-height: 1;">•</span><strong style="color: var(--fg);">Interactive Seat Map</strong> — Planned as a separate workstream with an independent delivery timeline.</li>
+      <li style="font-size: 13px; color: var(--muted-fg); line-height: 1.6; padding-left: 16px; position: relative;"><span style="position: absolute; left: 0; color: #2d67e4; font-size: 16px; line-height: 1;">•</span><strong style="color: var(--fg);">Resale &amp; Ticket Management</strong> — Reserved for a future phase beyond the initial purchasing experience.</li>
+      <li style="font-size: 13px; color: var(--muted-fg); line-height: 1.6; padding-left: 16px; position: relative;"><span style="position: absolute; left: 0; color: #2d67e4; font-size: 16px; line-height: 1;">•</span><strong style="color: var(--fg);">Backoffice Configuration</strong> — Managed by a separate product team and excluded from the design scope.</li>
+      <li style="font-size: 13px; color: var(--muted-fg); line-height: 1.6; padding-left: 16px; position: relative;"><span style="position: absolute; left: 0; color: #2d67e4; font-size: 16px; line-height: 1;">•</span><strong style="color: var(--fg);">Invoice Generation</strong> — Existing invoicing infrastructure remained unchanged; the scope focused on invoice access and triggering within the purchasing flow.</li>
+      <li style="font-size: 13px; color: var(--muted-fg); line-height: 1.6; padding-left: 16px; position: relative;"><span style="position: absolute; left: 0; color: #2d67e4; font-size: 16px; line-height: 1;">•</span><strong style="color: var(--fg);">Ticket Holder Assignment (PSA)</strong> — Scheduled for a subsequent phase following the MVP launch.</li>
+      <li style="font-size: 13px; color: var(--muted-fg); line-height: 1.6; padding-left: 16px; position: relative;"><span style="position: absolute; left: 0; color: #2d67e4; font-size: 16px; line-height: 1;">•</span><strong style="color: var(--fg);">Entitlements Management</strong> — Deferred to a later release; the MVP relied on predefined purchase limits rather than entitlement-based controls.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     03 · USERS & CONTEXT
+══════════════════════════════════════ -->
+<section class="cs-section">
+  <p class="section-label"><span class="num">03</span> Users &amp; Context</p>
+  <h2>Who we were designing for</h2>
+
+  <p>Designing for corporate procurement introduced a fundamentally different mental model from consumer ticketing. The challenge was not only to support distinct purchasing behaviors, but also to create a shared platform experience that could serve multiple stakeholder groups with clarity and confidence.</p>
+
+  <div class="user-context" style="display: flex; flex-direction: column; gap: 15px; margin-top: 40px; margin-bottom: 40px;">
+    <div style="display: flex; align-items: flex-start; gap: 15px; padding: 28px; border: 1px solid #e5e7eb; border-radius: 12px; background: #ffffff; box-shadow: 0 0 40px rgba(45,103,228,0.08);">
+      <img src="../../assets/Corporate-buyer.svg" alt="Corporate Buyer" style="width: 56px; height: 56px; flex-shrink: 0;" />
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <p style="font-size: 15px; font-weight: 600; color: var(--fg); margin: 0;">The Corporate Buyer</p>
+        <p style="font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin: 0;">RTSS Purchase Flow · Sponsors, Commercial Partners, Key Accounts</p>
+        <p style="font-size: 13px; color: var(--muted-fg); line-height: 1.75; margin: 0;">A goal-driven user focused on securing specific inventory under time pressure. Unlike consumer ticket buyers, they operate within procurement workflows, often purchasing in volume and requiring clear visibility into allocation limits, purchasing constraints, and invoice-based fulfillment processes.</p>
+      </div>
+    </div>
+    <div style="display: flex; align-items: flex-start; gap: 15px; padding: 28px; border: 1px solid #e5e7eb; border-radius: 12px; background: #ffffff; box-shadow: 0 0 40px rgba(45,103,228,0.08);">
+      <img src="../../assets/Union-representative.svg" alt="Union Representative" style="width: 56px; height: 56px; flex-shrink: 0;" />
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <p style="font-size: 15px; font-weight: 600; color: var(--fg); margin: 0;">The Union Representative</p>
+        <p style="font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin: 0;">Request → Approval Flow · Participating Unions</p>
+        <p style="font-size: 13px; color: var(--muted-fg); line-height: 1.75; margin: 0;">Operates within an established allocation and approval process. As this workflow remained unchanged, the primary design consideration was maintaining clear separation from the RTSS purchasing experience and ensuring users were automatically routed to the correct flow upon login.</p>
+      </div>
+    </div>
+  </div>
+
+
+</section>
+
+<!-- ══════════════════════════════════════
+     04 · DISCOVERY & RESEARCH
+══════════════════════════════════════ -->
+<section class="cs-section">
+  <p class="section-label"><span class="num">04</span> Discovery &amp; Research</p>
+  <h2>Design Principles &amp; Constraints</h2>
+
+  <!-- Grid 1: text left, image right -->
+  <div class="s4-grid-1" style="display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; margin-top: 40px; margin-bottom: 48px;">
+    <div style="display: flex; flex-direction: column; gap: 16px;">
+      <h3 style="margin: 0; font-size: 18px;">Evaluating the Foundation</h3>
+      <p style="margin: 0;">Before introducing new capabilities, I assessed the existing ticket selection experience against usability and accessibility standards to understand where the current design was creating friction and where foundational issues needed to be addressed.</p>
+    </div>
+    <img src="../../assets/evaluating-the-foundation.svg" alt="Evaluating the Foundation" style="width: 100%; height: auto; display: block; border-radius: 8px;" />
+  </div>
+
+  <!-- Grid 2: image left, text right -->
+  <div class="s4-grid-2" style="display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; margin-bottom: 48px;">
+    <img src="../../assets/Understanding-the-Platform-Architecture.png" alt="Understanding the Platform Architecture" style="width: 100%; height: auto; display: block; border-radius: 8px;" />
+    <div style="display: flex; flex-direction: column; gap: 16px;">
+      <h3 style="margin: 0; font-size: 18px;">Understanding the Platform Architecture</h3>
+      <p style="margin: 0;">Before exploring interface solutions, I mapped the underlying platform architecture to understand how inventory, entitlement rules, ticket states, and financial systems interacted across CTP. This revealed that RTSS was fundamentally a platform integration challenge rather than a standalone workflow. By identifying upstream dependencies and downstream impacts early, the resulting solution could be designed as a reusable platform capability rather than a Rugby World Cup–specific implementation.</p>
+    </div>
+  </div>
+
+  <h3 style="margin-bottom: 12px; margin-top: 0; font-size: 18px;">Designing for a Different Mental Model</h3>
+  <p>A critical insight emerged early in the project: corporate procurement behaviour differs fundamentally from consumer ticket purchasing. Unlike fans who browse, compare, and explore options, corporate buyers typically arrive with a defined inventory objective and operate under strict time constraints.</p>
+  <p>This meant many familiar consumer-ticketing patterns were not only unnecessary but actively detrimental to task completion. The experience needed to prioritize operational efficiency through clear purchasing constraints, reduced decision friction, and procurement-focused post-purchase workflows.</p>
+  <p>Recognizing this distinction established a core design principle: <strong>optimize for execution, not discovery.</strong></p>
+
+  <div class="quotes-grid">
+    <div class="quote-card">
+      <div class="quote-text">"When inventory becomes available, speed matters more than discovery. I need to understand my limits, make a decision, and secure the seats before someone else does."</div>
+    </div>
+    <div class="quote-card">
+      <div class="quote-text">"Unlike a fan purchase, this is part of a procurement process. The confirmation is useful, but the invoice is what allows me to complete the transaction internally."</div>
+    </div>
+  </div>
+
+  <div style="border-top: 1px solid var(--border); margin-top: 40px;"></div>
+  <h3 style="margin-top: 32px; margin-bottom: 12px; font-size: 18px;">Constraints That Shaped the Design</h3>
+  <p style="margin-bottom: 32px;">Before exploring solutions, it was important to understand the platform, business, and operational constraints that would shape the final experience.</p>
+
+  <div style="display: flex; flex-direction: column; gap: 32px;">
+    <div>
+      <p style="font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin: 0 0 16px 0;">Platform Constraints</p>
+      <div class="constraints-list">
+        <div class="constraint-item">
+          <div class="constraint-dot" aria-hidden="true"></div>
+          <p><strong style="color: var(--fg); font-weight: 600;">CTP-Native Experience</strong> — The purchasing journey needed to be built entirely within CTP. A planned handoff to an existing Ticketmaster transactional surface was ruled out, requiring every stage — from inventory selection through confirmation — to be designed within the platform.</p>
+        </div>
+        <div class="constraint-item">
+          <div class="constraint-dot" aria-hidden="true"></div>
+          <p><strong style="color: var(--fg); font-weight: 600;">No Existing Order Model</strong> — CTP was built around request management rather than transactional purchasing. The platform did not contain a dedicated order entity, requiring post-purchase and confirmation states to be designed around a future B2B order model rather than existing request-based patterns.</p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <p style="font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin: 0 0 16px 0;">Business Constraints</p>
+      <div class="constraints-list">
+        <div class="constraint-item">
+          <div class="constraint-dot" aria-hidden="true"></div>
+          <p><strong style="color: var(--fg); font-weight: 600;">Configurable Purchase Limits</strong> — Purchase limits vary by client segment and are managed through back-office configuration. The experience could not rely on fixed Rugby World Cup values and needed to support changing entitlement rules without design changes.</p>
+        </div>
+        <div class="constraint-item">
+          <div class="constraint-dot" aria-hidden="true"></div>
+          <p><strong style="color: var(--fg); font-weight: 600;">Dual-Mode Platform</strong> — The platform needed to support both RTSS purchasing and the existing Request → Approval workflow. Preventing confusion between these operating models was critical, making workflow separation a core design requirement rather than a routing consideration.</p>
+        </div>
+        <div class="constraint-item">
+          <div class="constraint-dot" aria-hidden="true"></div>
+          <p><strong style="color: var(--fg); font-weight: 600;">Invoice-Driven Procurement</strong> — For corporate buyers, the transaction does not end at confirmation. Invoice access is a primary post-purchase action and needed to be treated as a first-class outcome alongside ticket fulfillment.</p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <p style="font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin: 0 0 16px 0;">Experience Constraints</p>
+      <div class="constraints-list">
+        <div class="constraint-item">
+          <div class="constraint-dot" aria-hidden="true"></div>
+          <p><strong style="color: var(--fg); font-weight: 600;">Basket as an Inventory Checkpoint</strong> — Unlike traditional ecommerce baskets, inventory remained highly dynamic throughout the transaction. The basket therefore functioned as an active validation checkpoint, continuously communicating availability, purchase limits, and purchasing constraints before checkout.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     05 · DESIGN PRINCIPLES
+══════════════════════════════════════ -->
+<section class="cs-section">
+  <p class="section-label"><span class="num">05</span> Design Principles</p>
+  <h2>The Three Objectives the Solution Had to Satisfy</h2>
+  <p>Before exploring solutions, I defined three success criteria that would guide the project. Every concept, interaction, and design decision was measured against these principles to ensure the experience remained focused on the core user and business objectives.</p>
+
+  <div class="principles-grid">
+    <div class="principle-item">
+      <div class="principle-label">01 · Leveraging Existing Allocation Technology</div>
+      <div class="principle-title">Rather than creating a new seat allocation system, the solution built upon an existing Best Available capability already used elsewhere in the business.</div>
+      <p class="principle-desc">The challenge was adapting the technology to support a different customer segment, purchasing model, and platform requirements while maintaining a familiar and scalable allocation experience.</p>
+    </div>
+    <div class="principle-item">
+      <div class="principle-label">02 · Operational Efficiency</div>
+      <div class="principle-title">Every interaction should move the buyer closer to securing inventory.</div>
+      <p class="principle-desc">This experience was designed for task completion, not exploration. Buyers arrive with a clear objective and limited time, making unnecessary decisions, navigation, or promotional patterns a source of friction rather than value.</p>
+    </div>
+    <div class="principle-item">
+      <div class="principle-label">03 · Platform Scalability</div>
+      <div class="principle-title">The solution must scale beyond a single tournament.</div>
+      <p class="principle-desc">Business rules, purchasing constraints, payment methods, and system states should be driven by configuration rather than event-specific logic. Designing for flexibility ensures the platform can support future tournaments, clients, and operational models without requiring fundamental redesign.</p>
+    </div>
+  </div>
+
+
+</section>
+
+<!-- ══════════════════════════════════════
+     06 · EXPLORATIONS & ITERATION
+══════════════════════════════════════ -->
+<section class="cs-section">
+  <p class="section-label"><span class="num">06</span> Explorations</p>
+  <h2>Exploration &amp; Trade-Offs</h2>
+
+  <div class="exploration-trade-offs" style="display: grid; grid-template-columns: 1fr 1.6fr; gap: 32px; margin-top: 40px; align-items: start;">
+    <!-- Left: cards -->
+    <div style="display: flex; flex-direction: column; gap: 12px;">
+
+      <!-- Card 1 — open by default -->
+      <div class="explore-card explore-card--open" data-concept="../../assets/concept-1.svg" style="border: 1px solid #e5e7eb; border-radius: 12px; overflow: hidden; cursor: pointer; background: #ffffff;">
+        <div class="explore-card-header" style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 20px; background: #1F1F1F;">
+          <h3 style="font-size: 14px; font-weight: 600; color: #ffffff; margin: 0; flex: 1;">Embedded Checkout Summary</h3>
+          <span style="font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; padding: 4px 10px; background: #ffffff; color: #000000; border-radius: 12px; white-space: nowrap;">Operational Efficiency</span>
+        </div>
+        <div class="explore-card-body" style="padding: 20px; display: block;">
+          <p style="font-size: 13px; font-style: italic; font-weight: 500; color: var(--fg); margin: 0 0 10px 0;">Why it was explored</p>
+          <p style="font-size: 13px; color: var(--muted-fg); line-height: 1.75; margin: 0 0 16px 0;">This direction introduced a persistent order summary alongside category selection, allowing buyers to see pricing, basket value, and selected inventory without leaving the page.</p>
+          <p style="font-size: 13px; font-style: italic; font-weight: 500; color: var(--fg); margin: 0 0 10px 0;">Why it wasn't selected</p>
+          <p style="font-size: 13px; color: var(--muted-fg); line-height: 1.75; margin: 0;">While the persistent summary improved visibility into purchase progress, it introduced unnecessary cognitive load during inventory selection. Buyers were required to process inventory discovery, category decisions, pricing, and checkout information simultaneously. For corporate buyers operating under FCFS conditions, the primary task is securing inventory as quickly as possible. Surfacing checkout concerns too early competed with the core decision-making process and increased visual complexity without meaningfully improving task completion.</p>
+        </div>
+      </div>
+
+      <!-- Card 2 — closed by default -->
+      <div class="explore-card" data-concept="../../assets/concept-2.svg" style="border: 1px solid #e5e7eb; border-radius: 12px; overflow: hidden; cursor: pointer; background: #ffffff;">
+        <div class="explore-card-header" style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 20px; background: #1F1F1F;">
+          <h3 style="font-size: 14px; font-weight: 600; color: #ffffff; margin: 0; flex: 1;">Seat Map-Led Selection</h3>
+          <span style="font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; padding: 4px 10px; background: #ffffff; color: #000000; border-radius: 12px; white-space: nowrap;">Platform Scalability</span>
+        </div>
+        <div class="explore-card-body" style="padding: 20px; display: none;">
+          <p style="font-size: 13px; font-style: italic; font-weight: 500; color: var(--fg); margin: 0 0 10px 0;">Why it was explored</p>
+          <p style="font-size: 13px; color: var(--muted-fg); line-height: 1.75; margin: 0 0 16px 0;">This direction centred the seat map as the primary interaction surface, allowing buyers to select inventory directly from a visual representation of the venue before entering the checkout flow.</p>
+          <p style="font-size: 13px; font-style: italic; font-weight: 500; color: var(--fg); margin: 0 0 10px 0;">Why it wasn't selected</p>
+          <p style="font-size: 13px; color: var(--muted-fg); line-height: 1.75; margin: 0;">Best Available allocation was designed to optimize speed, fairness, and inventory distribution at scale. Introducing a seat-map-led workflow added decision overhead without improving purchasing outcomes. The final solution focused on category-based selection, allowing users to secure inventory quickly while the allocation engine handled seat assignment behind the scenes.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: image -->
+    <div>
+      <img id="explore-concept-img" src="../../assets/concept-1.svg" alt="Concept preview" style="width: 100%; height: auto; display: block; border-radius: 8px; border: 1px solid #e5e7eb;" />
+    </div>
+  </div>
+
+  <script>
+    document.querySelectorAll('.explore-card').forEach(function(card) {
+      card.querySelector('.explore-card-header').addEventListener('click', function() {
+        document.querySelectorAll('.explore-card').forEach(function(c) {
+          c.querySelector('.explore-card-body').style.display = 'none';
+          c.classList.remove('explore-card--open');
+        });
+        card.querySelector('.explore-card-body').style.display = 'block';
+        card.classList.add('explore-card--open');
+        document.getElementById('explore-concept-img').src = card.getAttribute('data-concept');
+      });
+    });
+  </script>
+</section>
+
+<!-- ══════════════════════════════════════
+     08 · FINAL SOLUTION
+══════════════════════════════════════ -->
+<section class="cs-section">
+  <p class="section-label"><span class="num">07</span> Final Solution</p>
+  <h2>Design decisions, traced to user needs</h2>
+  <p>Design choices were informed by research, not personal preference. Every interaction, pattern, and prioritization was rooted in observed user behaviour and platform requirements.</p>
+
+  <video
+    src="../../assets/rtss-full-flow.mp4"
+    autoplay
+    muted
+    loop
+    playsinline
+    style="width: 100%; height: auto; display: block; border-radius: 12px; margin-top: 32px;"
+  ></video>
+
+</section>
+
+<!-- ══════════════════════════════════════
+     09 · IMPACT
+══════════════════════════════════════ -->
+<section class="cs-section">
+  <p class="section-label"><span class="num">08</span> What shipped and what it unlocked</p>
+  <h2>What happened after we shipped</h2>
+  <p>Measured against the equivalent pre-season window from the previous year, with the same B2B buyer cohort and comparable event inventory.</p>
+
+  <div class="metric-row">
+    <div class="metric-card">
+      <label>Time to purchase</label>
+      <div class="metric-num">TBC</div>
+      <p>RTSS vs. existing approval flow — target is minutes vs. hours</p>
+    </div>
+    <div class="metric-card">
+      <label>Over-limit error rate</label>
+      <div class="metric-num">TBC</div>
+      <p>If high post-launch, the purchase limit indicator needs iteration</p>
+    </div>
+    <div class="metric-card">
+      <label>Invoice download rate</label>
+      <div class="metric-num">TBC</div>
+      <p>Confirms whether primary CTA placement was justified</p>
+    </div>
+  </div>
+
+  <div class="card-grid" style="margin-top: 18px; grid-template-columns: 1fr;">
+    <div class="cs-card">
+      <label style="font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted-fg); display: block; margin-bottom: 10px; opacity: 0.6;">Design system</label>
+      <h3>Sports GDS contribution</h3>
+      <p>New states contributed: purchase limit indicator, FCFS inventory state, B2B payment states. State matrix for transactional edge cases — reusable for future CTP tournament flows.</p>
+    </div>
+  </div>
+
+
+</section>
+
+</div>
+
+</div>
+
+<!-- ══════════════════════════════════════
+     FOOTER NAV
+══════════════════════════════════════ -->
+<footer class="dark-footer" aria-label="Site footer">
+
+  <div class="df-inner">
+    <div class="df-left">
+      <p class="df-quote">Good design, like a well-tended garden, is built to outlast the hands that shaped it.</p>
+      <p class="df-caption">Made with care <3 and lots of coffee</p>
+    </div>
+    <div class="df-right">
+      <div class="df-contact-section">
+        <h3 class="df-contact-heading">Connect with me</h3>
+        <p class="df-contact">+91 8790575759</p>
+      </div>
+      <div class="df-links">
+        <a href="https://www.linkedin.com/in/rakshanda-kolhe-531687210" class="df-link" target="_blank" rel="noopener" data-cursor-label="Open LinkedIn">LinkedIn</a>
+        <a href="https://www.behance.net/rakshandakolhe1" class="df-link" target="_blank" rel="noopener" data-cursor-label="Open Behance">Behance</a>
+        <a href="https://drive.google.com/file/d/1PYxmC6yKE62FCQMmw7hzZY3tdsDJgcpa/view?usp=sharing" class="df-link" data-cursor-label="Open resume">Resume</a>
+        <a href="mailto:rakshandakolhe@yahoo.in" class="df-link" data-cursor-label="Send email">Email</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="df-garden" aria-hidden="true"></div>
+
+  <div class="df-bottom">
+    <p>© 2026 Rakshanda Kolhe · All work under NDA where noted</p>
+  </div>
+
+</footer>
+
+<script src="../../js/garden.js"></script>
+
+<script>
+/* Reveal */
+const revealEls = document.querySelectorAll('.reveal');
+const revObs = new IntersectionObserver(
+  (entries) => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); revObs.unobserve(e.target); } }),
+  { threshold: 0.06, rootMargin: '0px 0px -32px 0px' }
+);
+revealEls.forEach(el => revObs.observe(el));
+
+/* Mobile dropdown */
+const hamburger = document.getElementById('navHamburger');
+const dropdown  = document.getElementById('navDropdown');
+function openDD()  { hamburger.classList.add('is-open'); hamburger.setAttribute('aria-expanded','true'); hamburger.setAttribute('aria-label','Close navigation menu'); dropdown.classList.add('is-open'); dropdown.setAttribute('aria-hidden','false'); }
+function closeDD() { hamburger.classList.remove('is-open'); hamburger.setAttribute('aria-expanded','false'); hamburger.setAttribute('aria-label','Open navigation menu'); dropdown.classList.remove('is-open'); dropdown.setAttribute('aria-hidden','true'); }
+hamburger.addEventListener('click', e => { e.stopPropagation(); dropdown.classList.contains('is-open') ? closeDD() : openDD(); });
+document.addEventListener('click', e => { if (!hamburger.contains(e.target) && !dropdown.contains(e.target)) closeDD(); });
+dropdown.querySelectorAll('a').forEach(a => a.addEventListener('click', closeDD));
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDD(); });
+
+/* Custom cursor */
+if (window.matchMedia('(pointer: fine)').matches) {
+  const cursor = document.getElementById('customCursor');
+  const badge  = document.getElementById('cursorBadge');
+  let mx = -200, my = -200, rid;
+  cursor.classList.add('visible');
+  function move() { cursor.style.transform = `translate(${mx-6}px,${my-4}px)`; rid = null; }
+  document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; if (!rid) rid = requestAnimationFrame(move); });
+  document.addEventListener('mouseleave', () => cursor.classList.remove('visible'));
+  document.addEventListener('mouseenter', () => cursor.classList.add('visible'));
+  document.querySelectorAll('[data-cursor-label],a,button,.cs-back,.cs-footer-nav a,.dd-link,.dd-cta').forEach(el => {
+    el.addEventListener('mouseenter', () => { const t = el.getAttribute('data-cursor-label') || ''; if (t) { badge.textContent = t; badge.classList.add('show'); } });
+    el.addEventListener('mouseleave', () => badge.classList.remove('show'));
+  });
+}
+</script>
+
+</body>
+</html>

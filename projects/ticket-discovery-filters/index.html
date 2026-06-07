@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ticket Discovery Filters — Rakshanda Kolhe</title>
+  <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg" />
+  <meta name="description" content="Redesigning ticket discovery filters into a scalable multi-tournament system — a case study by Rakshanda Kolhe." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="../../css/portfolio.css" />
+</head>
+<body>
+
+<nav class="island-nav" aria-label="Primary navigation">
+  <div class="nav-profile" aria-hidden="true">
+    <img src="../../assets/profile.svg" alt="" />
+  </div>
+  <a href="../../index.html" class="nav-link" data-cursor-label="Home">Home</a>
+  <a href="../../index.html#work"  class="nav-link" data-cursor-label="View work">Work</a>
+  <a href="../../index.html#about" class="nav-link" data-cursor-label="About me">About</a>
+  <a href="https://drive.google.com/file/d/1PYxmC6yKE62FCQMmw7hzZY3tdsDJgcpa/view?usp=sharing" class="nav-link" target="_blank" rel="noopener" data-cursor-label="Open resume">Resume</a>
+  <a href="mailto:rakshandakolhe@yahoo.in" class="nav-cta" data-cursor-label="Send email">Let's connect</a>
+  <button class="nav-hamburger" id="navHamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navDropdown">
+    <span class="hb-line"></span>
+    <span class="hb-line"></span>
+    <span class="hb-line"></span>
+  </button>
+</nav>
+<div class="nav-dropdown" id="navDropdown" role="navigation" aria-label="Mobile navigation" aria-hidden="true">
+  <a href="../../index.html" class="dd-link">Home</a>
+  <a href="../../index.html#work"  class="dd-link dd-active">Work</a>
+  <a href="../../index.html#about" class="dd-link">About</a>
+  <a href="https://drive.google.com/file/d/1PYxmC6yKE62FCQMmw7hzZY3tdsDJgcpa/view?usp=sharing" class="dd-link" target="_blank" rel="noopener">Resume ↗</a>
+  <a href="mailto:rakshandakolhe@yahoo.in" class="dd-cta">Let's connect</a>
+</div>
+<div class="custom-cursor" id="customCursor" aria-hidden="true">
+  <svg class="cursor-arrow" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g filter="url(#cs)">
+      <path d="M8.75418 20L5.62291 4.04089L20 11.9182L12.9181 13.9727L8.75418 20Z" fill="black"/>
+      <path d="M8.75418 20L5.62291 4.04089L20 11.9182L12.9181 13.9727L8.75418 20Z" stroke="white"/>
+    </g>
+    <defs><filter id="cs" x="2.9248" y="2.09058" width="20.3721" height="22.1735" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/><feOffset dy="1"/><feGaussianBlur stdDeviation="1"/><feComposite in2="hardAlpha" operator="out"/><feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/><feBlend mode="normal" in2="BackgroundImageFix" result="e1"/><feBlend mode="normal" in="SourceGraphic" in2="e1" result="shape"/></filter></defs>
+  </svg>
+  <div class="cursor-badge" id="cursorBadge"></div>
+</div>
+
+<div class="page">
+
+<!-- ══════════════════════════════════════
+     HERO
+══════════════════════════════════════ -->
+<div class="cs-hero">
+  <div class="cs-hero-inner">
+
+    <a href="../../index.html" class="cs-back">
+      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true" style="transform:scaleX(-1)"><path d="M19 12H5M12 5l7 7-7 7"/></svg>
+      Back to work
+    </a>
+
+    <div class="cs-hero-split">
+      <div class="cs-hero-split-left">
+        <h1 class="cs-hero-title">
+          Redesigned Ticket Discovery Filters Into a Scalable Multi-Tournament System
+        </h1>
+        <p class="cs-hero-desc" style="margin-bottom: 20px;">
+          What started as a tournament-specific requirement became a scalable filtering system, establishing a responsive architecture that improved consistency, accessibility, and long-term reuse across future events and client deployments.
+        </p>
+
+        <div class="hero-pills" style="margin-top: 0; margin-bottom: 40px; display: flex; gap: 16px;">
+          <div style="display: flex; align-items: center; gap: 0; padding: 8px 20px 8px 16px; background: #000000; border-radius: 9999px;">
+            <img src="../../assets/RWC2027.svg" alt="Men's Rugby World Cup" style="width: 30px; height: 30px; flex-shrink: 0;">
+            <a href="https://rwc2027.rugbyworldcup.com/" style="font-size: 12px; font-weight: 500; color: #ffffff; text-decoration: underline;">Mens Rugby World Cup'27 ↗</a>
+          </div>
+          <div style="display: flex; align-items: center; gap: 0; padding: 8px 20px 8px 16px; background: #000000; border-radius: 9999px;">
+            <img src="../../assets/Asian_Games_logo.svg" alt="Asian Games" style="width: 30px; height: 30px; flex-shrink: 0;">
+            <a href="https://presale.tickets-aichi-nagoya2026.org/" style="font-size: 12px; font-weight: 500; color: #ffffff; text-decoration: underline;">Asian Games'26 ↗</a>
+          </div>
+        </div>
+
+        <div class="cs-meta-row">
+          <div class="cs-meta-item">
+            <label>My Role</label>
+            <span class="meta-val">Product Designer</span>
+          </div>
+          <div class="cs-meta-item">
+            <label>Skills</label>
+            <span class="meta-val">IA</span>
+            <span class="meta-val">UX Systems</span>
+            <span class="meta-val">Design System</span>
+            <span class="meta-val">A/B Testing</span>
+          </div>
+          <div class="cs-meta-item">
+            <label>Platform</label>
+            <span class="meta-val">Web</span>
+            <span class="meta-val">Mobile</span>
+          </div>
+        </div>
+      </div>
+      <div class="cs-hero-split-right">
+        <img src="../../assets/filter-phone.svg" alt="Filter phone mockup" class="cs-hero-phone-img" />
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     OUTCOME BANNER
+══════════════════════════════════════ -->
+<div class="outcome-banner">
+  <div class="outcome-inner outcome-inner--principles">
+    <div class="outcome-principles-header">
+      <h2 class="outcome-principles-heading">Design Principles</h2>
+      <p class="outcome-principles-sub">Before exploring solutions, I defined three non-negotiables that any direction had to satisfy.</p>
+    </div>
+    <div class="outcome-principles-grid">
+      <div class="outcome-principle-item">
+        <div class="outcome-principle-num">01</div>
+        <h3 class="outcome-principle-title">Reduce cognitive load during high-intent browsing</h3>
+        <p class="outcome-principle-desc">Interface patterns are implementation details; preserving user context is the product principle. The final solution optimized for clarity, decision confidence, and scalability, enabling users to navigate complex inventory without losing orientation or control.</p>
+      </div>
+      <div class="outcome-principle-item">
+        <div class="outcome-principle-num">02</div>
+        <h3 class="outcome-principle-title">Treat accessibility as a system behaviour, not a compliance layer</h3>
+        <p class="outcome-principle-desc">System-level problems require system-level solutions. By treating accessibility requirements as part of the component contract, the organisation shifts from enforcing compliance at the screen level to enabling consistency at scale.</p>
+      </div>
+      <div class="outcome-principle-item">
+        <div class="outcome-principle-num">03</div>
+        <h3 class="outcome-principle-title">Build reusable interaction patterns that scale operationally</h3>
+        <p class="outcome-principle-desc">Product decisions were evaluated through a platform lens rather than a tournament lens. The objective was not simply to solve today's requirements, but to create reusable foundations that future teams could inherit, configure, and scale with confidence.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     01 · CONTEXT & STAKES
+══════════════════════════════════════ -->
+<div style="background: #ffffff;">
+<section class="cs-section">
+  <p class="section-label"><span class="num">01</span> Context & Stakes</p>
+  <h2>What was broken, and why it mattered</h2>
+
+  <p>Filters were one of the highest-leverage interaction points in the ticket discovery experience, directly influencing how quickly fans could narrow large inventories during high-traffic tournament launches.</p>
+  <p>However, the existing implementation had diverged across tournaments over time, resulting in inconsistent interaction patterns, duplicated implementation effort, and accessibility gaps — especially on mobile devices where the majority of browsing sessions occurred.</p>
+
+  <div class="broken-layout">
+    <div class="broken-col broken-col--left">
+      <div class="broken-block">
+        <h3 class="broken-block-title">01 · Mobile interactions were optimised poorly for dense ticket inventories</h3>
+        <p class="broken-block-desc">Desktop filtering behaviours had been compressed into smaller screens rather than intentionally redesigned for mobile-first usage, creating friction during high-pressure browsing flows.</p>
+      </div>
+      <div class="broken-block">
+        <h3 class="broken-block-title">02 · Accessibility behaviours were inconsistent and difficult to scale</h3>
+        <p class="broken-block-desc">Focus management, keyboard support, semantic hierarchy, and touch target behaviour varied across implementations, increasing both usability and compliance risk.</p>
+      </div>
+    </div>
+    <div class="broken-col broken-col--center">
+      <video src="../../assets/what-didnt-work.mp4" autoplay loop muted playsinline class="broken-video"></video>
+      <p style="font-size: 12px; color: var(--muted-fg); text-align: center; opacity: 0.7;">Old filter implementation</p>
+    </div>
+    <div class="broken-col broken-col--right">
+      <div class="broken-block">
+        <h3 class="broken-block-title">03 · Tournament implementations had fragmented over time</h3>
+        <p class="broken-block-desc">Different tournaments solved filtering independently, leading to duplicated design and engineering effort across launches.</p>
+      </div>
+      <div class="broken-block">
+        <h3 class="broken-block-title">04 · The system lacked a scalable responsive interaction model</h3>
+        <p class="broken-block-desc">The experience behaved differently across breakpoints without a unified behavioural framework for responsive adaptation.</p>
+      </div>
+    </div>
+  </div>
+
+  <h3 style="margin-top:48px;font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:28px;">The Challenge</h3>
+  <p>The challenge was not simply redesigning a UI component, but defining a reusable interaction model that could balance responsiveness, accessibility, scalability, and implementation feasibility across a shared platform ecosystem.</p>
+
+</section>
+</div>
+
+<!-- ══════════════════════════════════════
+     02 · PROBLEM DEFINITION
+══════════════════════════════════════ -->
+<div style="background: #ffffff;">
+<section class="cs-section">
+  <p class="section-label"><span class="num">02</span> Problem Definition</p>
+  <h2>Constraints that shaped the design</h2>
+
+  <p>The principles defined the direction. These constraints defined the boundaries.</p>
+
+  <div class="constraints-grid">
+    <div class="constraint-card">
+      <span class="constraint-num">01</span>
+      <h3 class="constraint-title">Tournament delivery timelines</h3>
+      <p class="constraint-desc">The redesign needed to ship within an active Rugby World Cup delivery cycle with limited opportunity for large architectural changes.</p>
+    </div>
+    <div class="constraint-card">
+      <span class="constraint-num">02</span>
+      <h3 class="constraint-title">Existing platform and Storybook limitations</h3>
+      <p class="constraint-desc">Solutions needed to work within existing component infrastructure and implementation realities.</p>
+    </div>
+    <div class="constraint-card">
+      <span class="constraint-num">03</span>
+      <h3 class="constraint-title">Cross-tournament scalability requirements</h3>
+      <p class="constraint-desc">The design needed to support multiple tournament configurations without fragmenting the experience further.</p>
+    </div>
+    <div class="constraint-card">
+      <span class="constraint-num">04</span>
+      <h3 class="constraint-title">Accessibility expectations across responsive breakpoints</h3>
+      <p class="constraint-desc">Interaction behavior needed to remain accessible and predictable across both desktop and mobile contexts.</p>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- ══════════════════════════════════════
+     03 · USERS & CONTEXT
+══════════════════════════════════════ -->
+<div style="background: #ffffff;">
+<section class="cs-section">
+  <p class="section-label"><span class="num">03</span> Users & Context</p>
+  <h2>Who We Were Designing For</h2>
+
+  <p>The challenge wasn't designing for a single user—it was designing for multiple decision-making models within the same experience. Each audience arrived with different goals, behaviours, and levels of urgency, making adaptability a core requirement rather than an enhancement.</p>
+
+  <div class="media-card">
+    <img src="../../assets/avatar-returning-fan.png" alt="Returning Fan" class="media-card-avatar" />
+    <div class="media-card-body">
+      <p class="media-card-title"><strong>Returning Fan</strong><br><span class="media-card-descriptor">Efficiency-first, friction-intolerant</span></p>
+    </div>
+    <p class="media-card-desc">Already knows the tournament, the teams, and roughly what they want. They arrive to confirm availability and complete a purchase — not to browse. For this user, filters are the critical path. Every redundant tap, unclear state, or lost filter selection is a signal that the platform isn't worth trusting with a high-value purchase.</p>
+  </div>
+
+  <div class="media-card">
+    <img src="../../assets/avatar-dedicated-fan.png" alt="Dedicated Fan" class="media-card-avatar" />
+    <div class="media-card-body">
+      <p class="media-card-title"><strong>Dedicated Fan</strong><br><span class="media-card-descriptor">High-frequency, architecture stress-tester</span></p>
+    </div>
+    <p class="media-card-desc">Emotionally invested, highly specific, and willing to iterate rapidly across filter combinations to find exactly the right match, seat category, or price tier. This user exposes every performance and responsiveness gap — repeated filter adjustments during high-demand launch windows are exactly the condition under which a poorly architected system degrades. Designing for this user meant designing for the system at load, not at rest.</p>
+  </div>
+
+  <div class="media-card">
+    <img src="../../assets/avatar-casual-explorer.png" alt="Casual Explorer" class="media-card-avatar" />
+    <div class="media-card-body">
+      <p class="media-card-title"><strong>Casual Explorer</strong><br><span class="media-card-descriptor">Discovery-first, easily lost</span></p>
+    </div>
+    <p class="media-card-desc">Browsing across 26+ sports and hundreds of sessions with no fixed intent creates a specific kind of cognitive pressure — too many choices with no natural entry point. For this user, a cluttered or dense filter pattern doesn't just cause friction, it causes exit. The filter system needed to reduce the decision surface progressively, surfacing relevance without demanding that the user already know what they're looking for.</p>
+  </div>
+
+  <div class="media-card">
+    <img src="../../assets/avatar-international-buyer.png" alt="International Buyer" class="media-card-avatar" />
+    <div class="media-card-body">
+      <p class="media-card-title"><strong>International Buyer</strong><br><span class="media-card-descriptor">Unfamiliar ecosystem, highest cognitive load</span></p>
+    </div>
+    <p class="media-card-desc">Purchasing tickets across unfamiliar venues, tournament structures, and cultural contexts — often on mobile, often without the prior knowledge that makes filter labels intuitive. For this user, any inconsistency in interaction behavior reads as platform unreliability. Predictability wasn't a nice-to-have — it was the only way this user could trust the system enough to complete a purchase.</p>
+  </div>
+
+</section>
+</div>
+
+<!-- ══════════════════════════════════════
+     04 · DISCOVERY & RESEARCH
+══════════════════════════════════════ -->
+<div style="background: #ffffff;">
+<section class="cs-section">
+  <p class="section-label"><span class="num">04</span> Discovery & Research</p>
+  <h2>Iterating Toward a Scalable Filtering Architecture</h2>
+
+  <p>To define a scalable filtering experience across desktop and mobile, I explored multiple interaction models and evaluated them against accessibility requirements, responsive behaviour, implementation feasibility, and browsing efficiency during high-density ticket discovery flows. The goal was not simply to redesign filters visually, but to establish a reusable interaction framework that could scale consistently across future tournaments and devices.</p>
+
+  <div class="iteration-grid">
+    <div class="iteration-cards">
+      <div class="iteration-card iteration-card--open" data-video="../../assets/filter-interaction.mp4">
+        <div class="iteration-card-header">
+          <h3 class="iteration-card-title">Side Slider</h3>
+          <span class="iteration-card-pill">Breaks cognitive load</span>
+        </div>
+        <div class="iteration-card-content">
+          <p>Meeting the 44px minimum touch target requirement increased the height of each filter row, which significantly extended the overall filter panel. As a result, users needed to scroll through more filter options before reaching the controls they needed. For fans making time-sensitive purchase decisions, maintaining context and moving efficiently through the experience is critical. This highlighted an opportunity to balance accessibility requirements with a more streamlined navigation experience.</p>
+        </div>
+      </div>
+      <div class="iteration-card" data-video="../../assets/bottom-sheet.mp4">
+        <div class="iteration-card-header">
+          <h3 class="iteration-card-title">Bottom Slider</h3>
+          <span class="iteration-card-pill">System-Level Accessibility</span>
+        </div>
+        <div class="iteration-card-content">
+          <p>The decision was guided by implementation quality rather than feature scope. The pattern required additional accessibility validation to ensure a consistent experience across devices and assistive technologies, making a more mature and thoroughly validated approach the stronger long-term choice.</p>
+        </div>
+      </div>
+      <div class="iteration-card" data-video="../../assets/embed.mp4">
+        <div class="iteration-card-header">
+          <h3 class="iteration-card-title">Embed Filters</h3>
+          <span class="iteration-card-pill">breaks all principles</span>
+        </div>
+        <div class="iteration-card-content">
+          <p>Embedding filters directly within the listing meant both filtering controls and listing content shared the same vertical space. Accommodating 44px tap targets within that layout introduced constraints that reduced the effectiveness of each. As the experience expanded across 26+ sports with varying filter combinations, the pattern showed limited flexibility to scale while maintaining the same level of usability, accessibility, and content visibility.</p>
+        </div>
+      </div>
+      <div class="iteration-card" data-video="../../assets/fullscreen-dropdown.mp4">
+        <div class="iteration-card-header">
+          <h3 class="iteration-card-title">Full-screen Dropdown</h3>
+          <span class="iteration-card-pill">Breaks cognitive load</span>
+        </div>
+        <div class="iteration-card-content">
+          <p>The pattern established clear visual hierarchy for filtering and performed well against P2 and P3 requirements. However, testing with realistic content volumes revealed scalability challenges. As multiple filter categories accumulated, users often needed to scroll to access lower-level options, increasing the likelihood of unintended interactions when filter controls remained active during navigation. Across a catalogue spanning 26+ sports and multi-week date ranges, this became a common usage scenario rather than an exception. Preserving a user's position and context throughout the browsing journey emerged as an important consideration, particularly for fans making time-sensitive purchasing decisions.</p>
+        </div>
+      </div>
+    </div>
+    <div class="iteration-video">
+      <video src="../../assets/filter-interaction.mp4" autoplay loop muted playsinline class="iteration-video-player"></video>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- ══════════════════════════════════════
+     05 · FINAL DIRECTION
+══════════════════════════════════════ -->
+<div style="background: #ffffff;">
+<section class="cs-section">
+  <p class="section-label"><span class="num">05</span> Final Direction</p>
+  <h2>The design decisions that made it scale</h2>
+
+  <div class="final-direction-stack">
+    <div class="fd-step-item">
+      <div class="fd-circle">1</div>
+      <div class="fd-content">
+        <h3 class="fd-title">Interaction Model</h3>
+        <p class="fd-desc">The final solution adopted a full-screen filter experience with nested drill-down navigation, purpose-built for mobile ticket discovery during high-demand sporting events. Rather than embedding filters within the listing, filtering and browsing were treated as separate tasks, keeping the ticket inventory fully visible while users refined results.</p>
+      </div>
+    </div>
+
+    <div class="fd-step-item">
+      <div class="fd-circle">2</div>
+      <div class="fd-content">
+        <h3 class="fd-title">Architecture</h3>
+        <p class="fd-desc">Complex filter dimensions were handled through dedicated drill-down screens, while simpler dimensions used lightweight selection controls. High-volume categories supported searchable multi-select interactions, creating a flexible framework capable of scaling across large tournament datasets, varied filter combinations, and future event configurations.</p>
+      </div>
+    </div>
+
+    <div class="fd-step-item">
+      <div class="fd-circle">3</div>
+      <div class="fd-content">
+        <h3 class="fd-title">User Experience</h3>
+        <p class="fd-desc">Active filters remained visible at the parent level, enabling users to review, adjust, or remove selections without repeatedly navigating nested states. A persistent filter summary and clear reset controls improved recoverability, reduced interaction friction, and helped users maintain context during time-sensitive purchasing journeys.</p>
+      </div>
+    </div>
+
+    <div class="fd-step-item">
+      <div class="fd-circle">4</div>
+      <div class="fd-content">
+        <h3 class="fd-title">Outcome</h3>
+        <p class="fd-desc">The result was a scalable filtering system that improved touch accuracy, reduced unintended selections, and established a reusable interaction pattern that could support multiple sports, tournaments, and future platform expansion while maintaining a clear and efficient mobile experience.</p>
+      </div>
+    </div>
+  </div>
+
+  <video width="100%" autoplay muted loop style="margin-top: 40px; border-radius: 8px;">
+    <source src="../../assets/final-desktop-and-mobile-view-filter.mp4" type="video/mp4">
+  </video>
+
+  <div style="margin-top: 40px; padding: 10px; background: var(--accent-light); border: 1px solid var(--accent-mid); border-radius: 8px; display: flex; align-items: center; gap: 16px;">
+    <span style="font-size: 24px; flex-shrink: 0;">🔗</span>
+    <p style="margin: 0;">Test out the filter yourself on the official websites for <a href="https://presale.tickets-aichi-nagoya2026.org/" style="color: var(--accent); text-decoration: underline;">Asian Games</a> and <a href="https://rwc2027.rugbyworldcup.com/" style="color: var(--accent); text-decoration: underline;">Men's Rugby World cup</a>!</p>
+  </div>
+</section>
+</div>
+
+<!-- ══════════════════════════════════════
+     06 · OPERATIONAL IMPACT
+══════════════════════════════════════ -->
+<div style="background: #ffffff;">
+<section class="cs-section">
+  <p class="section-label"><span class="num">06</span> Operational Impact</p>
+  <h2>What changed across the organization</h2>
+
+  <div class="impact-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 50px;">
+    <div style="display: flex; flex-direction: column; gap: 20px; padding: 32px; background: linear-gradient(135deg, #f9fafb 0%, #ffffff 100%); border: 1px solid var(--border); border-radius: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); position: relative; overflow: hidden;">
+      <div style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--accent) 0%, var(--accent-mid) 100%);"></div>
+      <div style="width: 40px; height: 40px; background: var(--accent-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; color: var(--accent); font-size: 18px;">01</div>
+      <h3 style="font-size: 16px; font-weight: 600; color: var(--fg); margin: 0; line-height: 1.35;">Established a reusable filtering foundation across tournaments</h3>
+      <p style="font-size: 13px; color: var(--muted-fg); line-height: 1.7; margin: 0;">The redesigned interaction model became the baseline pattern for future tournament implementations, reducing repeated redesign and implementation effort.</p>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 20px; padding: 32px; background: linear-gradient(135deg, #f9fafb 0%, #ffffff 100%); border: 1px solid var(--border); border-radius: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); position: relative; overflow: hidden;">
+      <div style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--accent) 0%, var(--accent-mid) 100%);"></div>
+      <div style="width: 40px; height: 40px; background: var(--accent-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; color: var(--accent); font-size: 18px;">02</div>
+      <h3 style="font-size: 16px; font-weight: 600; color: var(--fg); margin: 0; line-height: 1.35;">Improved accessibility readiness across responsive experiences</h3>
+      <p style="font-size: 13px; color: var(--muted-fg); line-height: 1.7; margin: 0;">Accessibility considerations became embedded within the filtering interaction architecture rather than treated as post-implementation fixes.</p>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 20px; padding: 32px; background: linear-gradient(135deg, #f9fafb 0%, #ffffff 100%); border: 1px solid var(--border); border-radius: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); position: relative; overflow: hidden;">
+      <div style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--accent) 0%, var(--accent-mid) 100%);"></div>
+      <div style="width: 40px; height: 40px; background: var(--accent-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; color: var(--accent); font-size: 18px;">03</div>
+      <h3 style="font-size: 16px; font-weight: 600; color: var(--fg); margin: 0; line-height: 1.35;">Increased long-term scalability of the ticket discovery experience</h3>
+      <p style="font-size: 13px; color: var(--muted-fg); line-height: 1.7; margin: 0;">The project shifted filtering from a tournament-specific implementation model toward a reusable platform capability</p>
+    </div>
+  </div>
+</section>
+</div>
+
+</div>
+
+<footer class="dark-footer" aria-label="Site footer">
+
+  <div class="df-inner">
+    <div class="df-left">
+      <p class="df-quote">Good design, like a well-tended garden, is built to outlast the hands that shaped it.</p>
+      <p class="df-caption">Made with care <3 and lots of coffee</p>
+    </div>
+    <div class="df-right">
+      <div class="df-contact-section">
+        <h3 class="df-contact-heading">Connect with me</h3>
+        <p class="df-contact">+91 8790575759</p>
+      </div>
+      <div class="df-links">
+        <a href="https://www.linkedin.com/in/rakshanda-kolhe-531687210" class="df-link" target="_blank" rel="noopener" data-cursor-label="Open LinkedIn">LinkedIn</a>
+        <a href="https://www.behance.net/rakshandakolhe1" class="df-link" target="_blank" rel="noopener" data-cursor-label="Open Behance">Behance</a>
+        <a href="https://drive.google.com/file/d/1PYxmC6yKE62FCQMmw7hzZY3tdsDJgcpa/view?usp=sharing" class="df-link" data-cursor-label="Open resume">Resume</a>
+        <a href="mailto:rakshandakolhe@yahoo.in" class="df-link" data-cursor-label="Send email">Email</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="df-garden" aria-hidden="true"></div>
+
+  <div class="df-bottom">
+    <p>© 2026 Rakshanda Kolhe · All work under NDA where noted</p>
+  </div>
+
+</footer>
+
+<script src="../../js/garden.js"></script>
+
+<script>
+/* Reveal */
+const revealEls = document.querySelectorAll('.reveal');
+const revObs = new IntersectionObserver(
+  (entries) => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); revObs.unobserve(e.target); } }),
+  { threshold: 0.06, rootMargin: '0px 0px -32px 0px' }
+);
+revealEls.forEach(el => revObs.observe(el));
+
+/* Mobile dropdown */
+const hamburger = document.getElementById('navHamburger');
+const dropdown  = document.getElementById('navDropdown');
+function openDD()  { hamburger.classList.add('is-open'); hamburger.setAttribute('aria-expanded','true'); hamburger.setAttribute('aria-label','Close navigation menu'); dropdown.classList.add('is-open'); dropdown.setAttribute('aria-hidden','false'); }
+function closeDD() { hamburger.classList.remove('is-open'); hamburger.setAttribute('aria-expanded','false'); hamburger.setAttribute('aria-label','Open navigation menu'); dropdown.classList.remove('is-open'); dropdown.setAttribute('aria-hidden','true'); }
+hamburger.addEventListener('click', e => { e.stopPropagation(); dropdown.classList.contains('is-open') ? closeDD() : openDD(); });
+document.addEventListener('click', e => { if (!hamburger.contains(e.target) && !dropdown.contains(e.target)) closeDD(); });
+dropdown.querySelectorAll('a').forEach(a => a.addEventListener('click', closeDD));
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDD(); });
+
+/* Iteration card accordion and video switching */
+document.querySelectorAll('.iteration-card-header').forEach(header => {
+  header.addEventListener('click', () => {
+    const card = header.closest('.iteration-card');
+    const allCards = document.querySelectorAll('.iteration-card');
+
+    // Close all cards except the clicked one
+    allCards.forEach(c => {
+      if (c !== card) {
+        c.classList.remove('iteration-card--open');
+      }
+    });
+
+    // Open the clicked card
+    card.classList.add('iteration-card--open');
+
+    // Switch video if card has data-video attribute
+    const videoSrc = card.getAttribute('data-video');
+    if (videoSrc) {
+      const videoPlayer = document.querySelector('.iteration-video-player');
+      if (videoPlayer) {
+        videoPlayer.src = videoSrc;
+        videoPlayer.play();
+      }
+    }
+  });
+});
+
+/* Custom cursor */
+if (window.matchMedia('(pointer: fine)').matches) {
+  const cursor = document.getElementById('customCursor');
+  const badge  = document.getElementById('cursorBadge');
+  let mx = -200, my = -200, rid;
+  cursor.classList.add('visible');
+  function move() { cursor.style.transform = `translate(${mx-6}px,${my-4}px)`; rid = null; }
+  document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; if (!rid) rid = requestAnimationFrame(move); });
+  document.addEventListener('mouseleave', () => cursor.classList.remove('visible'));
+  document.addEventListener('mouseenter', () => cursor.classList.add('visible'));
+  document.querySelectorAll('[data-cursor-label],a,button,.cs-back,.cs-footer-nav a,.dd-link,.dd-cta').forEach(el => {
+    el.addEventListener('mouseenter', () => { const t = el.getAttribute('data-cursor-label') || ''; if (t) { badge.textContent = t; badge.classList.add('show'); } });
+    el.addEventListener('mouseleave', () => badge.classList.remove('show'));
+  });
+}
+</script>
+
+</body>
+</html>

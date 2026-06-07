@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rakshanda Senior Designer Portfolio</title>
+  <meta name="description" content="Senior Product Designer specialising in platform design, enterprise B2B workflows, scalable design systems, and end-to-end product strategy." />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="css/portfolio.css" />
+</head>
+<body>
+
+<!-- ══════════════════════════════════════
+     ISLAND NAVIGATION
+     Desktop: [profile] [Work] [About] [Resume] [Let's connect]
+     Mobile:  [profile] [hamburger/✕]  → dropdown below
+══════════════════════════════════════ -->
+<nav class="island-nav" aria-label="Primary navigation">
+
+  <!-- Profile — always visible on desktop + mobile -->
+  <div class="nav-profile" aria-hidden="true">
+    <img src="assets/profile.svg" alt="" />
+  </div>
+
+  <!-- Desktop nav links -->
+  <a href="https://drive.google.com/file/d/1PYxmC6yKE62FCQMmw7hzZY3tdsDJgcpa/view?usp=sharing"      class="nav-link nav-active" data-section="home"  data-cursor-label="Home">Home</a>
+  <a href="#work"  class="nav-link"            data-section="work"  data-cursor-label="View work">Work</a>
+  <a href="#about" class="nav-link"            data-section="about" data-cursor-label="About me">About</a>
+  <a href="https://drive.google.com/file/d/1PYxmC6yKE62FCQMmw7hzZY3tdsDJgcpa/view?usp=sharing"      class="nav-link"            target="_blank" rel="noopener" data-cursor-label="Open resume">Resume</a>
+  <a href="mailto:rakshandakolhe@yahoo.in" class="nav-cta" data-cursor-label="Send email">Let's connect</a>
+
+  <!-- Mobile hamburger / close toggle -->
+  <button class="nav-hamburger" id="navHamburger"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="navDropdown">
+    <span class="hb-line"></span>
+    <span class="hb-line"></span>
+    <span class="hb-line"></span>
+  </button>
+
+</nav>
+
+<!-- ══════════════════════════════════════
+     MOBILE DROPDOWN (below pill, mobile only)
+══════════════════════════════════════ -->
+<div class="nav-dropdown" id="navDropdown" role="navigation" aria-label="Mobile navigation" aria-hidden="true">
+  <a href="https://drive.google.com/file/d/1PYxmC6yKE62FCQMmw7hzZY3tdsDJgcpa/view?usp=sharing"      class="dd-link dd-active" data-section="home">Home</a>
+  <a href="#work"  class="dd-link"          data-section="work">Work</a>
+  <a href="#about" class="dd-link"          data-section="about">About</a>
+  <a href="https://drive.google.com/file/d/1PYxmC6yKE62FCQMmw7hzZY3tdsDJgcpa/view?usp=sharing"      class="dd-link" target="_blank" rel="noopener">Resume ↗</a>
+  <a href="mailto:rakshandakolhe@yahoo.in" class="dd-cta">Let's connect</a>
+</div>
+
+<!-- ══════════════════════════════════════
+     CUSTOM CURSOR
+══════════════════════════════════════ -->
+<div class="custom-cursor" id="customCursor" aria-hidden="true">
+  <svg class="cursor-arrow" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g filter="url(#cs)">
+      <path d="M8.75418 20L5.62291 4.04089L20 11.9182L12.9181 13.9727L8.75418 20Z" fill="black"/>
+      <path d="M8.75418 20L5.62291 4.04089L20 11.9182L12.9181 13.9727L8.75418 20Z" stroke="white"/>
+    </g>
+    <defs>
+      <filter id="cs" x="2.9248" y="2.09058" width="20.3721" height="22.1735" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+        <feOffset dy="1"/><feGaussianBlur stdDeviation="1"/>
+        <feComposite in2="hardAlpha" operator="out"/>
+        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+      </filter>
+    </defs>
+  </svg>
+  <div class="cursor-badge" id="cursorBadge"></div>
+</div>
+
+<div class="page">
+<main>
+
+<!-- ══════════════════════════════════════
+     HERO
+══════════════════════════════════════ -->
+<div class="hero reveal" id="home">
+  <p class="hero-eyebrow">Hey, I'm Rakshanda</p>
+  <h1 class="hero-title">Product designer focused on <span class="keyword-rotator" aria-label="Systems Thinking"><span class="keyword-slide">Systems Thinking</span></span></h1>
+  <p class="hero-desc">
+    I design platform-level products for high-stakes environments — from real-time B2B commerce flows to scalable component systems used across global events. My work lives at the intersection of business impact, systems thinking, and end-to-end product strategy.
+  </p>
+<div class="hero-ctas">
+    <a href="#work" class="btn btn-primary" data-cursor-label="View work">View selected work</a>
+    <a href="mailto:rakshandakolhe@yahoo.in" class="btn btn-secondary" data-cursor-label="Send email">Get in touch</a>
+  </div>
+</div>
+
+<hr class="section-divider" />
+
+<!-- ══════════════════════════════════════
+     FEATURED WORK
+══════════════════════════════════════ -->
+<section id="work" class="section" style="scroll-margin-top: 80px;">
+  <div class="section-header reveal">
+    <span class="label">Selected work</span>
+    <h2>Featured case studies</h2>
+    <p>End-to-end projects across B2B commerce, platform architecture, and scalable design systems — each built for complexity and designed to last.</p>
+  </div>
+
+  <div class="work-grid">
+
+    <!-- ── Card 01 · Real-Time Seat Sales ── -->
+    <a href="projects/real-time-seat-sales/index.html"
+       class="work-card reveal"
+       aria-label="View Real-Time Seat Sales case study"
+       data-cursor-label="View case study">
+
+      <div class="work-card-thumb" aria-hidden="true">
+        <img src="assets/RTSS-Cover.svg" alt="Real-Time Seat Sales project" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+      </div>
+
+      <div class="work-card-body">
+        <div class="work-card-title-row">
+          <h3 class="work-card-title">Real-Time Seat Sales: Designing high-stakes B2B purchasing for inventory that disappears in minutes</h3>
+          <div class="work-card-arrow" aria-hidden="true">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+          </div>
+        </div>
+        <p class="work-card-desc">Established a new transactional capability within the stakeholder platform, allowing corporate clients to discover, purchase, and manage Rugby World Cup 2027 inventory end-to-end.</p>
+        <div class="work-card-pills" style="padding: 0; margin-top: 0;">
+          <span class="wc-pill wcp-purple">Enterprise Products</span>
+          <span class="wc-pill wcp-purple">B2B</span>
+          <span class="wc-pill wcp-orange">Systems Thinking</span>
+          <span class="wc-pill wcp-green">Platform Design</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- ── Card 02 · Multi-Tournament Architecture ── -->
+    <a href="projects/multi-tournament-architecture/index.html"
+       class="work-card reveal"
+       aria-label="View Multi-Tournament Architecture case study"
+       data-cursor-label="View case study">
+
+      <div class="work-card-thumb" aria-hidden="true">
+        <video src="assets/multi-tournament-cover.mp4" autoplay loop muted playsinline style="width:100%;height:100%;object-fit:cover;display:block;"></video>
+      </div>
+
+      <div class="work-card-body">
+        <div class="work-card-title-row">
+          <h3 class="work-card-title">Built Scalable Multi-Tournament Component Architecture</h3>
+          <div class="work-card-arrow" aria-hidden="true">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+          </div>
+        </div>
+        <p class="work-card-desc">Created a flexible card architecture capable of supporting multiple tournament structures through a single reusable framework, reducing operational overhead and enabling future platform growth.</p>
+        <div class="work-card-pills">
+          <span class="wc-pill wcp-blue">Design Systems</span>
+          <span class="wc-pill wcp-orange">Systems Thinking</span>
+          <span class="wc-pill wcp-purple">Enterprise Product</span>
+          <span class="wc-pill wcp-green">B2C</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- ── Card 03 · Ticket Discovery Filters ── -->
+    <a href="projects/ticket-discovery-filters/index.html"
+       class="work-card reveal"
+       aria-label="View Ticket Discovery Filters case study"
+       data-cursor-label="View case study">
+
+      <div class="work-card-thumb" aria-hidden="true" style="padding: 0; overflow: hidden;">
+        <img src="assets/MultiTournament-filter-cover.svg" alt="Multi-Tournament Filter Cover" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+      </div>
+
+      <div class="work-card-body">
+        <div class="work-card-title-row">
+          <h3 class="work-card-title">Redesigned Ticket Discovery Filters Into a Scalable Multi-Tournament System</h3>
+          <div class="work-card-arrow" aria-hidden="true">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+          </div>
+        </div>
+        <p class="work-card-desc">Transformed filtering from a collection of platform-specific implementations into a systemized, accessible, and scalable capability that could evolve alongside future product requirements.</p>
+        <div class="work-card-pills">
+          <span class="wc-pill wcp-blue">Information Architecture</span>
+          <span class="wc-pill wcp-green">Accessibility</span>
+          <span class="wc-pill wcp-orange">Systems Thinking</span>
+          <span class="wc-pill wcp-green">B2C</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- ── Card 04 · PhonePe Gold SIP Onboarding ── -->
+    <a href="javascript:void(0)"
+       class="work-card work-card--upcoming reveal"
+       aria-label="PhonePe: Gold SIP Onboarding — upcoming"
+       data-cursor-label="Upcoming">
+
+      <div class="work-card-thumb" aria-hidden="true">
+        <img src="assets/phonepe-cover.svg" alt="PhonePe Gold SIP Onboarding" style="width:100%;height:100%;object-fit:cover;display:block;" />
+      </div>
+
+      <div class="work-card-body">
+        <div class="work-card-title-row">
+          <h3 class="work-card-title">PhonePe: Gold SIP Onboarding</h3>
+          <div class="work-card-arrow" aria-hidden="true">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+          </div>
+        </div>
+        <p class="work-card-desc">Designed a trust-first onboarding flow for first-time digital gold investors on PhonePe, reducing drop-off at KYC and building confidence through progressive disclosure.</p>
+        <div class="work-card-pills">
+          <span class="wc-pill wcp-orange">Interaction Design</span>
+          <span class="wc-pill wcp-blue">UI</span>
+          <span class="wc-pill wcp-green">B2C</span>
+          <span class="wc-pill wcp-pink">User Research</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- ── Card 05 · Instagram Instant Redesign ── -->
+    <a href="javascript:void(0)"
+       class="work-card work-card--upcoming reveal"
+       aria-label="Instagram Instant Redesign — upcoming"
+       data-cursor-label="Upcoming">
+
+      <div class="work-card-thumb" aria-hidden="true">
+        <video src="assets/instagram-cover.mp4" autoplay loop muted playsinline style="width:100%;height:100%;object-fit:cover;display:block;"></video>
+      </div>
+
+      <div class="work-card-body">
+        <div class="work-card-title-row">
+          <h3 class="work-card-title">Improving Trust & Safety for Instagram Instants</h3>
+          <div class="work-card-arrow" aria-hidden="true">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+          </div>
+        </div>
+        <p class="work-card-desc">Rebuilt trust and safety interactions for a time-sensitive sharing surface, balancing user protection with the low-friction experience ephemeral content demands.</p>
+        <div class="work-card-pills">
+          <span class="wc-pill wcp-pink">Consumer Mobile</span>
+          <span class="wc-pill wcp-purple">Interaction Design</span>
+          <span class="wc-pill wcp-orange">UX Strategy</span>
+        </div>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<hr class="section-divider" />
+
+<!-- ══════════════════════════════════════
+     EXPERTISE
+══════════════════════════════════════ -->
+<section class="section">
+<!-- ══════════════════════════════════════
+     ABOUT
+══════════════════════════════════════ -->
+<section id="about" class="section" style="scroll-margin-top: 80px;">
+  <div class="about-strip">
+    <div class="about-copy reveal">
+      <h2 style="margin-bottom: 16px;">About me</h2>
+      <p>
+        Outside the cursor, I've always been fascinated by how things work behind the scenes. What began as an interest in visual design evolved into a curiosity about how people think, make decisions, and interact with technology.
+      </p>
+      <p>
+        Today, that curiosity shapes my work as a Product Designer. Whether I'm designing scalable platforms, complex B2B workflows, or design systems, I enjoy finding clarity in complexity and creating solutions that feel intuitive for users while remaining scalable for teams.
+      </p>
+      <p>
+        At the heart of my process is empathy. I believe great products come from understanding the people, contexts, and challenges behind the requirements, then turning those insights into experiences that are intuitive, accessible, and built to last.
+      </p>
+
+      <div class="tools-section">
+        <h3 class="tools-heading">Tools</h3>
+        <div class="tools-stack">
+          <div class="tool-badge" style="--z: 5;">
+            <img src="assets/figma.svg" alt="Figma" />
+          </div>
+          <div class="tool-badge" style="--z: 4;">
+            <img src="assets/claude.svg" alt="Claude" />
+          </div>
+          <div class="tool-badge" style="--z: 3;">
+            <img src="assets/cursor-tool.svg" alt="Cursor" />
+          </div>
+          <div class="tool-badge" style="--z: 2;">
+            <img src="assets/gemini.svg" alt="Gemini" />
+          </div>
+          <div class="tool-badge" style="--z: 1;">
+            <img src="assets/miro.svg" alt="Miro" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="about-image reveal">
+      <img src="assets/raksh-about.png" alt="Rakshanda Kolhe, Product Designer" />
+    </div>
+  </div>
+</section>
+
+</main>
+</div>
+
+<!-- ══════════════════════════════════════
+     FOOTER
+══════════════════════════════════════ -->
+<footer class="dark-footer" aria-label="Site footer">
+
+  <div class="df-inner">
+    <!-- Left: quote + caption -->
+    <div class="df-left">
+      <p class="df-quote">Good design, like a well-tended garden, is built to outlast the hands that shaped it.</p>
+      <p class="df-caption">Made with care <3 and lots of coffee</p>
+    </div>
+
+    <!-- Right: contact + links group -->
+    <div class="df-right">
+      <!-- Connect section -->
+      <div class="df-contact-section">
+        <h3 class="df-contact-heading">Connect with me</h3>
+        <p class="df-contact">+91 8790575759</p>
+      </div>
+
+      <!-- Links -->
+      <div class="df-links">
+        <a href="https://www.linkedin.com/in/rakshanda-kolhe-531687210" class="df-link" target="_blank" rel="noopener" data-cursor-label="Open LinkedIn">LinkedIn</a>
+        <a href="https://www.behance.net/rakshandakolhe1" class="df-link" target="_blank" rel="noopener" data-cursor-label="Open Behance">Behance</a>
+        <a href="https://drive.google.com/file/d/1PYxmC6yKE62FCQMmw7hzZY3tdsDJgcpa/view?usp=sharing" class="df-link" data-cursor-label="Open resume">Resume</a>
+        <a href="mailto:rakshandakolhe@yahoo.in" class="df-link" data-cursor-label="Send email">Email</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ASCII garden (animated via js/garden.js) -->
+  <div class="df-garden" aria-hidden="true"></div>
+
+  <div class="df-bottom">
+    <p>© 2026 Rakshanda Kolhe · All work under NDA where noted</p>
+  </div>
+
+</footer>
+
+<script src="js/garden.js"></script>
+
+<script>
+/* ── Reveal on scroll ── */
+const revealEls = document.querySelectorAll('.reveal');
+const revObs = new IntersectionObserver(
+  (entries) => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); revObs.unobserve(e.target); } }),
+  { threshold: 0.08, rootMargin: '0px 0px -40px 0px' }
+);
+revealEls.forEach(el => revObs.observe(el));
+
+/* ── Active nav link on scroll ── */
+const desktopNavLinks = document.querySelectorAll('.nav-link[data-section]');
+const ddLinks = document.querySelectorAll('.dd-link');
+const sectIds = ['home', 'work', 'about'];
+const sectObs = new IntersectionObserver(
+  (entries) => entries.forEach(e => {
+    if (!e.isIntersecting) return;
+    desktopNavLinks.forEach(l => l.classList.remove('nav-active'));
+    ddLinks.forEach(l => l.classList.remove('dd-active'));
+    const dl = document.querySelector(`.nav-link[data-section="${e.target.id}"]`);
+    if (dl) dl.classList.add('nav-active');
+    const ddLink = document.querySelector(`.dd-link[data-section="${e.target.id}"]`);
+    if (ddLink) ddLink.classList.add('dd-active');
+  }),
+  { threshold: 0.3 }
+);
+sectIds.forEach(id => { const s = document.getElementById(id); if (s) sectObs.observe(s); });
+
+/* ── Mobile dropdown toggle ── */
+const hamburger  = document.getElementById('navHamburger');
+const dropdown   = document.getElementById('navDropdown');
+
+function openDropdown() {
+  hamburger.classList.add('is-open');
+  hamburger.setAttribute('aria-expanded', 'true');
+  hamburger.setAttribute('aria-label', 'Close navigation menu');
+  dropdown.classList.add('is-open');
+  dropdown.setAttribute('aria-hidden', 'false');
+}
+function closeDropdown() {
+  hamburger.classList.remove('is-open');
+  hamburger.setAttribute('aria-expanded', 'false');
+  hamburger.setAttribute('aria-label', 'Open navigation menu');
+  dropdown.classList.remove('is-open');
+  dropdown.setAttribute('aria-hidden', 'true');
+}
+function toggleDropdown() {
+  dropdown.classList.contains('is-open') ? closeDropdown() : openDropdown();
+}
+
+hamburger.addEventListener('click', (e) => { e.stopPropagation(); toggleDropdown(); });
+
+/* Close on outside click */
+document.addEventListener('click', (e) => {
+  if (!hamburger.contains(e.target) && !dropdown.contains(e.target)) closeDropdown();
+});
+/* Close on dropdown link tap */
+dropdown.querySelectorAll('a').forEach(a => a.addEventListener('click', closeDropdown));
+/* Close on Escape */
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDropdown(); });
+
+/* ── Custom cursor (fine-pointer devices only) ── */
+if (window.matchMedia('(pointer: fine)').matches) {
+  const cursor = document.getElementById('customCursor');
+  const badge  = document.getElementById('cursorBadge');
+  let mx = -200, my = -200, rafId;
+
+  cursor.classList.add('visible');
+
+  function moveCursor() {
+    cursor.style.transform = `translate(${mx - 6}px, ${my - 4}px)`;
+    rafId = null;
+  }
+  document.addEventListener('mousemove', (e) => {
+    mx = e.clientX; my = e.clientY;
+    if (!rafId) rafId = requestAnimationFrame(moveCursor);
+  });
+  document.addEventListener('mouseleave', () => cursor.classList.remove('visible'));
+  document.addEventListener('mouseenter', () => cursor.classList.add('visible'));
+
+  document.querySelectorAll('[data-cursor-label], a, button, .work-item, .nav-link, .nav-cta, .dd-link, .dd-cta').forEach(el => {
+    el.addEventListener('mouseenter', () => {
+      const t = el.getAttribute('data-cursor-label') || '';
+      if (t) { badge.textContent = t; badge.classList.add('show'); }
+    });
+    el.addEventListener('mouseleave', () => badge.classList.remove('show'));
+  });
+}
+</script>
+
+<script>
+/* ── Keyword rotator ── */
+(function () {
+  const keywords = ['Systems Thinking', 'Accessibility', 'AI Workflows', 'Design Systems', 'Information Architecture'];
+  let idx = 0;
+  const rotator = document.querySelector('.keyword-rotator');
+  const slide   = document.querySelector('.keyword-slide');
+  if (!rotator || !slide) return;
+
+  function rotate() {
+    slide.classList.add('ks-exit');
+
+    setTimeout(() => {
+      idx = (idx + 1) % keywords.length;
+      slide.textContent = keywords[idx];
+      rotator.setAttribute('aria-label', keywords[idx]);
+
+      slide.classList.remove('ks-exit');
+      slide.classList.add('ks-enter');
+
+      requestAnimationFrame(() => requestAnimationFrame(() => {
+        slide.classList.remove('ks-enter');
+      }));
+    }, 420);
+  }
+
+  setInterval(rotate, 2600);
+})();
+</script>
+
+</body>
+</html>
