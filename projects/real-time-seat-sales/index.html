@@ -45,7 +45,7 @@
   function checkPassword() {
     var val = document.getElementById('gate-input').value;
     var err = document.getElementById('gate-error');
-    if (val === 'Ticketmaster CTP NDA Project') {
+    if (val.trim().toLowerCase() === 'ticketmaster ctp nda project') {
       document.getElementById('password-gate').style.display = 'none';
     } else {
       err.style.display = 'block';
