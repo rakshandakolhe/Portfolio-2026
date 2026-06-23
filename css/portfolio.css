@@ -1328,14 +1328,14 @@ p + p { margin-top: 1rem; }
   letter-spacing: -0.028em;
   color: var(--fg);
   margin-bottom: 24px;
-  max-width: 640px;
+  max-width: 1040px;
 }
 .cs-hero-desc {
   font-size: 17px;
   line-height: 1.7;
   color: var(--muted-fg);
   max-width: 100%;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 .cs-meta-row {
   display: grid;
@@ -1766,7 +1766,7 @@ p + p { margin-top: 1rem; }
 .outcome-note {
   grid-column: 1 / -1;
   font-size: 11.5px;
-  color: rgba(255,255,255,0.22);
+  color: #757575;
   border-top: none;
   line-height: 1.6;
   font-style: italic;
@@ -3015,6 +3015,12 @@ label.dc-row-label { cursor: pointer; }
 .ec-card.mobile .ec-meta { flex-direction: column; gap: 0.5rem; }
 .ec-card.mobile .ec-cta { margin-top: 0; }
 .hidden { display: none !important; }
+.hide-mobile { display: block; }
+.hide-desktop { display: none; }
+@media (max-width: 768px) {
+  .hide-mobile { display: none !important; }
+  .hide-desktop { display: block !important; }
+}
 
 @media (max-width: 480px) {
   .hero-title { font-size: 2rem; }

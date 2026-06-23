@@ -8,7 +8,25 @@
   <meta name="description" content="Building a scalable component architecture that supports multiple concurrent tournament formats — a case study by Rakshanda Kolhe." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" />
   <link rel="stylesheet" href="../../css/portfolio.css" />
+  <style>
+    .exp-card { min-width: 75%; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; background: var(--card); }
+    .exp-card-header { display: flex; flex-wrap: wrap; align-items: center; gap: 0 12px; margin-bottom: 25px; }
+    .exp-label { width: 100%; order: 1; font-size: 12px !important; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #9ca3af !important; margin: 0 0 6px !important; }
+    .exp-heading { flex: 1; order: 2; font-size: 20px !important; font-weight: 600 !important; color: #111827 !important; margin: 0 !important; line-height: 1.3 !important; }
+    .exp-pill { order: 3; font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #2d67e4; background: #eff4ff; border: 1px solid #c7d7fd; border-radius: 20px; padding: 3px 10px; white-space: nowrap; }
+    .metric-row { grid-template-columns: repeat(4, 1fr) !important; }
+    @media (max-width: 768px) {
+      .exp-card { min-width: 100%; }
+      .exp-card-header { flex-direction: column; align-items: flex-start; margin-bottom: 20px; }
+      .exp-pill { order: 1; margin-bottom: 8px; }
+      .exp-label { order: 2; width: 100%; }
+      .exp-heading { order: 3; }
+      .mode-text-heading, .mode-text-sub { width: 100% !important; }
+      .metric-row { grid-template-columns: repeat(2, 1fr) !important; }
+    }
+  </style>
 </head>
 <body>
 
@@ -58,12 +76,16 @@
       Back to work
     </a>
 
+    <div style="margin: 24px 0 30px 0;">
+      <span style="display: inline-flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 600; color: #ffffff; background: #000000; border: 1px solid #000000; border-radius: 20px; padding: 5px 14px; letter-spacing: 0.04em; text-transform: uppercase;">Rugby World Cup 2027 · Asian Games 2026 · 5+ tournament formats</span>
+    </div>
+
     <h1 class="cs-hero-title">
-      Built Scalable Multi-Tournament Component Architecture
+      Designed a configuration-driven component system to scale ticketing across every tournament format
     </h1>
 
     <p class="cs-hero-desc">
-      Every new tournament format introduced additional design and engineering overhead. Components were recreated, patterns diverged, and delivery slowed as the platform scaled. This project established a flexible component architecture that could accommodate structural differences across tournament types, enabling teams to configure experiences rather than rebuild them.
+      Each new tournament format added design and engineering overhead — components were rebuilt, patterns diverged, and delivery slowed as the platform scaled. This project established a configuration-driven component architecture that could adapt across tournament types and venues, letting product teams configure new experiences rather than rebuild them from scratch.
     </p>
 
     <img src="../../assets/hero-image.svg" alt="Hero image" style="width:100%;height:auto;display:block;margin-bottom:32px;" />
@@ -92,7 +114,7 @@
 <div style="background: #ffffff;">
 <section class="cs-section">
   <div class="issue-callout">
-    <h2>The Issue</h2>
+    <h2 style="margin-bottom: 20px;">The Issue</h2>
     <p>The platform was responsible for ticketing across all tournaments — yet each experience was built independently, with no shared component system. This created inconsistent user experiences, duplicated design and engineering effort, and fragmented behavior across products. Slower rollout timelines and compounding maintenance overhead meant the team couldn't scale new tournaments efficiently, directly threatening their ability to launch on time and at quality.</p>
   </div>
 </section>
@@ -101,7 +123,7 @@
      03 · TRY OUT THE SCALABLE COMPONENT
 ══════════════════════════════════════ -->
 <section class="cs-section cs-section--full-stroke">
-  <h2>Short on time? Try out the scalable component</h2>
+  <h2 style="margin-bottom: 20px;">Short on time? Try out the scalable component</h2>
 
   <p>Toggle the options below to explore how a single card adapts to different tournament contexts for the Event Listing page.</p>
 
@@ -175,7 +197,7 @@
 ══════════════════════════════════════ -->
 <section class="cs-section">
   <p class="section-label"><span class="num">01</span> Problem Framing</p>
-  <h2>Why the Existing Model Couldn't Scale</h2>
+  <h2 style="margin-bottom: 20px;">Why the Existing Model Couldn't Scale</h2>
 
   <p>The component library had grown organically without governance. Every new format left its mark as a new variant, forked component, or one-off implementation. The root causes:</p>
 
@@ -267,10 +289,10 @@
      05 · CONSTRAINTS THAT SHAPED THE DESIGN
 ══════════════════════════════════════ -->
 <section class="cs-section">
-  <p class="section-label"><span class="num">02</span> User Needs</p>
-  <h2>Jobs to be done</h2>
+  <p class="section-label"><span class="num">02</span> System Constraints</p>
+  <h2 style="margin-bottom: 20px;">What the design had to accommodate</h2>
 
-  <img src="../../assets/jobs-sticker.svg" alt="Jobs to be done sticker" style="width:100%;height:auto;display:block;margin-bottom:28px;" />
+  <img src="../../assets/what-the-design-had-to-accommodate.svg" alt="What the design had to accommodate" style="width:100%;height:auto;display:block;margin-bottom:28px;" />
 
 </section>
 
@@ -279,7 +301,7 @@
 ══════════════════════════════════════ -->
 <section class="cs-section">
   <p class="section-label"><span class="num">03</span> Research</p>
-  <h2>Research Insights Applied to the Listing Experience</h2>
+  <h2 style="margin-bottom: 20px;">Research Insights Applied to the Listing Experience</h2>
 
   <p>Insights from Post-Purchase Fan Interviews and Discovery Research directly informed the information hierarchy, card behavior, and filtering experience.</p>
 
@@ -288,6 +310,27 @@
     <img src="../../assets/testimonial-3.svg" alt="Testimonial insight 2" class="testimonial-img" />
     <img src="../../assets/testimonial-1.svg" alt="Testimonial insight 3" class="testimonial-img" />
   </div>
+
+  <!-- Synthesis block -->
+  <div style="margin-top: 40px; padding: 28px 32px; background: #f9fafb; border-left: 3px solid #111827; border-radius: 0 12px 12px 0;">
+    <p style="font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #6b7280; margin: 0 0 12px;">What these insights told us together</p>
+    <p style="font-size: 15px; color: #374151; line-height: 1.7; margin: 0 0 24px;">Across post-purchase and discovery research, fans consistently used three signals to decide whether an event was worth clicking through: availability, venue, and content hierarchy. The pattern was directional — fans wanted enough information to commit on the listing itself, with the click-through reserved for confirmation rather than discovery.</p>
+    <p style="font-size: 13px; font-weight: 600; color: #111827; margin: 0 0 14px;">This shaped three architectural decisions that show up across the rest of the case:</p>
+    <div style="display: flex; flex-direction: column; gap: 12px;">
+      <div style="display: flex; gap: 14px; align-items: flex-start;">
+        <span style="flex-shrink: 0; width: 6px; height: 6px; background: #111827; border-radius: 50%; margin-top: 8px;"></span>
+        <p style="font-size: 14px; color: #374151; line-height: 1.65; margin: 0;"><strong style="color: #111827;">Availability surfaced as a first-class element</strong> on the card ("High Availability / Low Availability / Unavailable") rather than discovered after click-through.</p>
+      </div>
+      <div style="display: flex; gap: 14px; align-items: flex-start;">
+        <span style="flex-shrink: 0; width: 6px; height: 6px; background: #111827; border-radius: 50%; margin-top: 8px;"></span>
+        <p style="font-size: 14px; color: #374151; line-height: 1.65; margin: 0;"><strong style="color: #111827;">Venue elevated in the card hierarchy</strong> above secondary metadata (session times, ticket categories), supporting fans who decide based on location first.</p>
+      </div>
+      <div style="display: flex; gap: 14px; align-items: flex-start;">
+        <span style="flex-shrink: 0; width: 6px; height: 6px; background: #111827; border-radius: 50%; margin-top: 8px;"></span>
+        <p style="font-size: 14px; color: #374151; line-height: 1.65; margin: 0;"><strong style="color: #111827;">Medal and prioritisation cues introduced</strong> to help fans surface high-interest sessions across 26+ sports without forcing them to scan everything.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- ══════════════════════════════════════
@@ -295,7 +338,7 @@
 ══════════════════════════════════════ -->
 <section class="cs-section">
   <p class="section-label"><span class="num">04</span> Design Principles</p>
-  <h2>Core Experience Principles</h2>
+  <h2 style="margin-bottom: 20px;">Core Experience Principles</h2>
 
   <p>Every design decision — from card hierarchy to accessibility behavior — was evaluated against three foundational principles.</p>
 
@@ -338,7 +381,7 @@
 ══════════════════════════════════════ -->
 <section class="cs-section">
   <p class="section-label"><span class="num">05</span> Strategy</p>
-  <h2>Defining the experience strategy</h2>
+  <h2 style="margin-bottom: 20px;">Defining the experience strategy</h2>
 
   <p>The listing experience was designed around two distinct fan behaviours with fundamentally different browsing and decision-making patterns.</p>
 
@@ -354,7 +397,7 @@
       <ul class="fan-list">
         <li>Arrives with a specific sport and session in mind — filtering is their primary action</li>
         <li>Needs date, venue, and availability confirmed fast before committing</li>
-        <li>Frustrated by unnecessary friction</li>
+        <li>Frustrated by unnecessary friction — the moment they can't see availability or venue on a listing card, they assume the event isn't worth investigating.</li>
       </ul>
     </div>
     <div class="fan-col">
@@ -368,7 +411,7 @@
       <ul class="fan-list">
         <li>Doesn't have a sport preference — wants to know what's available and affordable</li>
         <li>Needs enough context from the card to decide without clicking through</li>
-        <li>Likely comparing multiple events simultaneously across the listing</li>
+        <li>Likely comparing multiple events simultaneously — needs the card to carry enough context (medal status, availability, venue) to support side-by-side decisions without click-through.</li>
       </ul>
     </div>
   </div>
@@ -381,7 +424,7 @@
 ══════════════════════════════════════ -->
 <section class="cs-section">
   <p class="section-label"><span class="num">06</span> Architecture</p>
-  <h2>System Architecture Strategy</h2>
+  <h2 style="margin-bottom: 20px;">System Architecture Strategy</h2>
 
   <div class="arch-grid">
 
@@ -419,11 +462,106 @@
 </section>
 
 <!-- ══════════════════════════════════════
-     10 · COMPONENTS AND DESIGN SYSTEM THINKING
+     07 · DIRECTIONS CONSIDERED
 ══════════════════════════════════════ -->
 <section class="cs-section">
-  <p class="section-label"><span class="num">07</span> Design System</p>
-  <h2>Components &amp; Design System Thinking</h2>
+  <p class="section-label"><span class="num">07</span> Explorations</p>
+  <h2 style="margin-bottom: 20px;">Directions considered and what they traded off</h2>
+  <p>Before settling on a single configuration-driven card architecture, three approaches were explored. Each was tested against the three core principles — clarity at a glance, one system across all sports, accessibility by default.</p>
+
+  <!-- Carousel -->
+  <div style="margin-top: 32px;">
+
+    <!-- Arrow nav -->
+    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px;">
+      <span style="font-size: 12px; font-weight: 600; color: #374151; border: 1px solid var(--border); border-radius: 20px; padding: 4px 12px;"><span id="exp-current">1</span> of 3</span>
+      <div style="display: flex; gap: 8px;">
+        <button id="exp-prev" onclick="expCarousel(-1)" style="width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--border); background: var(--card); cursor: pointer; display: flex; align-items: center; justify-content: center;" aria-label="Previous exploration">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <button id="exp-next" onclick="expCarousel(1)" style="width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--border); background: var(--card); cursor: pointer; display: flex; align-items: center; justify-content: center;" aria-label="Next exploration">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Cards -->
+    <div style="position: relative; overflow: hidden;">
+      <div id="exp-track" style="display: flex; gap: 16px; transition: transform 0.35s ease;">
+
+        <!-- Exploration 1 -->
+        <div class="exp-card">
+          <img src="assets/exploration-1.svg" alt="Exploration 1" style="width: 100%; height: auto; display: block;" />
+          <div style="padding: 24px;">
+            <div class="exp-card-header">
+              <span class="exp-pill">Clarity at a glance</span>
+              <p class="exp-label">Exploration 01</p>
+              <p class="exp-heading">Image-led card</p>
+            </div>
+            <p style="font-size: 14px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #6b7280; margin: 0 0 8px;">Why it was explored</p>
+            <p style="font-size: 14px; color: #374151; line-height: 1.7; margin: 0 0 20px;">The first variation used a tournament-specific image (athlete, venue, action shot) as the primary visual anchor. Image-led cards perform well in consumer ticketing — they create immediate emotional pull and help fans recognize the sport at a glance, particularly for casual browsers who haven't committed to a specific event yet.</p>
+            <p style="font-size: 14px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #6b7280; margin: 0 0 8px;">What it traded off</p>
+            <p style="font-size: 14px; color: #374151; line-height: 1.7; margin: 0;">Image-led cards required tournament organizers to source and maintain a usable image for every event — across 26+ sports for Asian Games and every match for Rugby World Cup. Image quality varied widely between sports (some had editorial photography pipelines, others didn't), creating visual inconsistency across the listing experience. The model also fought localization: image-heavy cards reduced available space for text expansion in Kanji and Katakana content.</p>
+          </div>
+        </div>
+
+        <!-- Exploration 2 -->
+        <div class="exp-card">
+          <img src="assets/exploration-2.svg" alt="Exploration 2" style="width: 100%; height: auto; display: block;" />
+          <div style="padding: 24px;">
+            <div class="exp-card-header">
+              <span class="exp-pill">One system across all sports</span>
+              <p class="exp-label">Exploration 02</p>
+              <p class="exp-heading">Logo-led card</p>
+            </div>
+            <p style="font-size: 14px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #6b7280; margin: 0 0 8px;">Why it was explored</p>
+            <p style="font-size: 14px; color: #374151; line-height: 1.7; margin: 0 0 20px;">This variation used team or tournament logos as the primary anchor. Logos are universally available, scale predictably, and create instant recognition for fans who already know which teams or events they're following — particularly useful for the corporate workflow, where buyers identify events by team rather than by sport.</p>
+            <p style="font-size: 14px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #6b7280; margin: 0 0 8px;">What it traded off</p>
+            <p style="font-size: 14px; color: #374151; line-height: 1.7; margin: 0;">On mobile, a logo-only anchor compressed the rest of the card's information hierarchy — event name, venue, availability, and CTA had to compete for vertical space without the visual breathing room that a wider image gave the layout. More importantly, locking the anchor to logos alone removed the option for future tournaments to use editorial or sport imagery where it would serve the experience better. The decision wasn't just about Rugby World Cup and Asian Games — it was about whether the architecture could absorb the next tournament's brand direction without a redesign.</p>
+          </div>
+        </div>
+
+        <!-- Exploration 3 -->
+        <div class="exp-card">
+          <img src="assets/exploration-3.svg" alt="Exploration 3" style="width: 100%; height: auto; display: block;" />
+          <div style="padding: 24px;">
+            <div class="exp-card-header">
+              <span class="exp-pill">One system across all sports</span>
+              <p class="exp-label">Exploration 03</p>
+              <p class="exp-heading">Tournament-specific cards</p>
+            </div>
+            <p style="font-size: 14px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #6b7280; margin: 0 0 8px;">Why it was explored</p>
+            <p style="font-size: 14px; color: #374151; line-height: 1.7; margin: 0 0 20px;">This direction gave each tournament its own card variant — distinct imagery rules, layout adjustments, and visual treatment tuned to that sport's identity. It matched how the existing system had grown organically: each tournament had been handled individually, and this approach made that pattern intentional and branded rather than incidental. It also gave tournament operators full autonomy over how their events were presented on the platform.</p>
+            <p style="font-size: 14px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #6b7280; margin: 0 0 8px;">What it traded off</p>
+            <p style="font-size: 14px; color: #374151; line-height: 1.7; margin: 0;">It preserved exactly the scaling problem the project was commissioned to solve. Every new tournament would require its own design pass, its own component variants, and its own maintenance path. The system would grow in surface area with each event added — which was untenable at the pace CTP was onboarding new tournaments. It was ruled out not because it produced poor experiences, but because it couldn't deliver a consistent one at scale without proportionally growing the team.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var expIndex = 0;
+    function expCarousel(dir) {
+      expIndex = Math.max(0, Math.min(2, expIndex + dir));
+      var card = document.getElementById('exp-track').children[0];
+      var slideAmount = expIndex * (card.offsetWidth + 16);
+      document.getElementById('exp-track').style.transform = 'translateX(-' + slideAmount + 'px)';
+      document.getElementById('exp-current').textContent = expIndex + 1;
+      document.getElementById('exp-prev').style.opacity = expIndex === 0 ? '0.3' : '1';
+      document.getElementById('exp-next').style.opacity = expIndex === 2 ? '0.3' : '1';
+    }
+    expCarousel(0);
+  </script>
+</section>
+
+<!-- ══════════════════════════════════════
+     11 · COMPONENTS AND DESIGN SYSTEM THINKING
+══════════════════════════════════════ -->
+<section class="cs-section">
+  <p class="section-label"><span class="num">08</span> Design System</p>
+  <h2 style="margin-bottom: 20px;">Components &amp; Design System Thinking</h2>
 
   <p>Every component decision was grounded in scalability, system alignment, and cross-functional collaboration — building foundations that extend beyond a single tournament.</p>
 
@@ -479,8 +617,8 @@
      11 · KEY EXPERIENCE FLOWS
 ══════════════════════════════════════ -->
 <section class="cs-section">
-  <p class="section-label"><span class="num">08</span> Experience Design</p>
-  <h2>Key Experience Flows</h2>
+  <p class="section-label"><span class="num">09</span> Experience Design</p>
+  <h2 style="margin-bottom: 20px;">Key Experience Flows</h2>
 
   <p>Check out the information presented across the cards in the Listing Experience, Checkout Experience and Event Detail Experience.</p>
 
@@ -492,8 +630,8 @@
      12 · FINAL DIRECTION
 ══════════════════════════════════════ -->
 <section class="cs-section">
-  <p class="section-label"><span class="num">09</span> Solution</p>
-  <h2>Final Direction</h2>
+  <p class="section-label"><span class="num">10</span> Solution</p>
+  <h2 style="margin-bottom: 20px;">Final Direction</h2>
 
   <p>The final direction focused on building reusable configuration-driven templates and scalable component structures that could adapt across tournaments while maintaining consistent user experiences and implementation efficiency.</p>
 
@@ -525,19 +663,22 @@
           </li>
         </ul>
       </div>
-      <img src="../../assets/mode-message.png" alt="Explore different modes to see how event cards change across tournaments" class="mode-message-img" style="margin-top:10px;width:100%;height:auto;display:block;" />
+      <p class="mode-text-heading" style="font-family: 'Caveat', cursive; font-size: 22px; font-weight: 500; color: #111827; line-height: 1; margin: 20px 0 10px; width: 222px;">Same component. Three tournaments. Configuration over code.</p>
+      <p class="mode-text-sub" style="font-family: 'Inter', sans-serif; font-size: 14px; color: #6b7280; line-height: 1.7; margin: 0; width: 222px;">Toggle between the base theme, Rugby World Cup 2027, and Asian Games 2026 to see how configuration replaces duplication.</p>
     </div>
   </div>
 
-  <p class="final-dir-quote">"Sometimes, the most meaningful design happens when you go beyond what's asked — and build what's truly needed."</p>
+
 </section>
+
+<div style="height: 1px; background: linear-gradient(to right, transparent, var(--border), transparent); margin: 0 auto; width: 100%;"></div>
 
 <!-- ══════════════════════════════════════
      13 · OUTCOME AND IMPACT
 ══════════════════════════════════════ -->
 <section class="cs-section cs-section--no-stroke">
-  <p class="section-label"><span class="num">10</span> Impact</p>
-  <h2>What happened after we shipped</h2>
+  <p class="section-label"><span class="num">11</span> Impact</p>
+  <h2 style="margin-bottom: 20px;">What happened after we shipped</h2>
 
   <div class="metric-row">
     <div class="metric-card">
@@ -554,6 +695,11 @@
       <label>Teams adopted</label>
       <div class="metric-num">3 / 3</div>
       <p>Product teams now building on the shared component system — previously each maintained their own fork</p>
+    </div>
+    <div class="metric-card">
+      <label>Time to adoption</label>
+      <div class="metric-num">8 weeks</div>
+      <p>All three product teams migrated to the shared architecture within 8 weeks of launch — no mandate, no migration deadline</p>
     </div>
   </div>
   <p class="outcome-note" style="margin-top: 24px; color: var(--muted-fg);">⚑ Metrics shown are based on post-launch reporting from the Product Management team and are included as shared business outcomes rather than independently measured design metrics.</p>
@@ -589,8 +735,8 @@
 
   <div class="cs12-reflection">
     <h3>Reflection &amp; What Changed</h3>
-    <p>This project shifted tournament experiences from isolated implementations toward a scalable platform mindset. Instead of repeatedly rebuilding tournament-specific experiences, the work established reusable foundations capable of supporting future sports events more efficiently and consistently.</p>
-    <p>The project also strengthened cross-functional collaboration between design and engineering by introducing more scalable workflows, reusable component thinking, and structured implementation alignment.</p>
+    <p>This project shifted tournament work from isolated implementations toward a configuration-driven platform mindset. Instead of rebuilding tournament-specific experiences each cycle, the architecture established reusable foundations capable of supporting future sports events without engineering rework.</p>
+    <p>The deeper outcome was organizational. Design and engineering now share a common configuration language for tournament builds — token-driven theming and component behavior agreed once, then reused. Each new tournament starts from the architecture rather than negotiating it from scratch.</p>
   </div>
 </section>
 
