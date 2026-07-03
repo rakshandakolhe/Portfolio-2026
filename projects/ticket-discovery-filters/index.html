@@ -60,6 +60,9 @@
 
     <div class="cs-hero-split">
       <div class="cs-hero-split-left">
+        <div style="display: inline-flex; align-items: center; background: #000000; color: #ffffff; border-radius: 9999px; padding: 6px 16px; font-size: 12px; font-weight: 500; letter-spacing: 0.01em; margin-top: 24px; margin-bottom: 30px;">
+          Rugby World Cup 2027 · Asian Games 2026 · 26+ sports · live across consumer and B2B
+        </div>
         <h1 class="cs-hero-title">
           Redesigned Ticket Discovery Filters Into a Scalable Multi-Tournament System
         </h1>
@@ -183,8 +186,8 @@
 ══════════════════════════════════════ -->
 <div style="background: #ffffff;">
 <section class="cs-section">
-  <p class="section-label"><span class="num">02</span> Problem Definition</p>
-  <h2>Constraints that shaped the design</h2>
+  <p class="section-label"><span class="num">02</span> Constraints</p>
+  <h2>What shaped the design</h2>
 
   <p>The principles defined the direction. These constraints defined the boundaries.</p>
 
@@ -379,21 +382,37 @@
     <div style="display: flex; flex-direction: column; gap: 20px; padding: 32px; background: linear-gradient(135deg, #f9fafb 0%, #ffffff 100%); border: 1px solid var(--border); border-radius: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); position: relative; overflow: hidden;">
       <div style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--accent) 0%, var(--accent-mid) 100%);"></div>
       <div style="width: 40px; height: 40px; background: var(--accent-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; color: var(--accent); font-size: 18px;">01</div>
-      <h3 style="font-size: 16px; font-weight: 600; color: var(--fg); margin: 0; line-height: 1.35;">Established a reusable filtering foundation across tournaments</h3>
-      <p style="font-size: 13px; color: var(--muted-fg); line-height: 1.7; margin: 0;">The redesigned interaction model became the baseline pattern for future tournament implementations, reducing repeated redesign and implementation effort.</p>
+      <h3 style="font-size: 16px; font-weight: 600; color: var(--fg); margin: 0; line-height: 1.35;">Reusable filtering foundation across tournaments</h3>
+      <p style="font-size: 13px; color: var(--muted-fg); line-height: 1.7; margin: 0;">The full-screen drill-down pattern became the baseline for Rugby World Cup 2027 and Asian Games 2026, replacing divergent legacy implementations.</p>
     </div>
     <div style="display: flex; flex-direction: column; gap: 20px; padding: 32px; background: linear-gradient(135deg, #f9fafb 0%, #ffffff 100%); border: 1px solid var(--border); border-radius: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); position: relative; overflow: hidden;">
       <div style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--accent) 0%, var(--accent-mid) 100%);"></div>
       <div style="width: 40px; height: 40px; background: var(--accent-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; color: var(--accent); font-size: 18px;">02</div>
-      <h3 style="font-size: 16px; font-weight: 600; color: var(--fg); margin: 0; line-height: 1.35;">Improved accessibility readiness across responsive experiences</h3>
-      <p style="font-size: 13px; color: var(--muted-fg); line-height: 1.7; margin: 0;">Accessibility considerations became embedded within the filtering interaction architecture rather than treated as post-implementation fixes.</p>
+      <h3 style="font-size: 16px; font-weight: 600; color: var(--fg); margin: 0; line-height: 1.35;">Accessibility embedded as a component contract</h3>
+      <p style="font-size: 13px; color: var(--muted-fg); line-height: 1.7; margin: 0;">WCAG 2.1 AA touch target and focus management built into the filter architecture itself, not enforced screen-by-screen. Authored 2 accessibility handover documents that became the internal baseline for component and alt-text standards across the team.</p>
     </div>
     <div style="display: flex; flex-direction: column; gap: 20px; padding: 32px; background: linear-gradient(135deg, #f9fafb 0%, #ffffff 100%); border: 1px solid var(--border); border-radius: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); position: relative; overflow: hidden;">
       <div style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--accent) 0%, var(--accent-mid) 100%);"></div>
       <div style="width: 40px; height: 40px; background: var(--accent-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; color: var(--accent); font-size: 18px;">03</div>
-      <h3 style="font-size: 16px; font-weight: 600; color: var(--fg); margin: 0; line-height: 1.35;">Increased long-term scalability of the ticket discovery experience</h3>
-      <p style="font-size: 13px; color: var(--muted-fg); line-height: 1.7; margin: 0;">The project shifted filtering from a tournament-specific implementation model toward a reusable platform capability</p>
+      <h3 style="font-size: 16px; font-weight: 600; color: var(--fg); margin: 0; line-height: 1.35;">Validated at tournament scale</h3>
+      <p style="font-size: 13px; color: var(--muted-fg); line-height: 1.7; margin: 0;">Filter patterns tested across 60+ participants in global research studies, covering the four mental models the system needed to serve simultaneously — Returning Fan, Dedicated Fan, Casual Explorer, International Buyer.</p>
     </div>
+  </div>
+</section>
+</div>
+
+<!-- ══════════════════════════════════════
+     07 · REFLECTION
+══════════════════════════════════════ -->
+<div style="background: #f9fafb;">
+<section class="cs-section">
+  <p class="section-label"><span class="num">07</span> Reflection</p>
+  <h2>The decision the timeline made</h2>
+
+  <div style="max-width: 720px; display: flex; flex-direction: column; gap: 24px; margin-top: 40px;">
+    <p style="font-size: 15px; color: var(--fg); line-height: 1.8; margin: 0;">The hierarchical filter navigation was the right call for what shipped — testing surfaced that users made fewer selection errors with the nested category structure than with denser inline patterns, and the accessibility behavior was easier to validate within the Rugby World Cup 2027 delivery window.</p>
+    <p style="font-size: 15px; color: var(--fg); line-height: 1.8; margin: 0;">But the honest reflection is that the bottom sheet pattern wasn't rejected on design merit. It was deferred because comprehensive accessibility testing — WCAG 2.1 AA compliance across gesture-driven interactions, focus management for keyboard users, and screen reader announcement of partial-height modals — would have needed more time than the tournament timeline allowed. In a longer runway, a bottom sheet could have been a valid second candidate, particularly for high-frequency filter iteration where deep navigation adds overhead.</p>
+    <p style="font-size: 15px; color: var(--fg); line-height: 1.8; margin: 0;">What I'd revisit for future tournament rollouts: run the accessibility validation on bottom sheet interactions now that the RWC 2027 delivery pressure is behind us. If it clears the same bar, it becomes a valid configuration option in the filter architecture — not a replacement for hierarchical navigation, but a second pattern the system can support for different tournament contexts. The shipped decision doesn't need to be undone; the architecture needs to earn the ability to hold both.</p>
   </div>
 </section>
 </div>
