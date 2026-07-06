@@ -115,9 +115,9 @@
       Back to work
     </a>
 
-    <img src="../../assets/RTSS-Image.svg" alt="Real-Time Seat Sales" style="width: 100%; height: auto; display: block; margin-bottom: 40px;" />
-
-    <p style="display: inline-flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 600; color: #ffffff; background: #000000; border: 1px solid #000000; border-radius: 20px; padding: 5px 14px; margin: 0 0 30px 0; letter-spacing: 0.04em; text-transform: uppercase;">Rugby World Cup 2027 · 24 teams · 52 matches · 2.5M ticket inventory · launching Q3 2027</p>
+    <div style="margin: 24px 0 30px 0;">
+      <span style="display: inline-flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 600; color: #ffffff; background: #000000; border: 1px solid #000000; border-radius: 20px; padding: 5px 14px; letter-spacing: 0.04em; text-transform: uppercase;">Rugby World Cup 2027 · 24 teams · 52 matches · 2.5M ticket inventory · launching Q3 2027</span>
+    </div>
 
     <h1 class="cs-hero-title">
       Real-Time Seat Sales: Designing high-stakes B2B purchasing for inventory that disappears in minutes
@@ -127,9 +127,11 @@
       Designed CTP's first transactional layer — basket, payment, and order — for a platform built only for allocation management. Created a complete end-to-end B2B purchasing journey for Rugby World Cup 2027 corporate buyers, secured in real time against dynamic inventory.
     </p>
 
-    <p style="font-size: 13px; font-style: italic; color: var(--muted-fg); margin: 0; padding-bottom: 60px; line-height: 1.6;">CTP (Client Ticketing Platform) — Ticketmaster's B2B ticketing platform used by sponsors, corporate partners, and rugby unions to manage tournament ticket allocations.</p>
+    <img src="../../assets/rtss-hero-image.svg" alt="" style="width: 100%; height: auto; display: block; margin-bottom: 30px;" />
 
-    <div class="cs-meta-row">
+    <p style="font-size: 13px; font-style: italic; color: var(--muted-fg); margin: 0 0 40px 0; line-height: 1.6;">CTP (Client Ticketing Platform) — Ticketmaster's B2B ticketing platform used by sponsors, corporate partners, and rugby unions to manage tournament ticket allocations.</p>
+
+    <div class="cs-meta-row" style="padding-bottom: 60px;">
       <div class="cs-meta-item">
         <label>My Role</label>
         <span class="meta-val">Lead Designer</span>
@@ -146,9 +148,9 @@
       </div>
     </div>
 
-    <div style="margin-top: 40px; padding: 24px 28px; background: #F7F7F7; border: 1px solid var(--border); border-left: 4px solid #2563EB; border-radius: 0; display: flex; gap: 16px; align-items: flex-start;">
+    <div style="padding: 24px 0; display: flex; gap: 16px; align-items: flex-start;">
       <div>
-        <p style="font-size: 13px; font-weight: 600; color: var(--fg); margin: 0 0 6px 0; text-transform: uppercase; letter-spacing: 0.08em;">The Problem</p>
+        <p style="font-size: 25px; font-weight: 600; color: var(--fg); margin: 0 0 6px 0; text-transform: uppercase;">The Problem</p>
         <p style="font-size: 14px; color: var(--muted-fg); line-height: 1.7; margin: 0;">Corporate clients had no way to purchase Rugby World Cup 2027 seat inventory directly — the platform was built for stakeholder visibility, not transactional commerce. B2B buyers were forced through manual processes, causing delays, errors, and lost sales during time-critical inventory windows.</p>
       </div>
     </div>
@@ -197,31 +199,45 @@
     CTP supports purchases from account managers, corporate clients, and group booking coordinators who allocate large blocks of seats across live sports and entertainment events. Unlike consumer fans, these buyers pre-sell those seats to their own clients — a procurement workflow, not a discovery workflow.
   </p>
 
-  <div class="context-table" style="display: flex; flex-direction: column; gap: 0; margin-top: 48px; border: 1px solid var(--border); border-radius: 16px; overflow: hidden;">
-    <div style="display: grid; grid-template-columns: 200px 1fr; border-bottom: 1px solid var(--border);">
-      <div style="padding: 28px 24px; background: #F7F7F7; border-right: 1px solid var(--border); display: flex; align-items: flex-start;">
-        <span style="font-size: 13px; font-weight: 600; color: var(--fg);">The Operational Reality</span>
+  <style>
+    .stakes-card { background: #ffffff; border: 4px solid #F5F5F5; border-radius: 16px; padding: 28px; transition: transform 0.4s cubic-bezier(.22,.68,0,1.2), opacity 0.3s ease; }
+    .stakes-card:hover { transform: translateX(0) rotate(0deg) !important; opacity: 1 !important; }
+    @media (max-width: 768px) {
+      .stakes-grid { grid-template-columns: 1fr !important; }
+      .stakes-card { transform: none !important; opacity: 1 !important; }
+    }
+    .stakes-card-heading { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; }
+    .stakes-card-dot { display: inline-block; width: 12px; height: 12px; background: #FF3B30; border-radius: 50%; flex-shrink: 0; margin-top: 5px; }
+    .stakes-card-title { font-family: 'Inter', sans-serif; font-size: 18px; font-weight: 700; letter-spacing: -0.3px; line-height: 1.2; color: #000000; margin: 0; }
+    .stakes-card-body { font-family: 'Inter', sans-serif; font-size: 14px; color: #7F7F80; line-height: 1.6; margin: 0; }
+  </style>
+
+  <div class="stakes-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 48px;">
+
+    <div class="stakes-card" style="will-change: transform; transform: translateX(-8px) rotate(-1.8deg); opacity: 0.92;">
+      <div class="stakes-card-heading">
+        <span class="stakes-card-dot"></span>
+        <h3 class="stakes-card-title">The Reality of Live Inventory</h3>
       </div>
-      <div style="padding: 28px 32px;">
-        <p style="font-size: 13px; color: var(--muted-fg); line-height: 1.75; margin: 0;">During live tournaments, ticket availability is highly dynamic. Stadium reconfigurations, returned allocations, and reclaimed sponsor inventory can release new seats at any time — often hours before an event. These releases involve high-demand matches and limited availability.</p>
-      </div>
+      <p class="stakes-card-body">During live tournaments, stadium reconfigurations, returned allocations, and reclaimed sponsor inventory can release new seats, often just hours before an event. These are typically high-demand matches with limited availability.</p>
     </div>
-    <div style="display: grid; grid-template-columns: 200px 1fr; border-bottom: 1px solid var(--border);">
-      <div style="padding: 28px 24px; background: #F7F7F7; border-right: 1px solid var(--border); display: flex; align-items: flex-start;">
-        <span style="font-size: 13px; font-weight: 600; color: var(--fg);">The Existing Experience</span>
+
+    <div class="stakes-card" style="will-change: transform; transform: translateX(4px) rotate(0.6deg); opacity: 0.95;">
+      <div class="stakes-card-heading">
+        <span class="stakes-card-dot"></span>
+        <h3 class="stakes-card-title">Designed for Requests, Not Purchases</h3>
       </div>
-      <div style="padding: 28px 32px;">
-        <p style="font-size: 13px; color: var(--muted-fg); line-height: 1.75; margin: 0;">CTP operated on a Request → Approval model. Users could request available inventory, but purchases were not completed in real time. Requests were reviewed and approved manually before tickets could be secured. Effective for planned allocation management, but not built for inventory releases where availability changes within minutes.</p>
-      </div>
+      <p class="stakes-card-body">CTP operated on a Request → Approval model. Every request required manual review before tickets could be secured. While effective for planned allocation management, it wasn't designed for fast-moving inventory releases where availability changed within minutes.</p>
     </div>
-    <div style="display: grid; grid-template-columns: 200px 1fr;">
-      <div style="padding: 28px 24px; background: #F7F7F7; border-right: 1px solid var(--border); display: flex; align-items: flex-start;">
-        <span style="font-size: 13px; font-weight: 600; color: var(--fg);">The Opportunity</span>
+
+    <div class="stakes-card" style="will-change: transform; transform: translateX(6px) rotate(-0.8deg); opacity: 0.92;">
+      <div class="stakes-card-heading">
+        <span class="stakes-card-dot"></span>
+        <h3 class="stakes-card-title">The Shift to Real-Time Transactions</h3>
       </div>
-      <div style="padding: 28px 32px;">
-        <p style="font-size: 13px; color: var(--muted-fg); line-height: 1.75; margin: 0;">For Rugby World Cup 2027, Ticketmaster wanted to enable eligible stakeholders to purchase approved inventory directly within the platform — reducing operational overhead while creating a faster and more transparent purchasing experience. Achieving this required transforming a platform built for allocation management into a transactional purchasing experience supporting inventory discovery, seat selection, basket management, and checkout.</p>
-      </div>
+      <p class="stakes-card-body">For Rugby World Cup 2027, Ticketmaster wanted eligible stakeholders to purchase inventory directly within CTP. Delivering that required evolving a platform built for allocation management into a complete purchasing experience—from inventory discovery to checkout.</p>
     </div>
+
   </div>
 
 
@@ -240,47 +256,34 @@
     <!-- Left column -->
     <div style="display: flex; flex-direction: column; gap: 40px;">
       <div style="display: flex; flex-direction: column; gap: 10px;">
-        <h3 style="font-size: 14px; font-weight: 700; color: var(--fg); margin: 0; line-height: 1.4;">1. The approval model is incompatible with real-time inventory</h3>
-        <p style="font-size: 13px; color: var(--muted-fg); line-height: 1.75; margin: 0;">When inventory drops unpredictably, the Request→Approval flow introduces too much latency. By the time approval completes, high-demand seats are gone. There is no mechanism for eligible stakeholders to act immediately.</p>
+        <h3 style="font-size: 14px; font-weight: 700; color: var(--fg); margin: 0; line-height: 1.4;">1. The approval model couldn't support real-time sales</h3>
+        <p style="font-size: 13px; color: var(--muted-fg); line-height: 1.75; margin: 0;">When inventory is released unexpectedly, the Request → Approval flow introduces too much latency. By the time requests are approved, high-demand seats are often gone, leaving eligible buyers unable to act in time.</p>
       </div>
       <div style="display: flex; flex-direction: column; gap: 10px;">
-        <h3 style="font-size: 14px; font-weight: 700; color: var(--fg); margin: 0; line-height: 1.4;">2. No transactional infrastructure exists on CTP</h3>
-        <p style="font-size: 13px; color: var(--muted-fg); line-height: 1.75; margin: 0;">CTP generates a "request entity" for payments — not an order entity. Basket, payment, and confirmation flows are net-new surfaces with no pattern to extend. Every design decision either creates a scalable foundation or a fragile workaround. This was not in the original brief — it surfaced through platform analysis.</p>
+        <h3 style="font-size: 14px; font-weight: 700; color: var(--fg); margin: 0; line-height: 1.4;">2. CTP lacked transactional infrastructure</h3>
+        <p style="font-size: 13px; color: var(--muted-fg); line-height: 1.75; margin: 0;">CTP was built around request entities, not orders. Basket, payment, and checkout were entirely new capabilities, making every design decision foundational rather than an extension of existing patterns.</p>
       </div>
     </div>
 
     <!-- Center image -->
     <div style="display: flex; justify-content: center;">
-      <img src="../../assets/EDP-old.svg" alt="EDP Old Experience" style="width: 550px; height: auto; display: block; border-radius: 8px; box-shadow: 0 4px 24px rgba(0,0,0,0.1);" />
+      <img src="../../assets/event-detail-page.svg" alt="Event Detail Page" style="width: 550px; height: auto; display: block; border-radius: 8px;" />
     </div>
 
     <!-- Right column -->
     <div style="display: flex; flex-direction: column; gap: 40px; align-items: flex-start; text-align: left;">
       <div style="display: flex; flex-direction: column; gap: 10px;">
-        <h3 style="font-size: 14px; font-weight: 700; color: var(--fg); margin: 0; line-height: 1.4;">3. Dual-mode stakeholder management creates collision risk</h3>
-        <p style="font-size: 13px; color: var(--muted-fg); line-height: 1.75; margin: 0;">Non-union corporates (RTSS) and participating unions (Request→Approval) operate differently. Nothing in the current design explicitly differentiates these flows — a corporate stakeholder could land in the wrong journey entirely.</p>
+        <h3 style="font-size: 14px; font-weight: 700; color: var(--fg); margin: 0; line-height: 1.4;">3. Two stakeholder workflows needed clear separation</h3>
+        <p style="font-size: 13px; color: var(--muted-fg); line-height: 1.75; margin: 0;">Corporate buyers (RTSS) and participating unions (Request → Approval) followed different purchasing journeys. Without clear distinction, users could easily enter the wrong workflow.</p>
       </div>
       <div style="display: flex; flex-direction: column; gap: 10px;">
-        <h3 style="font-size: 14px; font-weight: 700; color: var(--fg); margin: 0; line-height: 1.4;">4. Platform decisions need to scale beyond RWC</h3>
-        <p style="font-size: 13px; color: var(--muted-fg); line-height: 1.75; margin: 0;">Market segments, CRC seat pools, and workflow routing are all configurable systems. Design decisions made for RWC 2027 will either scale across the platform or create tournament-specific debt for every subsequent client.</p>
+        <h3 style="font-size: 14px; font-weight: 700; color: var(--fg); margin: 0; line-height: 1.4;">4. The solution had to scale beyond RWC 2027</h3>
+        <p style="font-size: 13px; color: var(--muted-fg); line-height: 1.75; margin: 0;">Market segments, seat pools, and workflow routing were all configuration-driven. The experience needed to become a reusable platform capability—not a tournament-specific solution.</p>
       </div>
     </div>
   </div>
 
 
-  <div class="cs-card" style="margin-top: 28px;">
-    <h3>Scope &amp; Constraints</h3>
-    <p style="margin-top: 8px;">To meet the Rugby World Cup 2027 delivery timeline, the MVP focused on enabling a complete end-to-end purchasing journey for eligible stakeholders. Several adjacent capabilities were intentionally deferred, handled by existing systems, or owned by separate teams to keep the project focused on the highest-impact user and business outcomes.</p>
-    <p style="font-size: 13px; font-weight: 600; color: var(--fg); margin: 16px 0 10px 0;">MVP Constraints</p>
-    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px;">
-      <li style="font-size: 13px; color: var(--muted-fg); line-height: 1.6; padding-left: 16px; position: relative;"><span style="position: absolute; left: 0; color: #2d67e4; font-size: 16px; line-height: 1;">•</span><strong style="color: var(--fg);">Interactive Seat Map</strong> — Planned as a separate workstream with an independent delivery timeline.</li>
-      <li style="font-size: 13px; color: var(--muted-fg); line-height: 1.6; padding-left: 16px; position: relative;"><span style="position: absolute; left: 0; color: #2d67e4; font-size: 16px; line-height: 1;">•</span><strong style="color: var(--fg);">Resale &amp; Ticket Management</strong> — Reserved for a future phase beyond the initial purchasing experience.</li>
-      <li style="font-size: 13px; color: var(--muted-fg); line-height: 1.6; padding-left: 16px; position: relative;"><span style="position: absolute; left: 0; color: #2d67e4; font-size: 16px; line-height: 1;">•</span><strong style="color: var(--fg);">Backoffice Configuration</strong> — Managed by a separate product team and excluded from the design scope.</li>
-      <li style="font-size: 13px; color: var(--muted-fg); line-height: 1.6; padding-left: 16px; position: relative;"><span style="position: absolute; left: 0; color: #2d67e4; font-size: 16px; line-height: 1;">•</span><strong style="color: var(--fg);">Invoice Generation</strong> — Existing invoicing infrastructure remained unchanged; the scope focused on invoice access and triggering within the purchasing flow.</li>
-      <li style="font-size: 13px; color: var(--muted-fg); line-height: 1.6; padding-left: 16px; position: relative;"><span style="position: absolute; left: 0; color: #2d67e4; font-size: 16px; line-height: 1;">•</span><strong style="color: var(--fg);">Ticket Holder Assignment (PSA)</strong> — Scheduled for a subsequent phase following the MVP launch.</li>
-      <li style="font-size: 13px; color: var(--muted-fg); line-height: 1.6; padding-left: 16px; position: relative;"><span style="position: absolute; left: 0; color: #2d67e4; font-size: 16px; line-height: 1;">•</span><strong style="color: var(--fg);">Entitlements Management</strong> — Deferred to a later release; the MVP relied on predefined purchase limits rather than entitlement-based controls.</li>
-    </ul>
-  </div>
 </section>
 
 <!-- ══════════════════════════════════════
@@ -290,7 +293,7 @@
   <p class="section-label"><span class="num">03</span> Users &amp; Context</p>
   <h2 style="margin-bottom: 20px;">Who we were designing for</h2>
 
-  <p>Designing for corporate procurement introduced a fundamentally different mental model from consumer ticketing. The challenge was not only to support distinct purchasing behaviors, but also to create a shared platform experience that could serve multiple stakeholder groups with clarity and confidence.</p>
+  <p>CTP supported multiple stakeholder groups with distinct responsibilities, permissions, and purchasing workflows. While they shared the same platform, each came with different goals, requiring experiences tailored to how they worked rather than a one-size-fits-all journey.</p>
 
   <div class="user-context" style="display: flex; flex-direction: column; gap: 15px; margin-top: 40px; margin-bottom: 40px;">
     <div style="display: flex; align-items: flex-start; gap: 15px; padding: 28px; border: 1px solid #e5e7eb; border-radius: 12px; background: #ffffff; box-shadow: 0 0 40px rgba(45,103,228,0.08);">
@@ -298,7 +301,7 @@
       <div style="display: flex; flex-direction: column; gap: 8px;">
         <p style="font-size: 15px; font-weight: 600; color: var(--fg); margin: 0;">The Corporate Buyer</p>
         <p style="font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin: 0;">RTSS Purchase Flow · Sponsors, Commercial Partners, Key Accounts</p>
-        <p style="font-size: 13px; color: var(--muted-fg); line-height: 1.75; margin: 0;">A goal-driven user focused on securing specific inventory under time pressure. Unlike consumer ticket buyers, they operate within procurement workflows — purchasing in volume, settling through bank transfer rather than card, and requiring invoice access as a primary outcome of the transaction, not a secondary download.</p>
+        <p style="font-size: 13px; color: var(--muted-fg); line-height: 1.75; margin: 0;">Purchases approved inventory on behalf of their organization through the RTSS flow. Works within corporate procurement processes, settles payments via bank transfer, and relies on invoices to complete internal purchasing and reconciliation.</p>
       </div>
     </div>
     <div style="display: flex; align-items: flex-start; gap: 15px; padding: 28px; border: 1px solid #e5e7eb; border-radius: 12px; background: #ffffff; box-shadow: 0 0 40px rgba(45,103,228,0.08);">
@@ -306,7 +309,7 @@
       <div style="display: flex; flex-direction: column; gap: 8px;">
         <p style="font-size: 15px; font-weight: 600; color: var(--fg); margin: 0;">The Union Representative</p>
         <p style="font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin: 0;">Request → Approval Flow · Participating Unions</p>
-        <p style="font-size: 13px; color: var(--muted-fg); line-height: 1.75; margin: 0;">Operates within an established allocation and approval process. As this workflow remained unchanged, the primary design consideration was maintaining clear separation from the RTSS purchasing experience and ensuring users were automatically routed to the correct flow upon login.</p>
+        <p style="font-size: 13px; color: var(--muted-fg); line-height: 1.75; margin: 0;">Requests inventory through an established allocation and approval workflow. Since this experience remained unchanged, the primary design consideration was maintaining clear separation from RTSS purchasing.</p>
       </div>
     </div>
   </div>
@@ -321,97 +324,102 @@
   <p class="section-label"><span class="num">04</span> Discovery &amp; Research</p>
   <h2 style="margin-bottom: 20px;">What the platform analysis revealed</h2>
 
-  <!-- Grid 1: text left, image right -->
-  <div class="s4-grid-1" style="display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: stretch; margin-top: 40px; margin-bottom: 60px; height: 302.71px;">
-    <div style="display: flex; flex-direction: column; gap: 16px;">
-      <h3 style="margin: 0; font-size: 18px;">Evaluating the Foundation</h3>
-      <p style="margin: 0;">Before introducing new capabilities, I assessed the existing ticket selection experience against usability and accessibility standards to understand where the current design was creating friction and where foundational issues needed to be addressed.</p>
-    </div>
-    <div class="s4-img-wrap" style="overflow: hidden; border-radius: 8px; height: 100%;">
-      <img src="../../assets/evaluating-the-foundation.svg" alt="Evaluating the Foundation" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
-    </div>
-  </div>
-
-  <!-- Grid 2: image left, text right -->
-  <div class="s4-grid-2" style="display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: stretch; margin-bottom: 130px;">
-    <img src="../../assets/Understanding-the-Platform-Architecture.png" alt="Understanding the Platform Architecture" style="width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 8px;" />
-    <div style="display: flex; flex-direction: column; gap: 16px;">
-      <h3 style="margin: 0; font-size: 18px;">Understanding the Platform Architecture</h3>
-      <p style="margin: 0;">Before exploring interface solutions, I mapped the underlying platform architecture to understand how inventory, entitlement rules, ticket states, and financial systems interacted across CTP. This revealed that RTSS was fundamentally a platform integration challenge rather than a standalone workflow. By identifying upstream dependencies and downstream impacts early, the resulting solution could be designed as a reusable platform capability rather than a Rugby World Cup–specific implementation.</p>
-    </div>
-  </div>
-
-  <figure class="s4-figure" style="margin: 0 0 65px 0;">
+  <figure class="s4-figure" style="margin: 40px 0 65px 0;">
     <img src="../../assets/section4-diagram-desktop.svg" alt="CTP transactional layer diagram" class="hide-mobile" style="width: 100%; height: auto; display: block;" />
     <img src="../../assets/section4-diagram-mobile.svg" alt="CTP transactional layer diagram" class="hide-desktop" style="width: 100%; height: auto; display: none;" />
-    <figcaption style="font-size: 13px; color: var(--muted-fg); line-height: 1.7; margin-top: 16px;">The platform's missing transactional layer — basket, payment, and order — identified during architecture analysis. CTP generated request entities for approval workflows but had no transactional model at all. Designing the entire purchasing journey required defining how a future B2B order entity would integrate with existing inventory and invoicing systems — and how RTSS and Request → Approval would route cleanly from a shared login.</figcaption>
+    <figcaption style="font-size: 13px; color: var(--muted-fg); line-height: 1.7; margin-top: 30px;">The platform's missing transactional layer — basket, payment, and order — identified during architecture analysis. CTP generated request entities for approval workflows but had no transactional model at all. Designing the entire purchasing journey required defining how a future B2B order entity would integrate with existing inventory and invoicing systems.</figcaption>
     <hr class="s4-hr" style="border: none; border-top: 1px solid var(--border); margin-top: 65px;" />
   </figure>
 
   <h3 style="margin-bottom: 12px; margin-top: 0; font-size: 18px;">Designing for a Different Mental Model</h3>
-  <p>A critical insight emerged early in the project: corporate procurement behaviour differs fundamentally from consumer ticket purchasing. Unlike fans who browse, compare, and explore options, corporate buyers typically arrive with a defined inventory objective and operate under strict time constraints.</p>
-  <p>This meant many familiar consumer-ticketing patterns were not only unnecessary but actively detrimental to task completion. The experience needed to prioritize operational efficiency through clear purchasing constraints, reduced decision friction, and procurement-focused post-purchase workflows.</p>
-  <p>Recognizing this distinction established a core design principle: <strong>optimize for execution, not discovery.</strong></p>
+  <p>A key insight from research was that corporate procurement follows a fundamentally different decision-making model than consumer ticketing. Unlike fans who browse and compare options, corporate buyers arrive with a predefined inventory objective and operate under strict time constraints.</p>
+  <p>As a result, familiar consumer patterns—such as exploratory browsing or extended comparison—added unnecessary friction. The experience instead needed to prioritize speed, clarity, and confidence by surfacing purchasing constraints early, reducing decision overhead, and supporting procurement workflows beyond checkout.</p>
+  <p>This led to a core design principle: <strong>Optimize for execution, not discovery.</strong></p>
 
   <div class="quotes-grid">
-    <div style="background: var(--card); border: 1px solid var(--border); border-radius: var(--r-lg); padding: 24px; box-shadow: 0 4px 16px rgba(45,103,228,0.15);">
-      <div class="quote-text" style="margin-bottom: 20px;">"When inventory becomes available, speed matters more than discovery. I need to understand my limits, make a decision, and secure the seats before someone else does."</div>
+    <div style="border-left: 3px solid #2d67e4; padding: 16px 20px;">
+      <div class="quote-text" style="margin-bottom: 12px;">"When inventory becomes available, speed matters more than discovery. I need to understand my limits, make a decision, and secure the seats before someone else does."</div>
       <p style="font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #9ca3af; margin: 0;">Corporate buyer, research session, 2022</p>
-    </div>
-    <div style="background: var(--card); border: 1px solid var(--border); border-radius: var(--r-lg); padding: 24px; box-shadow: 0 4px 16px rgba(45,103,228,0.15);">
-      <div class="quote-text" style="margin-bottom: 20px;">"Unlike a fan purchase, this is part of a procurement process. The confirmation is useful, but the invoice is what allows me to complete the transaction internally."</div>
-      <p style="font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #9ca3af; margin: 0;">Corporate buyer, research session, 2025</p>
     </div>
   </div>
 
-  <div style="border-top: 1px solid var(--border); margin-top: 40px;"></div>
-  <h3 style="margin-top: 32px; margin-bottom: 12px; font-size: 18px;">Constraints That Shaped the Design</h3>
-  <p style="margin-bottom: 32px;">Before exploring solutions, it was important to understand the platform, business, and operational constraints that would shape the final experience.</p>
+</section>
 
-  <div style="display: flex; flex-direction: column; gap: 32px;">
-    <div>
-      <p style="font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin: 0 0 16px 0;">Platform Constraints</p>
-      <div class="constraints-list">
-        <div class="constraint-item">
-          <div class="constraint-dot" aria-hidden="true"></div>
-          <p><strong style="color: var(--fg); font-weight: 600;">CTP-Native Experience</strong> — The purchasing journey needed to be built entirely within CTP. A planned handoff to an existing Ticketmaster transactional surface was ruled out, requiring every stage — from inventory selection through confirmation — to be designed within the platform.</p>
-        </div>
-        <div class="constraint-item">
-          <div class="constraint-dot" aria-hidden="true"></div>
-          <p><strong style="color: var(--fg); font-weight: 600;">No Existing Order Model</strong> — CTP was built around request management rather than transactional purchasing. The platform did not contain a dedicated order entity, requiring post-purchase and confirmation states to be designed around a future B2B order model rather than existing request-based patterns.</p>
-        </div>
+<!-- ══════════════════════════════════════
+     05 · CONSTRAINTS
+══════════════════════════════════════ -->
+<section class="cs-section">
+  <p class="section-label"><span class="num">05</span> Constraints</p>
+  <h2 style="margin-bottom: 40px;">Constraints That Shaped the Design</h2>
+
+  <style>
+    .pin-row { display: flex; gap: 20px; }
+    .pin-row-center { justify-content: center; margin-top: 20px; }
+    .pin-card { background: #ffffff; border-radius: 16px; border: 1px solid #efefef; overflow: hidden; display: flex; flex-direction: column; flex: 1; box-shadow: 0 4px 16px rgba(0,0,0,0.06); }
+    .pin-row-center .pin-card { flex: 0 0 calc(33.333% - 7px); }
+    .pin-card-top { padding: 24px 24px 16px; display: flex; flex-direction: column; gap: 0; }
+    .pin-card-pin { width: 56px; height: 56px; object-fit: contain; display: block; margin: 0 auto; }
+    .pin-card-num { font-size: 11px; font-weight: 600; color: #9ca3af; letter-spacing: 0.06em; margin: 0; }
+    .pin-card-title { font-size: 20px; font-weight: 1000; color: #000000 !important; line-height: 1.3; margin: 0 0 10px 0; }
+    .pin-card-body-wrap { margin: 0 12px 12px; border-radius: 10px; padding: 16px; }
+    .pin-card-body { font-size: 13px; color: var(--muted-fg); line-height: 1.7; margin: 0; }
+    @media (max-width: 768px) { .pin-row { flex-direction: column; } .pin-row-center .pin-card { flex: 1; } }
+  </style>
+
+  <!-- Row 1: 3 cards -->
+  <div class="pin-row">
+    <div class="pin-card">
+      <div class="pin-card-top">
+        <img src="../../assets/pin.avif" alt="" class="pin-card-pin" />
+        <p class="pin-card-num">01</p>
+      </div>
+      <div class="pin-card-body-wrap" style="background: #fefce8;">
+        <p class="pin-card-title">Native Transaction Experience</p>
+        <p class="pin-card-body">The entire purchasing journey—from inventory selection to confirmation—had to be completed within CTP. Existing Ticketmaster checkout flows could not be reused.</p>
       </div>
     </div>
-
-    <div>
-      <p style="font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin: 0 0 16px 0;">Business Constraints</p>
-      <div class="constraints-list">
-        <div class="constraint-item">
-          <div class="constraint-dot" aria-hidden="true"></div>
-          <p><strong style="color: var(--fg); font-weight: 600;">Configurable Purchase Limits</strong> — Purchase limits vary by client segment and are managed through back-office configuration. The experience could not rely on fixed Rugby World Cup values and needed to support changing entitlement rules without design changes.</p>
-        </div>
-        <div class="constraint-item">
-          <div class="constraint-dot" aria-hidden="true"></div>
-          <p><strong style="color: var(--fg); font-weight: 600;">Dual-Mode Platform</strong> — The platform needed to support both RTSS purchasing and the existing Request → Approval workflow. Preventing confusion between these operating models was critical, making workflow separation a core design requirement rather than a routing consideration.</p>
-        </div>
-        <div class="constraint-item">
-          <div class="constraint-dot" aria-hidden="true"></div>
-          <p><strong style="color: var(--fg); font-weight: 600;">Invoice-Driven Procurement</strong> — For corporate buyers, the transaction does not end at confirmation. Invoice access is a primary post-purchase action and needed to be treated as a first-class outcome alongside ticket fulfillment.</p>
-        </div>
+    <div class="pin-card">
+      <div class="pin-card-top">
+        <img src="../../assets/pin.avif" alt="" class="pin-card-pin" />
+        <p class="pin-card-num">02</p>
+      </div>
+      <div class="pin-card-body-wrap" style="background: #eff6ff;">
+        <p class="pin-card-title">No Transactional Foundation</p>
+        <p class="pin-card-body">CTP was built for request management, not orders. Basket, checkout, confirmation, and post-purchase all had to establish new platform capabilities.</p>
       </div>
     </div>
+    <div class="pin-card">
+      <div class="pin-card-top">
+        <img src="../../assets/pin.avif" alt="" class="pin-card-pin" />
+        <p class="pin-card-num">03</p>
+      </div>
+      <div class="pin-card-body-wrap" style="background: #fef2f2;">
+        <p class="pin-card-title">Configurable, Not Tournament-Specific</p>
+        <p class="pin-card-body">Purchase limits, seat pools, workflow routing, and user entitlements were configuration-driven. The solution needed to scale beyond Rugby World Cup 2027 without redesign.</p>
+      </div>
+    </div>
+  </div>
 
-    <div>
-      <p style="font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin: 0 0 16px 0;">Experience Constraints</p>
-      <div class="constraints-list">
-        <div class="constraint-item">
-          <div class="constraint-dot" aria-hidden="true"></div>
-          <p><strong style="color: var(--fg); font-weight: 600;">Basket as Checkout-Time Validation Point</strong> — Unlike traditional ecommerce baskets where availability is assumed stable, RTSS inventory remained highly dynamic throughout the transaction. The basket functioned as an inventory-aware staging area: held seats remained in the basket during review, with inventory revalidated at the point of checkout submission. If an item was no longer available at checkout, the buyer received explicit error feedback identifying which selections had been lost — preserving the rest of the basket and allowing recovery without restarting the flow.</p>
-        </div>
-        <div class="constraint-item">
-          <div class="constraint-dot" aria-hidden="true"></div>
-          <p><strong style="color: var(--fg); font-weight: 600;">Procurement-Paced Post-Purchase</strong> — While the purchase decision happens in minutes, the buyer's downstream work (internal procurement, finance reconciliation, etc) happens across days or weeks. Confirmation, invoicing, and order access needed to remain functional and retrievable long after the transaction window closed.</p>
-        </div>
+  <!-- Row 2: 2 cards centred -->
+  <div class="pin-row pin-row-center">
+    <div class="pin-card">
+      <div class="pin-card-top">
+        <img src="../../assets/pin.avif" alt="" class="pin-card-pin" />
+        <p class="pin-card-num">04</p>
+      </div>
+      <div class="pin-card-body-wrap" style="background: #f0fdf4;">
+        <p class="pin-card-title">Parallel Purchasing Models</p>
+        <p class="pin-card-body">The platform had to support both RTSS purchasing and the existing Request → Approval workflow, while keeping the experiences clearly separated.</p>
+      </div>
+    </div>
+    <div class="pin-card">
+      <div class="pin-card-top">
+        <img src="../../assets/pin.avif" alt="" class="pin-card-pin" />
+        <p class="pin-card-num">05</p>
+      </div>
+      <div class="pin-card-body-wrap" style="background: #fdf4ff;">
+        <p class="pin-card-title">Procurement Doesn't End at Checkout</p>
+        <p class="pin-card-body">For corporate buyers, invoices and order history were primary outcomes—not secondary downloads. Post-purchase needed to support procurement workflows long after tickets were secured.</p>
       </div>
     </div>
   </div>
@@ -421,25 +429,34 @@
      05 · DESIGN PRINCIPLES
 ══════════════════════════════════════ -->
 <section class="cs-section">
-  <p class="section-label"><span class="num">05</span> Design Principles</p>
+  <p class="section-label"><span class="num">06</span> Design Principles</p>
   <h2 style="margin-bottom: 20px;">The Three Objectives the Solution Had to Satisfy</h2>
-  <p>Before exploring solutions, I defined three success criteria that would guide the project. Every concept, interaction, and design decision was measured against these principles to ensure the experience remained focused on the core user and business objectives.</p>
 
-  <div class="principles-grid">
+  <style>
+    .principles-grid--flat .principle-item { background: none; border: none; border-radius: 0; padding: 0 0 60px 0; box-shadow: none; gap: 8px; }
+    .principles-grid--flat .principle-item:last-child { padding-bottom: 0; }
+    .principles-grid--flat .principle-item::before { display: none; }
+    .principles-grid--flat .principle-item:hover { transform: none; box-shadow: none; }
+    .principles-grid--flat .principle-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 6px; }
+    .principles-grid--flat .principle-title { font-size: 18px; font-weight: 700; color: var(--fg); line-height: 1.3; }
+    .principles-grid--flat .principle-desc { font-size: 14px; color: var(--muted-fg); line-height: 1.75; margin-top: 6px; }
+    .principles-grid--flat { grid-template-columns: 1fr; gap: 0; }
+  </style>
+  <div class="principles-grid principles-grid--flat">
     <div class="principle-item">
-      <div class="principle-label">01 · Leveraging Existing Allocation Technology</div>
-      <div class="principle-title">Rather than creating a new seat allocation system, the solution built upon an existing Best Available capability already used elsewhere in the business.</div>
-      <p class="principle-desc">The challenge was adapting the technology to support a different customer segment, purchasing model, and platform requirements while maintaining a familiar and scalable allocation experience.</p>
+      <div class="principle-label">01 · Build on Existing Platform Capabilities</div>
+      <div class="principle-title">Reuse before reinvent.</div>
+      <p class="principle-desc">Rather than introducing a new seat allocation model, the experience extended CTP's existing Best Available capability. Design effort focused on adapting proven infrastructure for a new purchasing model.</p>
     </div>
     <div class="principle-item">
-      <div class="principle-label">02 · Operational Efficiency</div>
-      <div class="principle-title">Every interaction should move the buyer closer to securing inventory.</div>
-      <p class="principle-desc">This experience was designed for task completion, not exploration. Buyers arrive with a clear objective and limited time, making unnecessary decisions, navigation, or promotional patterns a source of friction rather than value.</p>
+      <div class="principle-label">02 · Optimize for Execution</div>
+      <div class="principle-title">Help buyers complete tasks—not explore options.</div>
+      <p class="principle-desc">Corporate buyers arrive with a defined objective and limited time. Every interaction was designed to reduce friction, surface constraints early, and move users closer to securing inventory.</p>
     </div>
     <div class="principle-item">
-      <div class="principle-label">03 · Platform Scalability</div>
-      <div class="principle-title">The solution must scale beyond a single tournament.</div>
-      <p class="principle-desc">Business rules, purchasing constraints, payment methods, and system states should be driven by configuration rather than event-specific logic. Designing for flexibility ensures the platform can support future tournaments, clients, and operational models without requiring fundamental redesign.</p>
+      <div class="principle-label">03 · Design as a Platform Capability</div>
+      <div class="principle-title">Solve for the platform, not the tournament.</div>
+      <p class="principle-desc">Rules, limits, payment methods, and workflows were configuration-driven so the experience could support future tournaments without redesign.</p>
     </div>
   </div>
 
@@ -450,8 +467,8 @@
      06 · EXPLORATIONS & ITERATION
 ══════════════════════════════════════ -->
 <section class="cs-section">
-  <p class="section-label"><span class="num">06</span> Explorations</p>
-  <h2 style="margin-bottom: 20px;">Exploration &amp; Trade-Offs</h2>
+  <p class="section-label"><span class="num">07</span> Explorations</p>
+  <h2 style="margin-bottom: 20px;">Approaches considered before landing on the direction</h2>
 
   <div class="exploration-trade-offs" style="display: grid; grid-template-columns: 1fr 1.6fr; gap: 32px; margin-top: 40px; align-items: start;">
     <!-- Left: cards -->
@@ -460,7 +477,7 @@
       <!-- Card 1 — open by default -->
       <div class="explore-card explore-card--open" data-concept="../../assets/concept-1.svg" style="border: 1px solid #e5e7eb; border-radius: 12px; overflow: hidden; cursor: pointer; background: #ffffff;">
         <div class="explore-card-header" style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 20px; background: #1F1F1F;">
-          <h3 style="font-size: 14px; font-weight: 600; color: #ffffff; margin: 0; flex: 1;">Embedded Checkout Summary</h3>
+          <h3 style="font-size: 14px; font-weight: 600; color: #ffffff; margin: 0; flex: 1;">1. Embedded Checkout Summary</h3>
           <span style="font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; padding: 4px 10px; background: #ffffff; color: #000000; border-radius: 12px; white-space: nowrap;">Operational Efficiency</span>
         </div>
         <div class="explore-card-body" style="padding: 20px; display: block;">
@@ -474,7 +491,7 @@
       <!-- Card 2 — closed by default -->
       <div class="explore-card" data-concept="../../assets/concept-2.svg" style="border: 1px solid #e5e7eb; border-radius: 12px; overflow: hidden; cursor: pointer; background: #ffffff;">
         <div class="explore-card-header" style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 20px; background: #1F1F1F;">
-          <h3 style="font-size: 14px; font-weight: 600; color: #ffffff; margin: 0; flex: 1;">Seat Map-Led Selection</h3>
+          <h3 style="font-size: 14px; font-weight: 600; color: #ffffff; margin: 0; flex: 1;">2. Seat Map-Led Selection</h3>
           <span style="font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; padding: 4px 10px; background: #ffffff; color: #000000; border-radius: 12px; white-space: nowrap;">Platform Scalability</span>
         </div>
         <div class="explore-card-body" style="padding: 20px; display: none;">
@@ -488,7 +505,7 @@
       <!-- Card 3 — closed by default -->
       <div class="explore-card" data-concept="../../assets/single-page-checkout.svg" style="border: 1px solid #e5e7eb; border-radius: 12px; overflow: hidden; cursor: pointer; background: #ffffff;">
         <div class="explore-card-header" style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 20px; background: #1F1F1F;">
-          <h3 style="font-size: 14px; font-weight: 600; color: #ffffff; margin: 0; flex: 1;">Single-Page Checkout</h3>
+          <h3 style="font-size: 14px; font-weight: 600; color: #ffffff; margin: 0; flex: 1;">3. Single-Page Checkout</h3>
           <span style="font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; padding: 4px 10px; background: #ffffff; color: #000000; border-radius: 12px; white-space: nowrap;">Operational Efficiency</span>
         </div>
         <div class="explore-card-body" style="padding: 20px; display: none;">
@@ -522,10 +539,121 @@
 </section>
 
 <!-- ══════════════════════════════════════
+     07 · HOW THE DIRECTION EVOLVED
+══════════════════════════════════════ -->
+<section class="cs-section">
+  <p class="section-label"><span class="num">08</span> How the direction evolved</p>
+  <h2 style="margin-bottom: 20px;">Tensions that shaped how the direction was built</h2>
+
+  <style>
+    .tension-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; margin-top: 64px; }
+    .tension-grid.flip { direction: rtl; }
+    .tension-grid.flip > * { direction: ltr; }
+    .tension-placeholder { background: #ffffff; border-radius: 16px; aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center; border: 4px solid #EFEFEF; overflow: hidden; }
+    .tension-placeholder span { font-size: 13px; color: #9ca3af; font-weight: 500; }
+    .tension-chip { display: inline-flex; align-items: center; gap: 8px; background: #000; color: #fff; border-radius: 9999px; padding: 5px 14px; font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 20px; }
+    .tension-heading { font-size: 22px; font-weight: 700; color: var(--fg); margin: 0 0 28px 0; line-height: 1.3; }
+    .tension-sub { margin-bottom: 20px; }
+    .tension-sub-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; color: var(--fg); margin: 0 0 6px 0; }
+    .tension-sub p { font-size: 14px; color: var(--muted-fg); line-height: 1.75; margin: 0; }
+    .tension-decided { margin-top: 32px; padding: 0 20px; border-left: 3px solid var(--fg); border-radius: 0 8px 8px 0; }
+    .tension-decided-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; color: var(--fg); margin: 0 0 8px 0; }
+    .tension-decided p { font-size: 14px; color: var(--muted-fg); line-height: 1.75; margin: 0; }
+    .tension-highlight { font-weight: 800; color: #000000bf; }
+    @media (max-width: 768px) {
+      .tension-grid, .tension-grid.flip { grid-template-columns: 1fr; direction: ltr; gap: 32px; }
+    }
+  </style>
+
+  <p style="font-size: 15px; color: var(--muted-fg); line-height: 1.75; margin: 0 0 48px 0;">Beyond direction-level exploration, four tensions shaped the final architecture.</p>
+
+  <!-- Tension 1: image left, text right -->
+  <div class="tension-grid">
+    <div class="tension-placeholder"><img src="../../assets/event-detail-page.svg" alt="" style="max-width: 100%; max-height: 100%; object-fit: contain; display: block;" /></div>
+    <div>
+      <div class="tension-chip">Constraint Tension</div>
+      <div class="tension-sub">
+        <p class="tension-sub-label">What happened</p>
+        <p>Reusing legacy Best Available broke accessibility and blocked future scaling</p>
+      </div>
+      <div class="tension-sub">
+        <p class="tension-sub-label">What was at stake</p>
+        <p>Accessibility violations couldn't be back-fixed once the ticketing phase was live.</p>
+      </div>
+    </div>
+  </div>
+  <div class="tension-decided">
+    <p class="tension-decided-label">How I decided</p>
+    <p><span class="tension-highlight">I refused to trade accessibility for delivery speed</span> — violations would have needed post-launch engineering effort to resolve, and the flow would have inherited breakage that a partial redesign could have avoided. Accessibility had to be built into the design, not surfaced later in reviews. <span class="tension-highlight">The MVP map was the artifact I used to prove partial redesign was possible within the delivery timeline.</span></p>
+  </div>
+
+  <!-- Tension 2: text left, image right (flipped) -->
+  <div class="tension-grid flip" style="margin-top: 150px;">
+    <div class="tension-placeholder"><video autoplay loop muted playsinline style="width: 100%; height: 100%; object-fit: cover; display: block;"><source src="../../assets/rtss-stakeholder-tension.mp4" type="video/mp4" /></video></div>
+    <div>
+      <div class="tension-chip">Stakeholder Tension</div>
+      <div class="tension-sub">
+        <p class="tension-sub-label">What happened</p>
+        <p>PM wanted auto flow — the system would move buyers forward automatically after each match</p>
+      </div>
+      <div class="tension-sub">
+        <p class="tension-sub-label">What was at stake</p>
+        <p>Auto flow would have taken control away from buyers mid-decision — if a buyer selected 6 tickets and wanted 2 more, the system would already have moved them forward. It also introduced screen reader edge cases requiring a parallel non-auto path.</p>
+      </div>
+    </div>
+  </div>
+  <div class="tension-decided">
+    <p class="tension-decided-label">How I decided</p>
+    <p><span class="tension-highlight">Manual side-panel selection preserved user control at v1</span> and matched Nielsen's heuristic of user control and freedom. It also left a clean path for bulk selection later — a buyer could check a box to apply their category across multiple matches. Similar tradeoffs applied to seat-together toggle, interactive seat map, and multi-category selection — each scoped out of v1 because <span class="tension-highlight">shipping without a defensible scale path would have created platform debt.</span></p>
+  </div>
+
+  <!-- Tension 3: image left, text right -->
+  <div class="tension-grid" style="margin-top: 150px;">
+    <div class="tension-placeholder"><img src="../../assets/user-model-tension.svg" alt="" style="max-width: 100%; max-height: 100%; object-fit: contain; display: block;" /></div>
+    <div>
+      <div class="tension-chip">User Model Tension</div>
+      <div class="tension-sub">
+        <p class="tension-sub-label">What happened</p>
+        <p>Dual-access users couldn't tell which flow they were in — visual differentiation had to carry that load</p>
+      </div>
+      <div class="tension-sub">
+        <p class="tension-sub-label">What was at stake</p>
+        <p>A corporate buyer accidentally using the approval flow would sit in review while inventory disappeared. A union representative accidentally using RTSS would commit real-time purchases without governance review — unauthorized purchases that had to be unwound with finance teams. For dual-access users, one flow was indistinguishable from the other without visual anchors; mistakes stayed silent until reconciliation surfaced them.</p>
+      </div>
+    </div>
+  </div>
+  <div class="tension-decided">
+    <p class="tension-decided-label">How I decided</p>
+    <p>RBAC handled who could access what, but couldn't handle which flow a dual-access user was currently in. <span class="tension-highlight">Visual differentiation had to carry the cognitive load of "which mode am I in."</span> I designed the two interfaces to look and behave distinctly at the level of layout, primary actions, and state indicators — not skin-deep color changes but <span class="tension-highlight">structural cues that made the current flow unmistakable.</span></p>
+  </div>
+
+  <!-- Tension 4: text left, image right (flipped) -->
+  <div class="tension-grid flip" style="margin-top: 150px;">
+    <div class="tension-placeholder"><video autoplay loop muted playsinline style="width: 100%; height: 100%; object-fit: cover; display: block;"><source src="../../assets/what-changed-my-mind.mp4" type="video/mp4" /></video></div>
+    <div>
+      <div class="tension-chip">What changed my mind</div>
+      <div class="tension-sub">
+        <p class="tension-sub-label">What happened</p>
+        <p>I pushed hard for an interactive seat map — engineering feasibility changed my position</p>
+      </div>
+      <div class="tension-sub">
+        <p class="tension-sub-label">What was at stake</p>
+        <p>The interactive map needed to render differently per stadium. Given the RWC 2027 delivery timeline and match volume, the engineering cost would have compressed either MVP scope or shipping quality.</p>
+      </div>
+    </div>
+  </div>
+  <div class="tension-decided">
+    <p class="tension-decided-label">How I decided</p>
+    <p><span class="tension-highlight">I let engineering feasibility change my position</span> — but the real move was recognizing the interactive map could be reintroduced later as a configuration without breaking anything shipped in v1. Static image per row wasn't a compromise — it was <span class="tension-highlight">a placeholder for a future interactive version,</span> chosen because it could be swapped without unshipping user habits. The client had listed interactive seat map as "good to have," and past user interviews showed the pain point was <span class="tension-highlight">seat perspective visibility, not interactivity specifically.</span></p>
+  </div>
+
+</section>
+
+<!-- ══════════════════════════════════════
      08 · FINAL SOLUTION
 ══════════════════════════════════════ -->
 <section class="cs-section">
-  <p class="section-label"><span class="num">07</span> Final Solution</p>
+  <p class="section-label"><span class="num">09</span> Final Solution</p>
   <h2 style="margin-bottom: 20px;">Design decisions, traced to user needs</h2>
   <p>Research guided every design decision. Interactions, information hierarchy, and feature prioritization were shaped by observed user behaviour, platform constraints, and business goals.</p>
 
@@ -534,64 +662,74 @@
 
     <!-- Screen 1 -->
     <div>
-      <p style="font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #9ca3af; margin: 0 0 12px;">Screen 01</p>
-      <h3 style="font-size: 20px; font-weight: 600; color: #111827; margin: 0 0 4px;">Best Available selection (redesigned category view)</h3>
-      <p style="font-size: 14px; color: #6b7280; margin: 0 0 24px;">Category-based selection over seat map</p>
+      <div style="display: flex; align-items: center; gap: 8px; margin: 0;">
+        <span style="display: inline-block; width: 12px; height: 12px; background: #2d67e4; border-radius: 50%; flex-shrink: 0;"></span>
+        <span style="font-size: 20px; font-weight: 600; text-transform: uppercase; color: #000000;">Screen 01</span>
+      </div>
+      <h3 style="font-size: 15px; font-weight: 400; color: #6c6c6c; margin: 0 0 40px;">Best Available selection (redesigned category view)</h3>
       <img src="../../assets/edp-scaled-branded.svg" alt="Best Available selection — redesigned category view" style="width: 100%; height: auto; display: block; border-radius: 12px; border: 1px solid #e5e7eb;" />
       <div style="margin-top: 20px; padding: 20px 24px; background: #f9fafb; border-left: 3px solid #111827; border-radius: 0 8px 8px 0;">
-        <p style="font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #6b7280; margin: 0 0 8px;">Decision traced to: Operational Efficiency principle</p>
-        <p style="font-size: 15px; color: #374151; line-height: 1.65; margin: 0;">Best Available allocation optimizes for speed and fairness at scale — surfacing a seat map would have added decision overhead without improving outcomes. The category interface lets buyers express preference (price tier, section type) while the allocation engine handles seat assignment behind the scenes.</p>
+        <p style="font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #000000; font-weight: 600; margin: 0 0 8px;">Operational Efficiency principle</p>
+        <p style="font-size: 15px; color: #6c6c6c; line-height: 1.65; margin: 0;">Best Available allocation optimizes for speed and fairness at scale — surfacing a seat map would have added decision overhead without improving outcomes. The category interface lets buyers express preference (price tier, section type) while the allocation engine handles seat assignment behind the scenes.</p>
       </div>
     </div>
 
     <!-- Screen 2 -->
     <div>
-      <p style="font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #9ca3af; margin: 0 0 12px;">Screen 02</p>
-      <h3 style="font-size: 20px; font-weight: 600; color: #111827; margin: 0 0 4px;">Basket as a checkout-time validation point</h3>
-      <p style="font-size: 14px; color: #6b7280; margin: 0 0 24px;">Basket holds inventory as staged until checkout submission, where availability is revalidated against the live pool</p>
+      <div style="display: flex; align-items: center; gap: 8px; margin: 0;">
+        <span style="display: inline-block; width: 12px; height: 12px; background: #2d67e4; border-radius: 50%; flex-shrink: 0;"></span>
+        <span style="font-size: 20px; font-weight: 600; text-transform: uppercase; color: #000000;">Screen 02</span>
+      </div>
+      <h3 style="font-size: 15px; font-weight: 400; color: #6c6c6c; margin: 0 0 40px;">Basket as a checkout-time validation point</h3>
       <img src="../../assets/basket-checkout-scaled-branded.svg" alt="Basket designed for checkout-time inventory recovery" style="width: 100%; height: auto; display: block; border-radius: 12px; border: 1px solid #e5e7eb;" />
       <div style="margin-top: 20px; padding: 20px 24px; background: #f9fafb; border-left: 3px solid #111827; border-radius: 0 8px 8px 0;">
-        <p style="font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #6b7280; margin: 0 0 8px;">Decision traced to: Experience Constraint — basket as checkout-time validation point</p>
-        <p style="font-size: 15px; color: #374151; line-height: 1.65; margin: 0;">RTSS inventory is dynamic, but continuously polling availability during basket review would have introduced cognitive churn (items disappearing mid-review) and significant backend load. Instead, the basket holds inventory as staged until checkout submission, where availability is revalidated against the live pool. If a held item is no longer available at that moment, the buyer sees explicit error feedback identifying which selections were lost — preserving the rest of the basket and allowing recovery without restarting the flow.</p>
+        <p style="font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #000000; font-weight: 600; margin: 0 0 8px;">Experience Constraint — basket as checkout-time validation point</p>
+        <p style="font-size: 15px; color: #6c6c6c; line-height: 1.65; margin: 0;">RTSS inventory is dynamic, but continuously polling availability during basket review would have introduced cognitive churn (items disappearing mid-review) and significant backend load. Instead, the basket holds inventory as staged until checkout submission, where availability is revalidated against the live pool. If a held item is no longer available at that moment, the buyer sees explicit error feedback identifying which selections were lost — preserving the rest of the basket and allowing recovery without restarting the flow.</p>
       </div>
     </div>
 
     <!-- Screen 3 -->
     <div>
-      <p style="font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #9ca3af; margin: 0 0 12px;">Screen 03</p>
-      <h3 style="font-size: 20px; font-weight: 600; color: #111827; margin: 0 0 4px;">Payment screen with bank transfer as the only method</h3>
-      <p style="font-size: 14px; color: #6b7280; margin: 0 0 24px;">Bank transfer as the single payment method at launch, designed to extend to card</p>
+      <div style="display: flex; align-items: center; gap: 8px; margin: 0;">
+        <span style="display: inline-block; width: 12px; height: 12px; background: #2d67e4; border-radius: 50%; flex-shrink: 0;"></span>
+        <span style="font-size: 20px; font-weight: 600; text-transform: uppercase; color: #000000;">Screen 03</span>
+      </div>
+      <h3 style="font-size: 15px; font-weight: 400; color: #6c6c6c; margin: 0 0 40px;">Payment screen with bank transfer as the only method</h3>
       <img src="../../assets/payment-bank-transfer-scaled-branded.svg" alt="Payment screen with bank transfer as the only method" style="width: 100%; height: auto; display: block; border-radius: 12px; border: 1px solid #e5e7eb;" />
       <div style="margin-top: 20px; padding: 20px 24px; background: #f9fafb; border-left: 3px solid #111827; border-radius: 0 8px 8px 0;">
-        <p style="font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #6b7280; margin: 0 0 8px;">Decision traced to: B2B procurement reality + Platform Scalability principle</p>
-        <p style="font-size: 15px; color: #374151; line-height: 1.65; margin: 0;">Corporate buyers settle large-volume transactions through bank transfer, not card — it matches how their finance teams approve and reconcile spend. Designing for bank transfer first reflected the actual buyer workflow rather than retrofitting a consumer payment model. The payment screen architecture was designed to accommodate card as a second method in a later phase without restructuring the flow.</p>
+        <p style="font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #000000; font-weight: 600; margin: 0 0 8px;">B2B procurement reality + Platform Scalability principle</p>
+        <p style="font-size: 15px; color: #6c6c6c; line-height: 1.65; margin: 0;">Corporate buyers settle large-volume transactions through bank transfer, not card — it matches how their finance teams approve and reconcile spend. Designing for bank transfer first reflected the actual buyer workflow rather than retrofitting a consumer payment model. The payment screen architecture was designed to accommodate card as a second method in a later phase without restructuring the flow.</p>
       </div>
     </div>
 
     <!-- Screen 4 -->
     <div>
-      <p style="font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #9ca3af; margin: 0 0 12px;">Screen 04</p>
-      <h3 style="font-size: 20px; font-weight: 600; color: #111827; margin: 0 0 4px;">Order confirmation with invoice as a primary outcome</h3>
-      <p style="font-size: 14px; color: #6b7280; margin: 0 0 24px;">Invoice access elevated to a first-class CTA on the confirmation screen</p>
+      <div style="display: flex; align-items: center; gap: 8px; margin: 0;">
+        <span style="display: inline-block; width: 12px; height: 12px; background: #2d67e4; border-radius: 50%; flex-shrink: 0;"></span>
+        <span style="font-size: 20px; font-weight: 600; text-transform: uppercase; color: #000000;">Screen 04</span>
+      </div>
+      <h3 style="font-size: 15px; font-weight: 400; color: #6c6c6c; margin: 0 0 40px;">Order confirmation with invoice as a primary outcome</h3>
       <img src="../../assets/order-confirmation-scaled-branded.svg" alt="Order confirmation with invoice as a primary outcome" style="width: 100%; height: auto; display: block; border-radius: 12px; border: 1px solid #e5e7eb;" />
       <div style="margin-top: 20px; padding: 20px 24px; background: #f9fafb; border-left: 3px solid #111827; border-radius: 0 8px 8px 0;">
-        <p style="font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #6b7280; margin: 0 0 8px;">Decision traced to: Invoice-Driven Procurement constraint</p>
-        <p style="font-size: 15px; color: #374151; line-height: 1.65; margin: 0;">For corporate buyers, the transaction does not end at confirmation — the invoice is what allows the buyer to close the loop with internal procurement, finance, and downstream pre-sale operations. Treating Invoice as a primary CTA on the confirmation screen, rather than a secondary download link, acknowledges the real end-state of the workflow. Confirmation states were also designed against a future B2B order entity rather than the existing request-based pattern, ensuring the work scales beyond RWC and integrates cleanly when the order model is implemented.</p>
+        <p style="font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #000000; font-weight: 600; margin: 0 0 8px;">Invoice-Driven Procurement constraint</p>
+        <p style="font-size: 15px; color: #6c6c6c; line-height: 1.65; margin: 0;">For corporate buyers, the transaction does not end at confirmation — the invoice is what allows the buyer to close the loop with internal procurement, finance, and downstream pre-sale operations. Treating Invoice as a primary CTA on the confirmation screen, rather than a secondary download link, acknowledges the real end-state of the workflow. Confirmation states were also designed against a future B2B order entity rather than the existing request-based pattern, ensuring the work scales beyond RWC and integrates cleanly when the order model is implemented.</p>
       </div>
     </div>
 
     <!-- Screen 5 -->
     <div>
-      <p style="font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #9ca3af; margin: 0 0 12px;">Screen 05</p>
-      <h3 style="font-size: 20px; font-weight: 600; color: #111827; margin: 0 0 4px;">Payment edge case states — validation error and submission failure</h3>
-      <p style="font-size: 14px; color: #6b7280; margin: 0 0 24px;">Two distinct failure states with two distinct recovery paths</p>
+      <div style="display: flex; align-items: center; gap: 8px; margin: 0;">
+        <span style="display: inline-block; width: 12px; height: 12px; background: #2d67e4; border-radius: 50%; flex-shrink: 0;"></span>
+        <span style="font-size: 20px; font-weight: 600; text-transform: uppercase; color: #000000;">Screen 05</span>
+      </div>
+      <h3 style="font-size: 15px; font-weight: 400; color: #6c6c6c; margin: 0 0 40px;">Payment edge case states — validation error and submission failure</h3>
       <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
         <img src="../../assets/payment-not-filled-scaled-branded.svg" alt="Payment — banking details not filled" style="width: 100%; height: auto; display: block; border-radius: 12px; border: 1px solid #e5e7eb;" />
         <img src="../../assets/payment-failed-scaled-branded.svg" alt="Payment — payment failed" style="width: 100%; height: auto; display: block; border-radius: 12px; border: 1px solid #e5e7eb;" />
       </div>
       <div style="margin-top: 20px; padding: 20px 24px; background: #f9fafb; border-left: 3px solid #111827; border-radius: 0 8px 8px 0;">
-        <p style="font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #6b7280; margin: 0 0 8px;">Decision traced to: Operational Efficiency principle + edge case design discipline (25 states defined across the journey)</p>
-        <p style="font-size: 15px; color: #374151; line-height: 1.65; margin: 0;">With bank transfer as the only payment method at launch, recovery design carried more weight than in a multi-method consumer flow — a buyer hitting a failure state has no card fallback to switch to. The design distinguishes two failure modes that look superficially similar but require different buyer actions: "Banking details not filled" is caught client-side before submission, with the missing fields surfaced inline so the buyer can correct and proceed without losing context; "Payment failed" is a post-submission rejection from the bank or processor, where the inputs may be valid but the transaction couldn't complete.</p>
+        <p style="font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #000000; font-weight: 600; margin: 0 0 8px;">Operational Efficiency principle + edge case design discipline (25 states defined across the journey)</p>
+        <p style="font-size: 15px; color: #6c6c6c; line-height: 1.65; margin: 0;">With bank transfer as the only payment method at launch, recovery design carried more weight than in a multi-method consumer flow — a buyer hitting a failure state has no card fallback to switch to. The design distinguishes two failure modes that look superficially similar but require different buyer actions: "Banking details not filled" is caught client-side before submission, with the missing fields surfaced inline so the buyer can correct and proceed without losing context; "Payment failed" is a post-submission rejection from the bank or processor, where the inputs may be valid but the transaction couldn't complete.</p>
       </div>
     </div>
 
@@ -616,47 +754,12 @@
      09 · IMPACT
 ══════════════════════════════════════ -->
 <section class="cs-section">
-  <p class="section-label"><span class="num">08</span> What shipped and what it unlocked</p>
+  <p class="section-label"><span class="num">10</span> What shipped and what it unlocked</p>
   <h2 style="margin-bottom: 20px;">What happened after we shipped</h2>
-  <p>RTSS is pre-launch. Quantitative time-to-purchase and conversion data will be captured post-RWC 2027 against the existing Request → Approval baseline.</p>
-
   <div style="margin-top: 40px; display: flex; flex-direction: column; gap: 40px;">
-
-    <!-- What we know now -->
-    <div>
-      <p style="font-size: 13px; font-weight: 600; color: #111827; margin: 0 0 16px;">What we know now</p>
-      <div style="display: flex; flex-direction: column; gap: 12px;">
-        <div style="display: flex; gap: 16px; align-items: flex-start;">
-          <span style="flex-shrink: 0; width: 20px; height: 20px; background: #111827; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-top: 2px;">
-            <svg width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4L3.5 6.5L9 1" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </span>
-          <p style="font-size: 15px; color: #374151; line-height: 1.65; margin: 0;">18 audit issues resolved across heuristic and WCAG findings before a single new screen was built</p>
-        </div>
-        <div style="display: flex; gap: 16px; align-items: flex-start;">
-          <span style="flex-shrink: 0; width: 20px; height: 20px; background: #111827; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-top: 2px;">
-            <svg width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4L3.5 6.5L9 1" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </span>
-          <p style="font-size: 15px; color: #374151; line-height: 1.65; margin: 0;">25 edge case states defined and designed across the purchase journey</p>
-        </div>
-        <div style="display: flex; gap: 16px; align-items: flex-start;">
-          <span style="flex-shrink: 0; width: 20px; height: 20px; background: #111827; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-top: 2px;">
-            <svg width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4L3.5 6.5L9 1" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </span>
-          <p style="font-size: 15px; color: #374151; line-height: 1.65; margin: 0;">Bank transfer flow validated with corporate buyer stakeholders before payment screen design began</p>
-        </div>
-        <div style="display: flex; gap: 16px; align-items: flex-start;">
-          <span style="flex-shrink: 0; width: 20px; height: 20px; background: #111827; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-top: 2px;">
-            <svg width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4L3.5 6.5L9 1" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </span>
-          <p style="font-size: 15px; color: #374151; line-height: 1.65; margin: 0;">Accessibility patterns aligned with the broader filter and component baseline, ensuring consistency across CTP surfaces</p>
-        </div>
-      </div>
-    </div>
 
     <!-- What we'll measure post-launch -->
     <div>
-      <p style="font-size: 13px; font-weight: 600; color: #111827; margin: 0 0 16px;">What we'll measure post-launch</p>
-
       <!-- Desktop: 4-column overlay on paper bg -->
       <div class="hide-mobile" style="position: relative;">
         <img src="../../assets/paper-bg.svg" alt="" aria-hidden="true" style="width: 100%; height: auto; display: block;" />
@@ -714,11 +817,11 @@
 </section>
 
 <!-- ══════════════════════════════════════
-     09 · REFLECTION
+     10 · REFLECTION
 ══════════════════════════════════════ -->
 <section class="cs-section">
-  <p class="section-label"><span class="num">09</span> Reflection</p>
-  <h2 style="margin-bottom: 20px;">What I'd revisit and what surprised me</h2>
+  <p class="section-label"><span class="num">11</span> Reflection</p>
+  <h2 style="margin-bottom: 40px;">What I'd revisit and what surprised me</h2>
 
   <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
     <thead>
@@ -730,34 +833,34 @@
     <tbody>
       <tr style="border-bottom: 1px solid var(--border);">
         <td style="padding: 24px 24px 24px 0; vertical-align: top;">
-          <p style="font-size: 14px; font-weight: 600; color: #111827; margin: 0;">The real problem wasn't in the brief</p>
+          <p style="font-size: 14px; font-weight: 600; color: #111827; margin: 0;">The brief wasn't the real problem</p>
         </td>
         <td style="padding: 24px 0; vertical-align: top;">
-          <p style="font-size: 14px; color: #374151; line-height: 1.7; margin: 0;">The most important decision of this project happened before any screen was designed: realizing that CTP had no transactional infrastructure at all — no basket, no payment, no order — and that the brief, "build a B2B checkout flow," was actually asking for a transactional capability the platform had never had. If I'd executed the brief as written, I would have shipped four screens on top of a request-based data model and created tournament-specific debt for every future client. The platform analysis before the visual design was the most important hour of the project.</p>
+          <p style="font-size: 14px; color: #374151; line-height: 1.7; margin: 0;">The biggest breakthrough came before designing a single screen: realizing CTP lacked a transactional foundation. Designing a checkout without orders, basket, or payment would have created another tournament-specific workaround instead of a reusable platform capability.</p>
         </td>
       </tr>
       <tr style="border-bottom: 1px solid var(--border);">
         <td style="padding: 24px 24px 24px 0; vertical-align: top;">
-          <p style="font-size: 14px; font-weight: 600; color: #111827; margin: 0;">What I'd do differently</p>
+          <p style="font-size: 14px; font-weight: 600; color: #111827; margin: 0;">What I'd Change</p>
         </td>
         <td style="padding: 24px 0; vertical-align: top;">
-          <p style="font-size: 14px; color: #374151; line-height: 1.7; margin: 0;">I had limited access to the back-office configuration and CTP team during the design phase. With more deliberate scheduling, more thorough interview prep would have surfaced additional issues to log for future scoping and supported a stronger accessibility review. Beyond the user and product team input, many decisions leaned on past user interactions and the limited responses we received from CTP. A stronger product-mapping approach would have surfaced overlaps between adjacent epics — returns, credit, entitlements — before they surfaced in my designs.</p>
+          <p style="font-size: 14px; color: #374151; line-height: 1.7; margin: 0;">Earlier access to back-office configuration and platform teams would have uncovered future dependencies sooner. More stakeholder interviews and product mapping could also have identified adjacent capabilities—like returns and entitlements—earlier in the process.</p>
         </td>
       </tr>
       <tr style="border-bottom: 1px solid var(--border);">
         <td style="padding: 24px 24px 24px 0; vertical-align: top;">
-          <p style="font-size: 14px; font-weight: 600; color: #111827; margin: 0;">What I'd want to test post-launch</p>
+          <p style="font-size: 14px; font-weight: 600; color: #111827; margin: 0;">What I'd validate after launch</p>
         </td>
         <td style="padding: 24px 0; vertical-align: top;">
-          <p style="font-size: 14px; color: #374151; line-height: 1.7; margin: 0;">Four signals matter most. First, time-to-purchase against the legacy approval flow — the target is minutes, not hours, and the gap to baseline is the clearest measure of whether the operational thesis held. Second, error rate at ticket selection — if it's high, the limit indicator placement needs iteration. Third, the rate of "item no longer available" errors at checkout — this is the direct measure of whether the deferred basket-validation choice was the right tradeoff against continuous polling. If the rate is high, the basket needs to surface availability changes earlier; if it's low, the checkout-time validation model held up under live conditions. Fourth, invoice download rate — if it's low, the CTA placement wasn't justified and the outcome framing needs revisiting.</p>
+          <p style="font-size: 14px; color: #374151; line-height: 1.7; margin: 0;">I'd measure time-to-purchase, checkout validation failures, "item no longer available" errors, and invoice download rate. Together, these would show whether buyers could secure inventory quickly and complete downstream procurement tasks.</p>
         </td>
       </tr>
       <tr>
         <td style="padding: 24px 24px 0 0; vertical-align: top;">
-          <p style="font-size: 14px; font-weight: 600; color: #111827; margin: 0;">What this taught me about platform design</p>
+          <p style="font-size: 14px; font-weight: 600; color: #111827; margin: 0;">What this project taught me</p>
         </td>
         <td style="padding: 24px 0 0; vertical-align: top;">
-          <p style="font-size: 14px; color: #374151; line-height: 1.7; margin: 0;">Scoping the MVP forced an architectural conversation that wouldn't have happened if I'd shipped the brief. Deferring entitlements, resale, and seat map weren't accommodations — they were the prerequisite for designing a platform capability rather than a tournament feature. The deferred items became the v2 roadmap, and the transactional layer became foundational to how CTP will handle every future B2B client. The bigger lesson: a tournament timeline can be a forcing function for platform investment, but only if you're willing to push back on the brief.</p>
+          <p style="font-size: 14px; color: #374151; line-height: 1.7; margin: 0;">Platform design is often about solving beyond the brief. Scoping the MVP exposed foundational capabilities the platform would need for future tournaments, turning a one-off feature into a reusable product investment.</p>
         </td>
       </tr>
     </tbody>
@@ -765,44 +868,38 @@
 </section>
 
 <!-- ══════════════════════════════════════
-     10 · NEXT STEPS
+     11 · NEXT STEPS
 ══════════════════════════════════════ -->
 <section class="cs-section">
-  <p class="section-label"><span class="num">10</span> Next Steps</p>
-  <h2 style="margin-bottom: 20px;">What v2 unlocks</h2>
-  <p>The deferred MVP items became the v2 roadmap, with each feature intentionally scoped out of the initial release based on strategic prioritization.</p>
+  <p class="section-label"><span class="num">12</span> Next Steps</p>
+  <h2 style="margin-bottom: 20px;">What v2 Unlocks</h2>
+  <p>The MVP established the transactional foundation. These intentionally deferred capabilities build on that foundation without requiring architectural redesign.</p>
 
-  <div style="display: flex; flex-direction: column; gap: 0; margin-top: 32px;">
+  <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 40px;">
 
-    <div style="display: flex; gap: 20px; align-items: flex-start; padding: 24px 0; border-bottom: 1px solid var(--border);">
-      <span style="flex-shrink: 0; font-family: var(--serif); font-size: 28px; font-weight: 400; color: #ffffff; background: #2d67e4; width: 40px; height: 40px; border-radius: 20px; display: flex; align-items: center; justify-content: center; line-height: 1;">1</span>
-      <div>
-        <h3 style="margin-bottom: 8px;">Interactive Seat Map</h3>
-        <p>Gives buyers better view and transparency over the seats being purchased. Once available, it integrates with Best Available and the general ticket purchase flow for buyers who need specific seat selection (premium hospitality, accessibility seating, group block arrangement).</p>
-      </div>
+    <div style="background: #ffffff; border-radius: 16px; border: 1px solid #e5e7eb; padding: 28px 24px; display: flex; flex-direction: column; gap: 12px; box-shadow: 0 0 40px rgba(45,103,228,0.15), 0 4px 20px rgba(45,103,228,0.08);">
+      <span style="font-size: 20px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #2d67e4;">01</span>
+      <h3 style="font-size: 17px; font-weight: 700; color: #111827; margin: 0; line-height: 1.3;">Interactive Seat Map</h3>
+      <p style="font-size: 14px; color: #6b7280; line-height: 1.75; margin: 0;">Buyers can select specific seats instead of relying on Best Available. This extends the purchasing experience to premium hospitality, accessibility, and group bookings.</p>
     </div>
 
-    <div style="display: flex; gap: 20px; align-items: flex-start; padding: 24px 0; border-bottom: 1px solid var(--border);">
-      <span style="flex-shrink: 0; font-family: var(--serif); font-size: 28px; font-weight: 400; color: #ffffff; background: #2d67e4; width: 40px; height: 40px; border-radius: 20px; display: flex; align-items: center; justify-content: center; line-height: 1;">2</span>
-      <div>
-        <h3 style="margin-bottom: 8px;">Entitlements Management</h3>
-        <p>v1 relied on predefined purchase limits. Entitlements introduces dynamic, rule-based purchasing constraints — moving from "this client can buy up to X tickets" to "this client can buy up to X tickets of category Y for matches Z, with overrides under conditions A." This is the most architecturally complex of the deferred items and the one that most expands CTP's capability beyond RWC.</p>
-      </div>
+    <div style="background: #ffffff; border-radius: 16px; border: 1px solid #e5e7eb; padding: 28px 24px; display: flex; flex-direction: column; gap: 12px; box-shadow: 0 0 40px rgba(45,103,228,0.15), 0 4px 20px rgba(45,103,228,0.08);">
+      <span style="font-size: 20px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #2d67e4;">02</span>
+      <h3 style="font-size: 17px; font-weight: 700; color: #111827; margin: 0; line-height: 1.3;">Dynamic Entitlements</h3>
+      <p style="font-size: 14px; color: #6b7280; line-height: 1.75; margin: 0;">Replace fixed purchase limits with configurable rules based on client, inventory, and event. This expands the platform from static allocation rules to flexible purchasing policies.</p>
     </div>
 
-    <div style="display: flex; gap: 20px; align-items: flex-start; padding: 24px 0;">
-      <span style="flex-shrink: 0; font-family: var(--serif); font-size: 28px; font-weight: 400; color: #ffffff; background: #2d67e4; width: 40px; height: 40px; border-radius: 20px; display: flex; align-items: center; justify-content: center; line-height: 1;">3</span>
-      <div>
-        <h3 style="margin-bottom: 8px;">Resale & Ticket Management</h3>
-        <p>Reserved for a later phase. Once an order entity is live, resale becomes possible as a downstream operation rather than a parallel system.</p>
-      </div>
+    <div style="background: #ffffff; border-radius: 16px; border: 1px solid #e5e7eb; padding: 28px 24px; display: flex; flex-direction: column; gap: 12px; box-shadow: 0 0 40px rgba(45,103,228,0.15), 0 4px 20px rgba(45,103,228,0.08);">
+      <span style="font-size: 20px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #2d67e4;">03</span>
+      <h3 style="font-size: 17px; font-weight: 700; color: #111827; margin: 0; line-height: 1.3;">Resale & Ticket Management</h3>
+      <p style="font-size: 14px; color: #6b7280; line-height: 1.75; margin: 0;">Once the order model is established, resale and ticket management become downstream capabilities built on the same transactional foundation.</p>
     </div>
 
   </div>
 
-  <div class="cs-card" style="margin-top: 32px;">
-    <h3 style="margin-bottom: 10px;">What the platform unlocks</h3>
-    <p>With RTSS shipped and the transactional layer established, CTP becomes a transactional B2B ticketing platform — not a tournament-specific build. Future tournaments inherit the order model, the routing, the validation checkpoints, and the edge case state matrix. The platform investment compounds across every subsequent client.</p>
+  <div style="margin-top: 58px; padding: 50px 0 0 0;">
+    <h3 style="font-size: 26px; font-weight: 700; color: #111827; margin: 0 0 12px 0;">What the platform unlocks</h3>
+    <p style="font-size: 15px; color: #6b7280; line-height: 1.75; margin: 0;">With RTSS and the transactional layer in place, CTP evolves from an allocation platform into a reusable B2B commerce platform. Future tournaments can build on the same order model, workflows, and platform capabilities instead of starting from scratch.</p>
   </div>
 
 </section>

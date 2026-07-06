@@ -73,11 +73,11 @@
         <div class="hero-pills" style="margin-top: 0; margin-bottom: 40px; display: flex; gap: 16px;">
           <div style="display: flex; align-items: center; gap: 0; padding: 8px 20px 8px 16px; background: #000000; border-radius: 9999px;">
             <img src="../../assets/RWC2027.svg" alt="Men's Rugby World Cup" style="width: 30px; height: 30px; flex-shrink: 0;">
-            <a href="https://rwc2027.rugbyworldcup.com/" style="font-size: 12px; font-weight: 500; color: #ffffff; text-decoration: underline;">Mens Rugby World Cup'27 ↗</a>
+            <a href="https://rwc2027.rugbyworldcup.com/" style="font-size: 12px; font-weight: 500; color: #ffffff; text-decoration: underline;">Mens Rugby World Cup'27</a>
           </div>
           <div style="display: flex; align-items: center; gap: 0; padding: 8px 20px 8px 16px; background: #000000; border-radius: 9999px;">
             <img src="../../assets/Asian_Games_logo.svg" alt="Asian Games" style="width: 30px; height: 30px; flex-shrink: 0;">
-            <a href="https://presale.tickets-aichi-nagoya2026.org/" style="font-size: 12px; font-weight: 500; color: #ffffff; text-decoration: underline;">Asian Games'26 ↗</a>
+            <a href="https://presale.tickets-aichi-nagoya2026.org/" style="font-size: 12px; font-weight: 500; color: #ffffff; text-decoration: underline;">Asian Games'26</a>
           </div>
         </div>
 
@@ -187,7 +187,7 @@
 <div style="background: #ffffff;">
 <section class="cs-section">
   <p class="section-label"><span class="num">02</span> Constraints</p>
-  <h2>What shaped the design</h2>
+  <h2 style="margin-bottom: 20px;">What shaped the design</h2>
 
   <p>The principles defined the direction. These constraints defined the boundaries.</p>
 
@@ -275,7 +275,7 @@
     <div class="iteration-cards">
       <div class="iteration-card iteration-card--open" data-video="../../assets/filter-interaction.mp4">
         <div class="iteration-card-header">
-          <h3 class="iteration-card-title">Side Slider</h3>
+          <h3 class="iteration-card-title"><span class="iteration-card-num">1.</span> Side Slider</h3>
           <span class="iteration-card-pill">Breaks cognitive load</span>
         </div>
         <div class="iteration-card-content">
@@ -284,7 +284,7 @@
       </div>
       <div class="iteration-card" data-video="../../assets/bottom-sheet.mp4">
         <div class="iteration-card-header">
-          <h3 class="iteration-card-title">Bottom Slider</h3>
+          <h3 class="iteration-card-title"><span class="iteration-card-num">2.</span> Bottom Slider</h3>
           <span class="iteration-card-pill">System-Level Accessibility</span>
         </div>
         <div class="iteration-card-content">
@@ -293,7 +293,7 @@
       </div>
       <div class="iteration-card" data-video="../../assets/embed.mp4">
         <div class="iteration-card-header">
-          <h3 class="iteration-card-title">Embed Filters</h3>
+          <h3 class="iteration-card-title"><span class="iteration-card-num">3.</span> Embed Filters</h3>
           <span class="iteration-card-pill">breaks all principles</span>
         </div>
         <div class="iteration-card-content">
@@ -302,7 +302,7 @@
       </div>
       <div class="iteration-card" data-video="../../assets/fullscreen-dropdown.mp4">
         <div class="iteration-card-header">
-          <h3 class="iteration-card-title">Full-screen Dropdown</h3>
+          <h3 class="iteration-card-title"><span class="iteration-card-num">4.</span> Full-screen Dropdown</h3>
           <span class="iteration-card-pill">Breaks cognitive load</span>
         </div>
         <div class="iteration-card-content">
@@ -318,44 +318,126 @@
 </div>
 
 <!-- ══════════════════════════════════════
-     05 · FINAL DIRECTION
+     05 · HOW THE DIRECTION EVOLVED
 ══════════════════════════════════════ -->
 <div style="background: #ffffff;">
 <section class="cs-section">
-  <p class="section-label"><span class="num">05</span> Final Direction</p>
-  <h2>The design decisions that made it scale</h2>
+  <p class="section-label"><span class="num">05</span> How the direction evolved</p>
+  <h2 style="margin-bottom: 20px;">The tensions that shaped each decision</h2>
+
+  <style>
+    .tension-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; margin-top: 64px; }
+    .tension-grid.flip { direction: rtl; }
+    .tension-grid.flip > * { direction: ltr; }
+    .tension-placeholder { background: #ffffff; border-radius: 16px; aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center; border: 4px solid #EFEFEF; overflow: hidden; }
+    .tension-placeholder span { font-size: 13px; color: #9ca3af; font-weight: 500; }
+    .tension-chip { display: inline-flex; align-items: center; gap: 8px; background: #000; color: #fff; border-radius: 9999px; padding: 5px 14px; font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 20px; }
+    .tension-sub { margin-bottom: 20px; }
+    .tension-sub-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; color: var(--fg); margin: 0 0 6px 0; }
+    .tension-sub p { font-size: 14px; color: var(--muted-fg); line-height: 1.75; margin: 0; }
+    .tension-decided { margin-top: 32px; padding: 16px 20px; border-left: 3px solid var(--fg); border-radius: 0 8px 8px 0; }
+    .tension-decided-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; color: var(--fg); margin: 0 0 8px 0; }
+    .tension-decided p { font-size: 14px; color: var(--muted-fg); line-height: 1.75; margin: 0; }
+    .tension-highlight { font-weight: 800; color: #000000bf; }
+    @media (max-width: 768px) {
+      .tension-grid, .tension-grid.flip { grid-template-columns: 1fr; direction: ltr; gap: 32px; }
+    }
+  </style>
+
+  <!-- Tension 1: image left, text right -->
+  <div class="tension-grid">
+    <div class="tension-placeholder"><img src="assets/constraint-tension-filter.svg" alt="Constraint Tension" style="width:100%;height:100%;object-fit:contain;" /></div>
+    <div>
+      <div class="tension-chip">Constraint Tension</div>
+      <div class="tension-sub">
+        <p class="tension-sub-label">What happened</p>
+        <p>The live mobile filter wasn't accessible and didn't scale to multi-sport tournaments — larger data sets meant long scrolls, compressed touch targets, and known WCAG violations if left unchanged.</p>
+      </div>
+      <div class="tension-sub">
+        <p class="tension-sub-label">What was at stake</p>
+        <p>Mobile fatigue for casual explorers and international buyers. Compressed touch targets breaking accessibility. Shipping RWC 2027 with pre-existing violations and an experience that degraded as tournament complexity grew.</p>
+      </div>
+    </div>
+  </div>
+  <div class="tension-decided">
+    <p class="tension-decided-label">How I decided</p>
+    <p>The fix couldn't be a UI patch — <span class="tension-highlight">the filter needed re-architecture for both device contexts.</span> Mobile needed a pattern that held large data sets without density compromise; desktop needed a model that scaled to future tournament complexity. <span class="tension-highlight">Not a mobile fix — a platform-level upgrade making the filter architecture accessibility-compliant and scalable across formats.</span></p>
+  </div>
+
+  <!-- Tension 2: text left, image right (flipped) -->
+  <div class="tension-grid flip">
+    <div class="tension-placeholder"><img src="assets/stakeholder-tension-filter.svg" alt="Stakeholder Tension" style="width:100%;height:100%;object-fit:contain;" /></div>
+    <div>
+      <div class="tension-chip">Stakeholder Tension</div>
+      <div class="tension-sub">
+        <p class="tension-sub-label">What happened</p>
+        <p>Engineering pushed back on the redesign because new components would need to be built that didn't exist in Storybook — new interaction patterns, state handling, and accessibility behaviors.</p>
+      </div>
+      <div class="tension-sub">
+        <p class="tension-sub-label">What was at stake</p>
+        <p>Patching the existing filter would ship a pattern that couldn't hold large data sets, wouldn't meet accessibility out of the box, and would need re-architecture in a future release anyway.</p>
+      </div>
+    </div>
+  </div>
+  <div class="tension-decided">
+    <p class="tension-decided-label">How I decided</p>
+    <p><span class="tension-highlight">Held firm because patching would have created the same platform debt the configuration-driven component work was trying to eliminate.</span> Accessibility isn't retrofit-able cheaply; scalability isn't retrofit-able at all. The scope engineering was pushing back on was the actual scope of building for multi-tournament — the platform's stated direction. <span class="tension-highlight">New Storybook components would be reusable across every future tournament, not one-time work for RWC.</span></p>
+  </div>
+
+  <!-- Tension 3: image left, text right -->
+  <div class="tension-grid">
+    <div class="tension-placeholder"><img src="assets/reversal-moment-filter.svg" alt="Reversal Moment" style="width:100%;height:100%;object-fit:contain;" /></div>
+    <div>
+      <div class="tension-chip">Reversal Moment</div>
+      <div class="tension-sub">
+        <p class="tension-sub-label">What happened</p>
+        <p>My initial direction was a bottom sheet for mobile filter interactions — intuitive to touch, kept results visible behind the sheet, matched patterns users would recognize.</p>
+      </div>
+      <div class="tension-sub">
+        <p class="tension-sub-label">What was at stake</p>
+        <p>Bottom sheet needed more accessibility testing than the timeline allowed — WCAG 2.1 for gesture interactions, focus management, partial-height modal announcements. Not wrong on merit, wrong on delivery timing.</p>
+      </div>
+    </div>
+  </div>
+  <div class="tension-decided">
+    <p class="tension-decided-label">How I decided</p>
+    <p><span class="tension-highlight">Moved to page takeover — fewer accessibility unknowns, shorter validation cycle,</span> and a bonus advantage: full-screen accommodated larger filter data sets without compressing touch targets. Bottom sheet stayed as a viable v2 configuration — accessibility testing can happen post-launch, and if it passes the bar, it becomes a valid second pattern in the filter architecture. <span class="tension-highlight">Not a compromise; the right pattern given the timeline.</span> The deferred pattern isn't lost — it's now scoped for a longer runway.</p>
+  </div>
+
+</section>
+</div>
+
+<!-- ══════════════════════════════════════
+     06 · FINAL DIRECTION
+══════════════════════════════════════ -->
+<div style="background: #ffffff;">
+<section class="cs-section">
+  <p class="section-label"><span class="num">06</span> Final Direction</p>
+  <h2>Why this solution scales</h2>
 
   <div class="final-direction-stack">
     <div class="fd-step-item">
-      <div class="fd-circle">1</div>
-      <div class="fd-content">
-        <h3 class="fd-title">Interaction Model</h3>
-        <p class="fd-desc">The final solution adopted a full-screen filter experience with nested drill-down navigation, purpose-built for mobile ticket discovery during high-demand sporting events. Rather than embedding filters within the listing, filtering and browsing were treated as separate tasks, keeping the ticket inventory fully visible while users refined results.</p>
-      </div>
+      <div class="fd-chip">Interaction Model</div>
+      <h3 class="fd-title">Designing filtering as its own task</h3>
+      <p class="fd-desc">The final solution adopted a full-screen filter experience with hierarchical filter navigation, purpose-built for mobile ticket discovery during high-demand sporting events. <span class="fd-context">Rather than combining browsing and filtering, each became a distinct task — keeping ticket inventory visible while users refined results.</span></p>
     </div>
 
     <div class="fd-step-item">
-      <div class="fd-circle">2</div>
-      <div class="fd-content">
-        <h3 class="fd-title">Architecture</h3>
-        <p class="fd-desc">Complex filter dimensions were handled through dedicated drill-down screens, while simpler dimensions used lightweight selection controls. High-volume categories supported searchable multi-select interactions, creating a flexible framework capable of scaling across large tournament datasets, varied filter combinations, and future event configurations.</p>
-      </div>
+      <div class="fd-chip">Architecture</div>
+      <h3 class="fd-title">Scaling without rebuilding</h3>
+      <p class="fd-desc">Complex filter categories were organized using hierarchical filter navigation, while simpler filters used lightweight selection controls. <span class="fd-context">Searchable multi-select patterns supported large datasets, creating a flexible architecture that could scale across tournaments without introducing new interaction patterns.</span></p>
     </div>
 
     <div class="fd-step-item">
-      <div class="fd-circle">3</div>
-      <div class="fd-content">
-        <h3 class="fd-title">User Experience</h3>
-        <p class="fd-desc">Active filters remained visible at the parent level, enabling users to review, adjust, or remove selections without repeatedly navigating nested states. A persistent filter summary and clear reset controls improved recoverability, reduced interaction friction, and helped users maintain context during time-sensitive purchasing journeys.</p>
-      </div>
+      <div class="fd-chip">User Experience</div>
+      <h3 class="fd-title">Making filter refinement effortless</h3>
+      <p class="fd-desc">Selected filters remained visible at the parent level, allowing users to review, modify, or remove selections without repeatedly navigating through the hierarchy. <span class="fd-context">Persistent filter summaries and reset controls improved recoverability and helped users maintain context during time-sensitive purchases.</span></p>
     </div>
 
     <div class="fd-step-item">
-      <div class="fd-circle">4</div>
-      <div class="fd-content">
-        <h3 class="fd-title">Outcome</h3>
-        <p class="fd-desc">The result was a scalable filtering system that improved touch accuracy, reduced unintended selections, and established a reusable interaction pattern that could support multiple sports, tournaments, and future platform expansion while maintaining a clear and efficient mobile experience.</p>
-      </div>
+      <div class="fd-chip">Outcome</div>
+      <h3 class="fd-title">Built to scale beyond one tournament</h3>
+      <p class="fd-desc"><span class="fd-context">The final solution improved touch accuracy, reduced unintended selections, and established a reusable mobile filtering pattern that could scale across sports, tournaments, and future platform needs.</span></p>
     </div>
   </div>
 
@@ -375,7 +457,7 @@
 ══════════════════════════════════════ -->
 <div style="background: #ffffff;">
 <section class="cs-section">
-  <p class="section-label"><span class="num">06</span> Operational Impact</p>
+  <p class="section-label"><span class="num">07</span> Operational Impact</p>
   <h2>What changed across the organization</h2>
 
   <div class="impact-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 50px;">
@@ -406,13 +488,13 @@
 ══════════════════════════════════════ -->
 <div style="background: #ffffff;">
 <section class="cs-section">
-  <p class="section-label"><span class="num">07</span> Reflection</p>
+  <p class="section-label"><span class="num">08</span> Reflection</p>
   <h2>The decision the timeline made</h2>
 
-  <div style="max-width: 720px; display: flex; flex-direction: column; gap: 24px; margin-top: 40px;">
-    <p style="font-size: 15px; color: var(--fg); line-height: 1.8; margin: 0;">The hierarchical filter navigation was the right call for what shipped — testing surfaced that users made fewer selection errors with the nested category structure than with denser inline patterns, and the accessibility behavior was easier to validate within the Rugby World Cup 2027 delivery window.</p>
-    <p style="font-size: 15px; color: var(--fg); line-height: 1.8; margin: 0;">But the honest reflection is that the bottom sheet pattern wasn't rejected on design merit. It was deferred because comprehensive accessibility testing — WCAG 2.1 AA compliance across gesture-driven interactions, focus management for keyboard users, and screen reader announcement of partial-height modals — would have needed more time than the tournament timeline allowed. In a longer runway, a bottom sheet could have been a valid second candidate, particularly for high-frequency filter iteration where deep navigation adds overhead.</p>
-    <p style="font-size: 15px; color: var(--fg); line-height: 1.8; margin: 0;">What I'd revisit for future tournament rollouts: run the accessibility validation on bottom sheet interactions now that the RWC 2027 delivery pressure is behind us. If it clears the same bar, it becomes a valid configuration option in the filter architecture — not a replacement for hierarchical navigation, but a second pattern the system can support for different tournament contexts. The shipped decision doesn't need to be undone; the architecture needs to earn the ability to hold both.</p>
+  <div style="display: flex; flex-direction: column; gap: 24px; margin-top: 40px;">
+    <p style="font-size: 15px; color: var(--fg); line-height: 1.8; margin: 0;">Hierarchical navigation was the right choice for the RWC 2027 launch. Testing showed fewer selection errors, and its accessibility was easier to validate within the tournament timeline.</p>
+    <p style="font-size: 15px; color: var(--fg); line-height: 1.8; margin: 0;">The bottom sheet wasn't rejected because it was a weaker experience — it was deferred because validating WCAG 2.1 AA compliance across gestures, focus management, and screen readers required more time than the project allowed.</p>
+    <p style="font-size: 15px; color: var(--fg); line-height: 1.8; margin: 0;">Given a longer runway, I'd revisit it as a second configuration pattern rather than a replacement. If it meets the same accessibility standard, the platform should support both patterns and allow teams to choose the one that best fits each tournament.</p>
   </div>
 </section>
 </div>
