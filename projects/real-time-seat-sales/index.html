@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -8,6 +8,7 @@
   <meta name="description" content="Designing high-stakes B2B purchasing for inventory that disappears in minutes — a case study by Rakshanda Kolhe." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../../css/portfolio.css" />
   <style>
     .rtss-tbc-mobile { display: none; }
@@ -21,50 +22,12 @@
     }
   </style>
 </head>
-<body>
+<body class="rtss-page">
 
 <!-- ══════════════════════════════════════
      PASSWORD GATE
 ══════════════════════════════════════ -->
-<div id="password-gate" style="position: fixed; inset: 0; background: var(--bg); z-index: 9999; display: flex; align-items: center; justify-content: center; font-family: var(--sans);">
-  <div style="display: flex; flex-direction: column; align-items: center; gap: 20px; width: 100%; max-width: 380px; padding: 24px;">
-    <img src="../../assets/profile.svg" alt="" style="width: 64px; height: 64px;" />
-    <div style="text-align: center;">
-      <p style="font-family: 'Inter', system-ui, sans-serif; font-size: 22px; font-weight: 600; color: var(--fg); margin: 0 0 6px 0;">This is the hush hush stuff</p>
-      <p style="font-size: 13px; color: var(--muted-fg); margin: 0;">Enter the password to continue</p>
-    </div>
-    <div style="width: 100%; display: flex; flex-direction: column; gap: 8px;">
-      <input
-        id="gate-input"
-        type="password"
-        placeholder="Password"
-        style="width: 100%; box-sizing: border-box; padding: 12px 16px; font-size: 14px; font-family: var(--sans); border: 1px solid var(--border-strong); border-radius: 10px; background: var(--card); color: var(--fg); outline: none;"
-      />
-      <p id="gate-error" style="font-size: 12px; color: #e53e3e; margin: 0; display: none;">Incorrect password.</p>
-    </div>
-    <div style="display: flex; gap: 10px; width: 100%;">
-      <a href="../../index.html" style="flex: 1; text-align: center; padding: 11px 0; font-size: 14px; font-weight: 500; color: var(--fg); border: 1px solid var(--border-strong); border-radius: 10px; text-decoration: none; background: var(--card);">Cancel</a>
-      <button onclick="checkPassword()" style="flex: 1; padding: 11px 0; font-size: 14px; font-weight: 500; color: #fff; background: var(--fg); border: none; border-radius: 10px; cursor: pointer;">Continue</button>
-    </div>
-  </div>
-</div>
-
-<script>
-  document.getElementById('gate-input').addEventListener('keydown', function(e) {
-    if (e.key === 'Enter') checkPassword();
-  });
-  function checkPassword() {
-    var val = document.getElementById('gate-input').value;
-    var err = document.getElementById('gate-error');
-    if (val.trim().toLowerCase() === 'ticketmaster ctp nda project') {
-      document.getElementById('password-gate').style.display = 'none';
-    } else {
-      err.style.display = 'block';
-      document.getElementById('gate-input').value = '';
-      setTimeout(function() { window.location.href = '../../index.html'; }, 1500);
-    }
-  }
-</script>
+<!-- password gate temporarily disabled -->
 
 <!-- ══════════════════════════════════════
      NAVIGATION
@@ -116,43 +79,45 @@
     </a>
 
     <div style="margin: 24px 0 30px 0;">
-      <span style="display: inline-flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 600; color: #ffffff; background: #000000; border: 1px solid #000000; border-radius: 20px; padding: 5px 14px; letter-spacing: 0.04em; text-transform: uppercase;">Rugby World Cup 2027 · 24 teams · 52 matches · 2.5M ticket inventory · launching Q3 2027</span>
+      <span style="display: inline-flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 600; color: #ffffff; background: #000000; border: 1px solid #000000; border-radius: 20px; padding: 5px 14px; letter-spacing: 0.04em; text-transform: uppercase;">Rugby World Cup 2027 · 52 matches · 2.5M ticket inventory · launching Q3 2027</span>
     </div>
 
-    <h1 class="cs-hero-title">
-      Real-Time Seat Sales: Designing high-stakes B2B purchasing for inventory that disappears in minutes
-    </h1>
+    <div style="max-width: 52%;">
 
-    <p class="cs-hero-desc">
-      Designed CTP's first transactional layer — basket, payment, and order — for a platform built only for allocation management. Created a complete end-to-end B2B purchasing journey for Rugby World Cup 2027 corporate buyers, secured in real time against dynamic inventory.
-    </p>
+      <h1 class="cs-hero-title">
+        Real-Time Seat Sales: Building Ticketmaster's first B2B purchasing platform
+      </h1>
 
-    <img src="../../assets/rtss-hero-image.svg" alt="" style="width: 100%; height: auto; display: block; margin-bottom: 30px;" />
+      <p class="cs-hero-desc">
+        Designed CTP's first transactional layer — basket, payment, and order — for a platform built only for allocation management. Created a complete end-to-end B2B purchasing journey for Rugby World Cup 2027 corporate buyers, secured in real time against dynamic inventory.
+      </p>
 
-    <p style="font-size: 13px; font-style: italic; color: var(--muted-fg); margin: 0 0 40px 0; line-height: 1.6;">CTP (Client Ticketing Platform) — Ticketmaster's B2B ticketing platform used by sponsors, corporate partners, and rugby unions to manage tournament ticket allocations.</p>
-
-    <div class="cs-meta-row" style="padding-bottom: 60px;">
-      <div class="cs-meta-item">
-        <label>My Role</label>
-        <span class="meta-val">Lead Designer</span>
+      <div class="cs-meta-row" style="padding-bottom: 48px;">
+        <div class="cs-meta-item">
+          <label>Role</label>
+          <span class="meta-val">Product Designer</span>
+        </div>
+        <div class="cs-meta-item">
+          <label>Platform</label>
+          <span class="meta-val">Web</span>
+        </div>
+        <div class="cs-meta-item">
+          <label>Skills</label>
+          <span class="meta-val">UX Strategy</span>
+          <span class="meta-val">Interaction Design</span>
+          <span class="meta-val">Systems Thinking</span>
+        </div>
       </div>
-      <div class="cs-meta-item">
-        <label>Skills</label>
-        <span class="meta-val">UX Strategy</span>
-        <span class="meta-val">Interaction Design</span>
-        <span class="meta-val">Systems Thinking</span>
-      </div>
-      <div class="cs-meta-item">
-        <label>Platform</label>
-        <span class="meta-val">Web</span>
-      </div>
+
     </div>
 
-    <div style="padding: 24px 0; display: flex; gap: 16px; align-items: flex-start;">
-      <div>
-        <p style="font-size: 25px; font-weight: 600; color: var(--fg); margin: 0 0 6px 0; text-transform: uppercase;">The Problem</p>
-        <p style="font-size: 14px; color: var(--muted-fg); line-height: 1.7; margin: 0;">Corporate clients had no way to purchase Rugby World Cup 2027 seat inventory directly — the platform was built for stakeholder visibility, not transactional commerce. B2B buyers were forced through manual processes, causing delays, errors, and lost sales during time-critical inventory windows.</p>
-      </div>
+    <img src="../../assets/rtss-hero-image.svg" alt="" style="width: 100%; height: auto; display: block; margin-bottom: 16px;" />
+
+    <p style="font-size: 13px; font-style: italic; color: var(--muted-fg); margin: 0 0 60px 0; line-height: 1.6;">CTP (Client Ticketing Platform) — Ticketmaster's B2B ticketing platform used by sponsors, corporate partners, and rugby unions to manage tournament ticket allocations.</p>
+
+    <div>
+      <h2 style="font-size: 40px; font-weight: 620; margin: 0 0 12px 0;">The Issue</h2>
+      <p style="font-size: 15px; color: var(--muted-fg); line-height: 1.7; margin: 0;">Corporate clients had no way to purchase Rugby World Cup 2027 seat inventory directly — the platform was built for stakeholder visibility, not transactional commerce. B2B buyers were forced through manual processes, causing delays, errors, and lost sales during time-critical inventory windows.</p>
     </div>
 
   </div>
@@ -162,29 +127,35 @@
 <!-- ══════════════════════════════════════
      OUTCOME BANNER
 ══════════════════════════════════════ -->
-<div class="outcome-banner">
-  <div class="outcome-inner">
-    <div class="outcome-stat">
-      <label>Audit resolved</label>
-      <div class="big-num">18</div>
-      <p>9 heuristic violations and 9 WCAG failures across contrast, colour use, labelling, and error guidance — resolved before a single new screen was built</p>
+<div style="background: #ffffff;">
+  <div style="max-width: var(--content-w); margin: 0 auto; padding: 64px 48px 60px;">
+    <div style="display: grid; grid-template-columns: 1fr 1px 1fr 1px 1fr; gap: 0; padding-bottom: 48px;">
+      <div style="padding-right: 48px;">
+        <p style="font-size: 16px; color: var(--muted-fg); margin: 0 0 12px 0; font-weight: 400;">Audit resolved</p>
+        <div style="font-size: 64px; font-weight: 600; color: #2d67e4; line-height: 1; margin-bottom: 16px; font-family: 'Inter Display', system-ui, sans-serif;">18</div>
+        <p style="font-size: 16px; color: var(--fg); line-height: 1.65; margin: 0;">9 heuristic violations and 9 WCAG failures across contrast, colour use, labelling, and error guidance — resolved before a single new screen was built</p>
+      </div>
+      <div style="width: 1px; background: #bababa;"></div>
+      <div style="padding: 0 48px;">
+        <p style="font-size: 16px; color: var(--muted-fg); margin: 0 0 12px 0; font-weight: 400;">Net-new screens</p>
+        <div style="font-size: 64px; font-weight: 600; color: #2d67e4; line-height: 1; margin-bottom: 16px; font-family: 'Inter Display', system-ui, sans-serif;">4</div>
+        <p style="font-size: 16px; color: var(--fg); line-height: 1.65; margin: 0;">Basket, payment, order confirmation, and a redesigned Best Available* selection view — for a flow with no existing pattern to extend from</p>
+      </div>
+      <div style="width: 1px; background: #bababa;"></div>
+      <div style="padding-left: 48px;">
+        <p style="font-size: 16px; color: var(--muted-fg); margin: 0 0 12px 0; font-weight: 400;">Edge case states</p>
+        <div style="font-size: 64px; font-weight: 600; color: #2d67e4; line-height: 1; margin-bottom: 16px; font-family: 'Inter Display', system-ui, sans-serif;">25</div>
+        <p style="font-size: 16px; color: var(--fg); line-height: 1.65; margin: 0;">Across all screens — sold-out inventory, session timeout, payment failure, over-limit errors, and pending confirmation</p>
+      </div>
     </div>
-    <div class="outcome-stat">
-      <label>Net-new screens</label>
-      <div class="big-num">4</div>
-      <p>Basket, payment, order confirmation, and a redesigned Best Available* selection view — for a flow with no existing pattern to extend from</p>
-    </div>
-    <div class="outcome-stat">
-      <label>Edge case states</label>
-      <div class="big-num">25</div>
-      <p>Across all screens — sold-out inventory, session timeout, payment failure, over-limit errors, and pending confirmation</p>
-    </div>
-    <div style="grid-column: 1 / -1; display: flex; flex-direction: column; gap: 10px; align-self: end;">
-      <p class="outcome-note" style="margin: 0;">*Best Available — Ticketmaster's existing seat allocation engine that automatically assigns optimal seats based on inventory and buyer preferences.</p>
-      <p class="outcome-note" style="margin: 0;">⚑ Pre-launch. Quantitative time-to-purchase and conversion data will be captured post-RWC 2027 against the existing Request → Approval flow baseline.</p>
+    <div style="display: flex; flex-direction: column; gap: 6px;">
+      <p style="font-size: 12px; color: #696969; margin: 0; line-height: 1.6;">*Best Available — Ticketmaster's existing seat allocation engine that automatically assigns optimal seats based on inventory and buyer preferences.</p>
+      <p style="font-size: 12px; color: #696969; margin: 0; line-height: 1.6;">⚑ Pre-launch. Quantitative time-to-purchase and conversion data will be captured post-RWC 2027 against the existing Request → Approval flow baseline.</p>
     </div>
   </div>
 </div>
+
+<div style="max-width: 1040px; margin: 0 auto; height: 1px; background: linear-gradient(to right, transparent, #e5e7eb 20%, #e5e7eb 80%, transparent);"></div>
 
 <div style="background: #ffffff;">
 
@@ -192,7 +163,7 @@
      01 · CONTEXT & STAKES
 ══════════════════════════════════════ -->
 <section class="cs-section">
-  <p class="section-label"><span class="num">01</span> Context &amp; Stakes</p>
+  <p class="section-label">Context &amp; Stakes</p>
   <h2 style="margin-bottom: 20px;">Why this mattered to the business</h2>
 
   <p>
@@ -247,38 +218,52 @@
      02 · PROBLEM DEFINITION
 ══════════════════════════════════════ -->
 <section class="cs-section">
-  <p class="section-label"><span class="num">02</span> Problem Definition</p>
+  <p class="section-label">Problem Definition</p>
   <h2 style="margin-bottom: 20px;">What was broken, and why it mattered</h2>
 
   <p>Before designing anything new, a heuristic and accessibility audit was conducted across the existing CTP experience. The goal was to surface the violations already present in the platform — issues that would follow us into the new purchasing flow if left unresolved.</p>
 
-  <div class="three-col-layout" style="display: grid; grid-template-columns: 200px 550px 200px; gap: 40px; align-items: center; justify-content: center; margin-top: 48px; margin-bottom: 48px; margin-left: -200px; margin-right: -200px;">
+  <style>
+    .pd-grid { display: grid; grid-template-columns: 300px 600px 300px; column-gap: 32px; row-gap: 0; align-items: center; margin-top: 48px; margin-bottom: 48px; margin-left: -140px; margin-right: -140px; }
+    .pd-col { display: flex; flex-direction: column; gap: 24px; }
+    .pd-card { background: #ffffff; border: 1px solid #e5e7eb; border-radius: 16px; padding: 24px; box-shadow: 0 4px 24px rgba(0,0,0,0.07); width: 300px; box-sizing: border-box; }
+    .pd-card:first-child { transform: rotate(-1.5deg); }
+    .pd-card:last-child { transform: rotate(1.5deg); }
+    .pd-col:last-child .pd-card:first-child { transform: rotate(1.2deg); }
+    .pd-col:last-child .pd-card:last-child { transform: rotate(-1deg); }
+    .pd-card-heading { display: flex; align-items: baseline; gap: 6px; margin-bottom: 10px; }
+    .pd-num { font-size: 14px; font-weight: 700; color: #2d67e4; margin: 0; font-family: 'Inter Display', system-ui, sans-serif; flex-shrink: 0; }
+    .rtss-page .pd-title { font-size: 16px !important; font-weight: 700; color: var(--fg); margin: 0; line-height: 1.35; font-family: 'Inter Display', system-ui, sans-serif; }
+    .rtss-page .pd-body { font-size: 16px !important; color: var(--muted-fg); line-height: 1.75; margin: 0; font-family: 'Inter Display', system-ui, sans-serif; }
+  </style>
+
+  <div class="pd-grid">
     <!-- Left column -->
-    <div style="display: flex; flex-direction: column; gap: 40px;">
-      <div style="display: flex; flex-direction: column; gap: 10px;">
-        <h3 style="font-size: 14px; font-weight: 700; color: var(--fg); margin: 0; line-height: 1.4;">1. The approval model couldn't support real-time sales</h3>
-        <p style="font-size: 13px; color: var(--muted-fg); line-height: 1.75; margin: 0;">When inventory is released unexpectedly, the Request → Approval flow introduces too much latency. By the time requests are approved, high-demand seats are often gone, leaving eligible buyers unable to act in time.</p>
+    <div class="pd-col">
+      <div class="pd-card">
+        <div class="pd-card-heading"><p class="pd-num">1.</p><h3 class="pd-title">The approval model is incompatible with real-time inventory</h3></div>
+        <p class="pd-body">When inventory drops unpredictably, the Request→Approval flow introduces too much latency. By the time approval completes, high-demand seats are gone. There is no mechanism for eligible stakeholders to act immediately.</p>
       </div>
-      <div style="display: flex; flex-direction: column; gap: 10px;">
-        <h3 style="font-size: 14px; font-weight: 700; color: var(--fg); margin: 0; line-height: 1.4;">2. CTP lacked transactional infrastructure</h3>
-        <p style="font-size: 13px; color: var(--muted-fg); line-height: 1.75; margin: 0;">CTP was built around request entities, not orders. Basket, payment, and checkout were entirely new capabilities, making every design decision foundational rather than an extension of existing patterns.</p>
+      <div class="pd-card">
+        <div class="pd-card-heading"><p class="pd-num">2.</p><h3 class="pd-title">No transactional infrastructure exists on CTP</h3></div>
+        <p class="pd-body">CTP generates a "request entity" for payments — not an order entity. Basket, payment, and confirmation flows are net-new surfaces with no pattern to extend. Every design decision either creates a scalable foundation or a fragile workaround. This was not in the original brief — it surfaced through platform analysis.</p>
       </div>
     </div>
 
     <!-- Center image -->
-    <div style="display: flex; justify-content: center;">
-      <img src="../../assets/event-detail-page.svg" alt="Event Detail Page" style="width: 550px; height: auto; display: block; border-radius: 8px;" />
+    <div style="overflow: hidden;">
+      <img src="../../assets/event-detail-page.svg" alt="Event Detail Page" style="width: 600px; height: 100%; object-fit: cover; display: block; border-radius: 8px;" />
     </div>
 
     <!-- Right column -->
-    <div style="display: flex; flex-direction: column; gap: 40px; align-items: flex-start; text-align: left;">
-      <div style="display: flex; flex-direction: column; gap: 10px;">
-        <h3 style="font-size: 14px; font-weight: 700; color: var(--fg); margin: 0; line-height: 1.4;">3. Two stakeholder workflows needed clear separation</h3>
-        <p style="font-size: 13px; color: var(--muted-fg); line-height: 1.75; margin: 0;">Corporate buyers (RTSS) and participating unions (Request → Approval) followed different purchasing journeys. Without clear distinction, users could easily enter the wrong workflow.</p>
+    <div class="pd-col">
+      <div class="pd-card">
+        <div class="pd-card-heading"><p class="pd-num">3.</p><h3 class="pd-title">Dual-mode stakeholder management creates collision risk</h3></div>
+        <p class="pd-body">Non-union corporates (RTSS) and participating unions (Request→Approval) operate differently. Nothing in the current design explicitly differentiates these flows — a corporate stakeholder could land in the wrong journey entirely.</p>
       </div>
-      <div style="display: flex; flex-direction: column; gap: 10px;">
-        <h3 style="font-size: 14px; font-weight: 700; color: var(--fg); margin: 0; line-height: 1.4;">4. The solution had to scale beyond RWC 2027</h3>
-        <p style="font-size: 13px; color: var(--muted-fg); line-height: 1.75; margin: 0;">Market segments, seat pools, and workflow routing were all configuration-driven. The experience needed to become a reusable platform capability—not a tournament-specific solution.</p>
+      <div class="pd-card">
+        <div class="pd-card-heading"><p class="pd-num">4.</p><h3 class="pd-title">Platform decisions need to scale beyond RWC</h3></div>
+        <p class="pd-body">Market segments, CRC seat pools, and workflow routing are all configurable systems. Design decisions made for RWC 2027 will either scale across the platform or create tournament-specific debt for every subsequent client.</p>
       </div>
     </div>
   </div>
@@ -290,7 +275,7 @@
      03 · USERS & CONTEXT
 ══════════════════════════════════════ -->
 <section class="cs-section">
-  <p class="section-label"><span class="num">03</span> Users &amp; Context</p>
+  <p class="section-label">Users &amp; Context</p>
   <h2 style="margin-bottom: 20px;">Who we were designing for</h2>
 
   <p>CTP supported multiple stakeholder groups with distinct responsibilities, permissions, and purchasing workflows. While they shared the same platform, each came with different goals, requiring experiences tailored to how they worked rather than a one-size-fits-all journey.</p>
@@ -299,7 +284,7 @@
     <div style="display: flex; align-items: flex-start; gap: 15px; padding: 28px; border: 1px solid #e5e7eb; border-radius: 12px; background: #ffffff; box-shadow: 0 0 40px rgba(45,103,228,0.08);">
       <img src="../../assets/Corporate-buyer.svg" alt="Corporate Buyer" style="width: 56px; height: 56px; flex-shrink: 0;" />
       <div style="display: flex; flex-direction: column; gap: 8px;">
-        <p style="font-size: 15px; font-weight: 600; color: var(--fg); margin: 0;">The Corporate Buyer</p>
+        <p style="font-size: 24px !important; font-weight: 600; color: var(--fg); margin: 0;">The Corporate Buyer</p>
         <p style="font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin: 0;">RTSS Purchase Flow · Sponsors, Commercial Partners, Key Accounts</p>
         <p style="font-size: 13px; color: var(--muted-fg); line-height: 1.75; margin: 0;">Purchases approved inventory on behalf of their organization through the RTSS flow. Works within corporate procurement processes, settles payments via bank transfer, and relies on invoices to complete internal purchasing and reconciliation.</p>
       </div>
@@ -307,7 +292,7 @@
     <div style="display: flex; align-items: flex-start; gap: 15px; padding: 28px; border: 1px solid #e5e7eb; border-radius: 12px; background: #ffffff; box-shadow: 0 0 40px rgba(45,103,228,0.08);">
       <img src="../../assets/Union-representative.svg" alt="Union Representative" style="width: 56px; height: 56px; flex-shrink: 0;" />
       <div style="display: flex; flex-direction: column; gap: 8px;">
-        <p style="font-size: 15px; font-weight: 600; color: var(--fg); margin: 0;">The Union Representative</p>
+        <p style="font-size: 24px !important; font-weight: 600; color: var(--fg); margin: 0;">The Union Representative</p>
         <p style="font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin: 0;">Request → Approval Flow · Participating Unions</p>
         <p style="font-size: 13px; color: var(--muted-fg); line-height: 1.75; margin: 0;">Requests inventory through an established allocation and approval workflow. Since this experience remained unchanged, the primary design consideration was maintaining clear separation from RTSS purchasing.</p>
       </div>
@@ -321,14 +306,15 @@
      04 · DISCOVERY & RESEARCH
 ══════════════════════════════════════ -->
 <section class="cs-section">
-  <p class="section-label"><span class="num">04</span> Discovery &amp; Research</p>
+  <p class="section-label">Discovery &amp; Research</p>
   <h2 style="margin-bottom: 20px;">What the platform analysis revealed</h2>
+  <p>CTP supported multiple stakeholder groups with distinct responsibilities, permissions, and purchasing workflows. While they shared the same platform, each came with different goals, requiring experiences tailored to how they worked rather than a one-size-fits-all journey.</p>
 
   <figure class="s4-figure" style="margin: 40px 0 65px 0;">
     <img src="../../assets/section4-diagram-desktop.svg" alt="CTP transactional layer diagram" class="hide-mobile" style="width: 100%; height: auto; display: block;" />
     <img src="../../assets/section4-diagram-mobile.svg" alt="CTP transactional layer diagram" class="hide-desktop" style="width: 100%; height: auto; display: none;" />
     <figcaption style="font-size: 13px; color: var(--muted-fg); line-height: 1.7; margin-top: 30px;">The platform's missing transactional layer — basket, payment, and order — identified during architecture analysis. CTP generated request entities for approval workflows but had no transactional model at all. Designing the entire purchasing journey required defining how a future B2B order entity would integrate with existing inventory and invoicing systems.</figcaption>
-    <hr class="s4-hr" style="border: none; border-top: 1px solid var(--border); margin-top: 65px;" />
+    <hr class="s4-hr" style="border: none; margin-top: 65px;" />
   </figure>
 
   <h3 style="margin-bottom: 12px; margin-top: 0; font-size: 18px;">Designing for a Different Mental Model</h3>
@@ -339,7 +325,7 @@
   <div class="quotes-grid">
     <div style="border-left: 3px solid #2d67e4; padding: 16px 20px;">
       <div class="quote-text" style="margin-bottom: 12px;">"When inventory becomes available, speed matters more than discovery. I need to understand my limits, make a decision, and secure the seats before someone else does."</div>
-      <p style="font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #9ca3af; margin: 0;">Corporate buyer, research session, 2022</p>
+      <p style="font-size: 14px !important; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #9ca3af; margin: 0;">Corporate buyer, research session, 2022</p>
     </div>
   </div>
 
@@ -349,8 +335,9 @@
      05 · CONSTRAINTS
 ══════════════════════════════════════ -->
 <section class="cs-section">
-  <p class="section-label"><span class="num">05</span> Constraints</p>
-  <h2 style="margin-bottom: 40px;">Constraints That Shaped the Design</h2>
+  <p class="section-label">Constraints</p>
+  <h2 style="margin-bottom: 20px;">Constraints That Shaped the Design</h2>
+  <p style="margin-bottom: 40px;">CTP supported multiple stakeholder groups with distinct responsibilities, permissions, and purchasing workflows. While they shared the same platform, each came with different goals, requiring experiences tailored to how they worked rather than a one-size-fits-all journey.</p>
 
   <style>
     .pin-row { display: flex; gap: 20px; }
@@ -360,7 +347,7 @@
     .pin-card-top { padding: 24px 24px 16px; display: flex; flex-direction: column; gap: 0; }
     .pin-card-pin { width: 56px; height: 56px; object-fit: contain; display: block; margin: 0 auto; }
     .pin-card-num { font-size: 11px; font-weight: 600; color: #9ca3af; letter-spacing: 0.06em; margin: 0; }
-    .pin-card-title { font-size: 20px; font-weight: 1000; color: #000000 !important; line-height: 1.3; margin: 0 0 10px 0; }
+    .pin-card-title { font-size: 20px; font-weight: 700; color: #000000 !important; line-height: 1.3; margin: 0 0 10px 0; }
     .pin-card-body-wrap { margin: 0 12px 12px; border-radius: 10px; padding: 16px; }
     .pin-card-body { font-size: 13px; color: var(--muted-fg); line-height: 1.7; margin: 0; }
     @media (max-width: 768px) { .pin-row { flex-direction: column; } .pin-row-center .pin-card { flex: 1; } }
@@ -429,17 +416,17 @@
      05 · DESIGN PRINCIPLES
 ══════════════════════════════════════ -->
 <section class="cs-section">
-  <p class="section-label"><span class="num">06</span> Design Principles</p>
-  <h2 style="margin-bottom: 20px;">The Three Objectives the Solution Had to Satisfy</h2>
+  <p class="section-label">Design Principles</p>
+  <h2 style="margin-bottom: 40px;">The Three Objectives the Solution Had to Satisfy</h2>
 
   <style>
     .principles-grid--flat .principle-item { background: none; border: none; border-radius: 0; padding: 0 0 60px 0; box-shadow: none; gap: 8px; }
     .principles-grid--flat .principle-item:last-child { padding-bottom: 0; }
     .principles-grid--flat .principle-item::before { display: none; }
     .principles-grid--flat .principle-item:hover { transform: none; box-shadow: none; }
-    .principles-grid--flat .principle-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 6px; }
-    .principles-grid--flat .principle-title { font-size: 18px; font-weight: 700; color: var(--fg); line-height: 1.3; }
-    .principles-grid--flat .principle-desc { font-size: 14px; color: var(--muted-fg); line-height: 1.75; margin-top: 6px; }
+    .principles-grid--flat .principle-label { font-size: 16px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 0; }
+    .principles-grid--flat .principle-title { font-size: 24px; font-weight: 600; color: var(--fg); line-height: 1.3; }
+    .principles-grid--flat .principle-desc { font-size: 16px; color: var(--muted-fg); line-height: 1.75; margin-top: 6px; }
     .principles-grid--flat { grid-template-columns: 1fr; gap: 0; }
   </style>
   <div class="principles-grid principles-grid--flat">
@@ -467,7 +454,7 @@
      06 · EXPLORATIONS & ITERATION
 ══════════════════════════════════════ -->
 <section class="cs-section">
-  <p class="section-label"><span class="num">07</span> Explorations</p>
+  <p class="section-label">Explorations</p>
   <h2 style="margin-bottom: 20px;">Approaches considered before landing on the direction</h2>
 
   <div class="exploration-trade-offs" style="display: grid; grid-template-columns: 1fr 1.6fr; gap: 32px; margin-top: 40px; align-items: start;">
@@ -477,7 +464,7 @@
       <!-- Card 1 — open by default -->
       <div class="explore-card explore-card--open" data-concept="../../assets/concept-1.svg" style="border: 1px solid #e5e7eb; border-radius: 12px; overflow: hidden; cursor: pointer; background: #ffffff;">
         <div class="explore-card-header" style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 20px; background: #1F1F1F;">
-          <h3 style="font-size: 14px; font-weight: 600; color: #ffffff; margin: 0; flex: 1;">1. Embedded Checkout Summary</h3>
+          <h3 style="font-size: 20px; font-weight: 600; color: #ffffff; margin: 0; flex: 1;">1. Embedded Checkout Summary</h3>
           <span style="font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; padding: 4px 10px; background: #ffffff; color: #000000; border-radius: 12px; white-space: nowrap;">Operational Efficiency</span>
         </div>
         <div class="explore-card-body" style="padding: 20px; display: block;">
@@ -491,7 +478,7 @@
       <!-- Card 2 — closed by default -->
       <div class="explore-card" data-concept="../../assets/concept-2.svg" style="border: 1px solid #e5e7eb; border-radius: 12px; overflow: hidden; cursor: pointer; background: #ffffff;">
         <div class="explore-card-header" style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 20px; background: #1F1F1F;">
-          <h3 style="font-size: 14px; font-weight: 600; color: #ffffff; margin: 0; flex: 1;">2. Seat Map-Led Selection</h3>
+          <h3 style="font-size: 20px; font-weight: 600; color: #ffffff; margin: 0; flex: 1;">2. Seat Map-Led Selection</h3>
           <span style="font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; padding: 4px 10px; background: #ffffff; color: #000000; border-radius: 12px; white-space: nowrap;">Platform Scalability</span>
         </div>
         <div class="explore-card-body" style="padding: 20px; display: none;">
@@ -505,7 +492,7 @@
       <!-- Card 3 — closed by default -->
       <div class="explore-card" data-concept="../../assets/single-page-checkout.svg" style="border: 1px solid #e5e7eb; border-radius: 12px; overflow: hidden; cursor: pointer; background: #ffffff;">
         <div class="explore-card-header" style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 20px; background: #1F1F1F;">
-          <h3 style="font-size: 14px; font-weight: 600; color: #ffffff; margin: 0; flex: 1;">3. Single-Page Checkout</h3>
+          <h3 style="font-size: 20px; font-weight: 600; color: #ffffff; margin: 0; flex: 1;">3. Single-Page Checkout</h3>
           <span style="font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; padding: 4px 10px; background: #ffffff; color: #000000; border-radius: 12px; white-space: nowrap;">Operational Efficiency</span>
         </div>
         <div class="explore-card-body" style="padding: 20px; display: none;">
@@ -542,7 +529,7 @@
      07 · HOW THE DIRECTION EVOLVED
 ══════════════════════════════════════ -->
 <section class="cs-section">
-  <p class="section-label"><span class="num">08</span> How the direction evolved</p>
+  <p class="section-label">How the direction evolved</p>
   <h2 style="margin-bottom: 20px;">Tensions that shaped how the direction was built</h2>
 
   <style>
@@ -558,8 +545,8 @@
     .tension-sub p { font-size: 14px; color: var(--muted-fg); line-height: 1.75; margin: 0; }
     .tension-decided { margin-top: 32px; padding: 0 20px; border-left: 3px solid var(--fg); border-radius: 0 8px 8px 0; }
     .tension-decided-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; color: var(--fg); margin: 0 0 8px 0; }
-    .tension-decided p { font-size: 14px; color: var(--muted-fg); line-height: 1.75; margin: 0; }
-    .tension-highlight { font-weight: 800; color: #000000bf; }
+    .tension-decided p { font-size: 14px; font-weight: 600; color: var(--muted-fg); line-height: 1.75; margin: 0; }
+    .tension-highlight { font-weight: 650; color: #000000bf; }
     @media (max-width: 768px) {
       .tension-grid, .tension-grid.flip { grid-template-columns: 1fr; direction: ltr; gap: 32px; }
     }
@@ -653,7 +640,7 @@
      08 · FINAL SOLUTION
 ══════════════════════════════════════ -->
 <section class="cs-section">
-  <p class="section-label"><span class="num">09</span> Final Solution</p>
+  <p class="section-label">Final Solution</p>
   <h2 style="margin-bottom: 20px;">Design decisions, traced to user needs</h2>
   <p>Research guided every design decision. Interactions, information hierarchy, and feature prioritization were shaped by observed user behaviour, platform constraints, and business goals.</p>
 
@@ -664,9 +651,9 @@
     <div>
       <div style="display: flex; align-items: center; gap: 8px; margin: 0;">
         <span style="display: inline-block; width: 12px; height: 12px; background: #2d67e4; border-radius: 50%; flex-shrink: 0;"></span>
-        <span style="font-size: 20px; font-weight: 600; text-transform: uppercase; color: #000000;">Screen 01</span>
+        <span style="font-size: 14px; font-weight: 600; text-transform: uppercase; color: #000000;">Screen 01</span>
       </div>
-      <h3 style="font-size: 15px; font-weight: 400; color: #6c6c6c; margin: 0 0 40px;">Best Available selection (redesigned category view)</h3>
+      <h3 style="font-size: 20px; font-weight: 600; color: #000000; margin: 0 0 40px;">Best Available selection (redesigned category view)</h3>
       <img src="../../assets/edp-scaled-branded.svg" alt="Best Available selection — redesigned category view" style="width: 100%; height: auto; display: block; border-radius: 12px; border: 1px solid #e5e7eb;" />
       <div style="margin-top: 20px; padding: 20px 24px; background: #f9fafb; border-left: 3px solid #111827; border-radius: 0 8px 8px 0;">
         <p style="font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #000000; font-weight: 600; margin: 0 0 8px;">Operational Efficiency principle</p>
@@ -678,9 +665,9 @@
     <div>
       <div style="display: flex; align-items: center; gap: 8px; margin: 0;">
         <span style="display: inline-block; width: 12px; height: 12px; background: #2d67e4; border-radius: 50%; flex-shrink: 0;"></span>
-        <span style="font-size: 20px; font-weight: 600; text-transform: uppercase; color: #000000;">Screen 02</span>
+        <span style="font-size: 14px; font-weight: 600; text-transform: uppercase; color: #000000;">Screen 02</span>
       </div>
-      <h3 style="font-size: 15px; font-weight: 400; color: #6c6c6c; margin: 0 0 40px;">Basket as a checkout-time validation point</h3>
+      <h3 style="font-size: 20px; font-weight: 600; color: #000000; margin: 0 0 40px;">Basket as a checkout-time validation point</h3>
       <img src="../../assets/basket-checkout-scaled-branded.svg" alt="Basket designed for checkout-time inventory recovery" style="width: 100%; height: auto; display: block; border-radius: 12px; border: 1px solid #e5e7eb;" />
       <div style="margin-top: 20px; padding: 20px 24px; background: #f9fafb; border-left: 3px solid #111827; border-radius: 0 8px 8px 0;">
         <p style="font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #000000; font-weight: 600; margin: 0 0 8px;">Experience Constraint — basket as checkout-time validation point</p>
@@ -692,9 +679,9 @@
     <div>
       <div style="display: flex; align-items: center; gap: 8px; margin: 0;">
         <span style="display: inline-block; width: 12px; height: 12px; background: #2d67e4; border-radius: 50%; flex-shrink: 0;"></span>
-        <span style="font-size: 20px; font-weight: 600; text-transform: uppercase; color: #000000;">Screen 03</span>
+        <span style="font-size: 14px; font-weight: 600; text-transform: uppercase; color: #000000;">Screen 03</span>
       </div>
-      <h3 style="font-size: 15px; font-weight: 400; color: #6c6c6c; margin: 0 0 40px;">Payment screen with bank transfer as the only method</h3>
+      <h3 style="font-size: 20px; font-weight: 600; color: #000000; margin: 0 0 40px;">Payment screen with bank transfer as the only method</h3>
       <img src="../../assets/payment-bank-transfer-scaled-branded.svg" alt="Payment screen with bank transfer as the only method" style="width: 100%; height: auto; display: block; border-radius: 12px; border: 1px solid #e5e7eb;" />
       <div style="margin-top: 20px; padding: 20px 24px; background: #f9fafb; border-left: 3px solid #111827; border-radius: 0 8px 8px 0;">
         <p style="font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #000000; font-weight: 600; margin: 0 0 8px;">B2B procurement reality + Platform Scalability principle</p>
@@ -706,9 +693,9 @@
     <div>
       <div style="display: flex; align-items: center; gap: 8px; margin: 0;">
         <span style="display: inline-block; width: 12px; height: 12px; background: #2d67e4; border-radius: 50%; flex-shrink: 0;"></span>
-        <span style="font-size: 20px; font-weight: 600; text-transform: uppercase; color: #000000;">Screen 04</span>
+        <span style="font-size: 14px; font-weight: 600; text-transform: uppercase; color: #000000;">Screen 04</span>
       </div>
-      <h3 style="font-size: 15px; font-weight: 400; color: #6c6c6c; margin: 0 0 40px;">Order confirmation with invoice as a primary outcome</h3>
+      <h3 style="font-size: 20px; font-weight: 600; color: #000000; margin: 0 0 40px;">Order confirmation with invoice as a primary outcome</h3>
       <img src="../../assets/order-confirmation-scaled-branded.svg" alt="Order confirmation with invoice as a primary outcome" style="width: 100%; height: auto; display: block; border-radius: 12px; border: 1px solid #e5e7eb;" />
       <div style="margin-top: 20px; padding: 20px 24px; background: #f9fafb; border-left: 3px solid #111827; border-radius: 0 8px 8px 0;">
         <p style="font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #000000; font-weight: 600; margin: 0 0 8px;">Invoice-Driven Procurement constraint</p>
@@ -720,9 +707,9 @@
     <div>
       <div style="display: flex; align-items: center; gap: 8px; margin: 0;">
         <span style="display: inline-block; width: 12px; height: 12px; background: #2d67e4; border-radius: 50%; flex-shrink: 0;"></span>
-        <span style="font-size: 20px; font-weight: 600; text-transform: uppercase; color: #000000;">Screen 05</span>
+        <span style="font-size: 14px; font-weight: 600; text-transform: uppercase; color: #000000;">Screen 05</span>
       </div>
-      <h3 style="font-size: 15px; font-weight: 400; color: #6c6c6c; margin: 0 0 40px;">Payment edge case states — validation error and submission failure</h3>
+      <h3 style="font-size: 20px; font-weight: 600; color: #000000; margin: 0 0 40px;">Payment edge case states — validation error and submission failure</h3>
       <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
         <img src="../../assets/payment-not-filled-scaled-branded.svg" alt="Payment — banking details not filled" style="width: 100%; height: auto; display: block; border-radius: 12px; border: 1px solid #e5e7eb;" />
         <img src="../../assets/payment-failed-scaled-branded.svg" alt="Payment — payment failed" style="width: 100%; height: auto; display: block; border-radius: 12px; border: 1px solid #e5e7eb;" />
@@ -736,7 +723,8 @@
   </div>
 
   <!-- Full flow -->
-  <p style="font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #9ca3af; margin: 48px 0 12px;">See the full flow</p>
+  <div style="max-width: 1040px; margin: 48px auto; height: 1px; background: linear-gradient(to right, transparent, var(--border) 15%, var(--border) 85%, transparent);"></div>
+  <p style="font-size: 14px !important; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #2d67e4; margin: 0 0 12px;">See the full flow</p>
   <h2 style="margin-bottom: 20px;">End-to-end walkthrough</h2>
   <p>After several rounds of UX, accessibility and quality testing I designed CTP's first transactional layer — basket, payment, and order — for a platform built only for allocation management.</p>
   <video
@@ -748,13 +736,14 @@
     style="width: 100%; height: auto; display: block; border-radius: 12px;"
   ></video>
 
+
 </section>
 
 <!-- ══════════════════════════════════════
      09 · IMPACT
 ══════════════════════════════════════ -->
 <section class="cs-section">
-  <p class="section-label"><span class="num">10</span> What shipped and what it unlocked</p>
+  <p class="section-label">What shipped and what it unlocked</p>
   <h2 style="margin-bottom: 20px;">What happened after we shipped</h2>
   <div style="margin-top: 40px; display: flex; flex-direction: column; gap: 40px;">
 
@@ -766,22 +755,22 @@
         <div style="position: absolute; inset: 0; display: flex; align-items: center; padding: 6% 4% 0;">
           <div style="display: grid; grid-template-columns: 1fr 1px 1fr 1px 1fr 1px 1fr; width: 100%;">
             <div style="padding: 0 24px; text-align: center;">
-              <div class="metric-num" style="font-size: 28px; font-weight: 500; margin-bottom: 12px;">TBC</div>
+              <div class="metric-num" style="font-size: 28px; font-weight: 500; margin-bottom: 12px; font-family: 'Inter Display', system-ui, sans-serif; color: #000000;">TBC</div>
               <p style="font-size: 13px; color: #374151; line-height: 1.6; margin: 0;">Time-to-purchase against the legacy approval flow — minutes rather than hours</p>
             </div>
             <div style="background: #d1d5db; width: 1px;"></div>
             <div style="padding: 0 24px; text-align: center;">
-              <div class="metric-num" style="font-size: 28px; font-weight: 500; margin-bottom: 12px;">TBC</div>
+              <div class="metric-num" style="font-size: 28px; font-weight: 500; margin-bottom: 12px; font-family: 'Inter Display', system-ui, sans-serif; color: #000000;">TBC</div>
               <p style="font-size: 13px; color: #374151; line-height: 1.6; margin: 0;">Error rate at ticket selection and payment, especially the bank-detail validation state</p>
             </div>
             <div style="background: #d1d5db; width: 1px;"></div>
             <div style="padding: 0 24px; text-align: center;">
-              <div class="metric-num" style="font-size: 28px; font-weight: 500; margin-bottom: 12px;">TBC</div>
+              <div class="metric-num" style="font-size: 28px; font-weight: 500; margin-bottom: 12px; font-family: 'Inter Display', system-ui, sans-serif; color: #000000;">TBC</div>
               <p style="font-size: 13px; color: #374151; line-height: 1.6; margin: 0;">Invoice download rate, validating the elevation of invoice on confirmation</p>
             </div>
             <div style="background: #d1d5db; width: 1px;"></div>
             <div style="padding: 0 24px; text-align: center;">
-              <div class="metric-num" style="font-size: 28px; font-weight: 500; margin-bottom: 12px;">TBC</div>
+              <div class="metric-num" style="font-size: 28px; font-weight: 500; margin-bottom: 12px; font-family: 'Inter Display', system-ui, sans-serif; color: #000000;">TBC</div>
               <p style="font-size: 13px; color: #374151; line-height: 1.6; margin: 0;">Adoption rate by corporate buyer accounts who previously used Request → Approval</p>
             </div>
           </div>
@@ -791,19 +780,19 @@
       <!-- Mobile: 2×2 grid -->
       <div class="rtss-tbc-mobile" style="grid-template-columns: 1fr 1fr; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; background: #f6f6f6;">
         <div style="padding: 24px 20px; text-align: center; border-right: 1px solid var(--border); border-bottom: 1px solid var(--border);">
-          <div class="metric-num" style="font-size: 24px; font-weight: 500; margin-bottom: 10px;">TBC</div>
+          <div class="metric-num" style="font-size: 24px; font-weight: 500; margin-bottom: 10px; font-family: 'Inter Display', system-ui, sans-serif; color: #000000;">TBC</div>
           <p style="font-size: 12px; color: #374151; line-height: 1.6; margin: 0;">Time-to-purchase against the legacy approval flow — minutes rather than hours</p>
         </div>
         <div style="padding: 24px 20px; text-align: center; border-bottom: 1px solid var(--border);">
-          <div class="metric-num" style="font-size: 24px; font-weight: 500; margin-bottom: 10px;">TBC</div>
+          <div class="metric-num" style="font-size: 24px; font-weight: 500; margin-bottom: 10px; font-family: 'Inter Display', system-ui, sans-serif; color: #000000;">TBC</div>
           <p style="font-size: 12px; color: #374151; line-height: 1.6; margin: 0;">Error rate at ticket selection and payment, especially the bank-detail validation state</p>
         </div>
         <div style="padding: 24px 20px; text-align: center; border-right: 1px solid var(--border);">
-          <div class="metric-num" style="font-size: 24px; font-weight: 500; margin-bottom: 10px;">TBC</div>
+          <div class="metric-num" style="font-size: 24px; font-weight: 500; margin-bottom: 10px; font-family: 'Inter Display', system-ui, sans-serif; color: #000000;">TBC</div>
           <p style="font-size: 12px; color: #374151; line-height: 1.6; margin: 0;">Invoice download rate, validating the elevation of invoice on confirmation</p>
         </div>
         <div style="padding: 24px 20px; text-align: center;">
-          <div class="metric-num" style="font-size: 24px; font-weight: 500; margin-bottom: 10px;">TBC</div>
+          <div class="metric-num" style="font-size: 24px; font-weight: 500; margin-bottom: 10px; font-family: 'Inter Display', system-ui, sans-serif; color: #000000;">TBC</div>
           <p style="font-size: 12px; color: #374151; line-height: 1.6; margin: 0;">Adoption rate by corporate buyer accounts who previously used Request → Approval</p>
         </div>
       </div>
@@ -817,61 +806,10 @@
 </section>
 
 <!-- ══════════════════════════════════════
-     10 · REFLECTION
+     10 · NEXT STEPS
 ══════════════════════════════════════ -->
 <section class="cs-section">
-  <p class="section-label"><span class="num">11</span> Reflection</p>
-  <h2 style="margin-bottom: 40px;">What I'd revisit and what surprised me</h2>
-
-  <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
-    <thead>
-      <tr style="border-bottom: 2px solid #111827;">
-        <th style="text-align: left; padding: 0 24px 14px 0; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #9ca3af; width: 28%;">Topic</th>
-        <th style="text-align: left; padding: 0 0 14px 0; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #9ca3af;">Reflection</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr style="border-bottom: 1px solid var(--border);">
-        <td style="padding: 24px 24px 24px 0; vertical-align: top;">
-          <p style="font-size: 14px; font-weight: 600; color: #111827; margin: 0;">The brief wasn't the real problem</p>
-        </td>
-        <td style="padding: 24px 0; vertical-align: top;">
-          <p style="font-size: 14px; color: #374151; line-height: 1.7; margin: 0;">The biggest breakthrough came before designing a single screen: realizing CTP lacked a transactional foundation. Designing a checkout without orders, basket, or payment would have created another tournament-specific workaround instead of a reusable platform capability.</p>
-        </td>
-      </tr>
-      <tr style="border-bottom: 1px solid var(--border);">
-        <td style="padding: 24px 24px 24px 0; vertical-align: top;">
-          <p style="font-size: 14px; font-weight: 600; color: #111827; margin: 0;">What I'd Change</p>
-        </td>
-        <td style="padding: 24px 0; vertical-align: top;">
-          <p style="font-size: 14px; color: #374151; line-height: 1.7; margin: 0;">Earlier access to back-office configuration and platform teams would have uncovered future dependencies sooner. More stakeholder interviews and product mapping could also have identified adjacent capabilities—like returns and entitlements—earlier in the process.</p>
-        </td>
-      </tr>
-      <tr style="border-bottom: 1px solid var(--border);">
-        <td style="padding: 24px 24px 24px 0; vertical-align: top;">
-          <p style="font-size: 14px; font-weight: 600; color: #111827; margin: 0;">What I'd validate after launch</p>
-        </td>
-        <td style="padding: 24px 0; vertical-align: top;">
-          <p style="font-size: 14px; color: #374151; line-height: 1.7; margin: 0;">I'd measure time-to-purchase, checkout validation failures, "item no longer available" errors, and invoice download rate. Together, these would show whether buyers could secure inventory quickly and complete downstream procurement tasks.</p>
-        </td>
-      </tr>
-      <tr>
-        <td style="padding: 24px 24px 0 0; vertical-align: top;">
-          <p style="font-size: 14px; font-weight: 600; color: #111827; margin: 0;">What this project taught me</p>
-        </td>
-        <td style="padding: 24px 0 0; vertical-align: top;">
-          <p style="font-size: 14px; color: #374151; line-height: 1.7; margin: 0;">Platform design is often about solving beyond the brief. Scoping the MVP exposed foundational capabilities the platform would need for future tournaments, turning a one-off feature into a reusable product investment.</p>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</section>
-
-<!-- ══════════════════════════════════════
-     11 · NEXT STEPS
-══════════════════════════════════════ -->
-<section class="cs-section">
-  <p class="section-label"><span class="num">12</span> Next Steps</p>
+  <p class="section-label">Next Steps</p>
   <h2 style="margin-bottom: 20px;">What v2 Unlocks</h2>
   <p>The MVP established the transactional foundation. These intentionally deferred capabilities build on that foundation without requiring architectural redesign.</p>
 
@@ -897,12 +835,52 @@
 
   </div>
 
-  <div style="margin-top: 58px; padding: 50px 0 0 0;">
-    <h3 style="font-size: 26px; font-weight: 700; color: #111827; margin: 0 0 12px 0;">What the platform unlocks</h3>
-    <p style="font-size: 15px; color: #6b7280; line-height: 1.75; margin: 0;">With RTSS and the transactional layer in place, CTP evolves from an allocation platform into a reusable B2B commerce platform. Future tournaments can build on the same order model, workflows, and platform capabilities instead of starting from scratch.</p>
-  </div>
-
 </section>
+
+<!-- ══════════════════════════════════════
+     11 · REFLECTION
+══════════════════════════════════════ -->
+<section class="cs-section">
+  <p class="section-label">Reflection</p>
+  <h2 style="margin-bottom: 40px;">What I'd revisit and what surprised me</h2>
+
+  <div style="display: flex; flex-direction: column; gap: 48px; margin-top: 8px;">
+
+    <div>
+      <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+        <img src="../../assets/sparkle.svg" alt="" style="width: 28px; height: 28px; flex-shrink: 0;" />
+        <h3 style="font-size: 24px; font-weight: 600; color: #111827; margin: 0; line-height: 1.3;">The brief wasn't the real problem</h3>
+      </div>
+      <p style="font-size: 16px !important; color: #374151; line-height: 1.7; margin: 0; padding-left: 40px;">The biggest breakthrough came before designing a single screen: realizing CTP lacked a transactional foundation. Designing a checkout without orders, basket, or payment would have created another tournament-specific workaround instead of a reusable platform capability.</p>
+    </div>
+
+    <div>
+      <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+        <img src="../../assets/sparkle.svg" alt="" style="width: 28px; height: 28px; flex-shrink: 0;" />
+        <h3 style="font-size: 24px; font-weight: 600; color: #111827; margin: 0; line-height: 1.3;">What I'd Change</h3>
+      </div>
+      <p style="font-size: 16px !important; color: #374151; line-height: 1.7; margin: 0; padding-left: 40px;">Earlier access to back-office configuration and platform teams would have uncovered future dependencies sooner. More stakeholder interviews and product mapping could also have identified adjacent capabilities—like returns and entitlements—earlier in the process.</p>
+    </div>
+
+    <div>
+      <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+        <img src="../../assets/sparkle.svg" alt="" style="width: 28px; height: 28px; flex-shrink: 0;" />
+        <h3 style="font-size: 24px; font-weight: 600; color: #111827; margin: 0; line-height: 1.3;">What I'd validate after launch</h3>
+      </div>
+      <p style="font-size: 16px !important; color: #374151; line-height: 1.7; margin: 0; padding-left: 40px;">I'd measure time-to-purchase, checkout validation failures, "item no longer available" errors, and invoice download rate. Together, these would show whether buyers could secure inventory quickly and complete downstream procurement tasks.</p>
+    </div>
+
+    <div>
+      <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+        <img src="../../assets/sparkle.svg" alt="" style="width: 28px; height: 28px; flex-shrink: 0;" />
+        <h3 style="font-size: 24px; font-weight: 600; color: #111827; margin: 0; line-height: 1.3;">What this project taught me</h3>
+      </div>
+      <p style="font-size: 16px !important; color: #374151; line-height: 1.7; margin: 0; padding-left: 40px;">Platform design is often about solving beyond the brief. Scoping the MVP exposed foundational capabilities the platform would need for future tournaments, turning a one-off feature into a reusable product investment.</p>
+    </div>
+
+  </div>
+</section>
+
 
 </div>
 

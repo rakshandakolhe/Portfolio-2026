@@ -8,9 +8,10 @@
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/portfolio.css" />
 </head>
-<body>
+<body class="home">
 
 <!-- ══════════════════════════════════════
      ISLAND NAVIGATION
@@ -85,16 +86,60 @@
      HERO
 ══════════════════════════════════════ -->
 <div class="hero reveal" id="home">
-  <p class="hero-eyebrow">Hey, I'm Rakshanda</p>
-  <h1 class="hero-title">Product designer focused on <span class="keyword-rotator" aria-label="Systems Thinking"><span class="keyword-slide">Systems Thinking</span></span></h1>
-  <p class="hero-desc">
-    I design platform-level products for high-stakes environments — from real-time B2B commerce flows to scalable component systems used across global events. My work lives at the intersection of business impact, systems thinking, and end-to-end product strategy.
-  </p>
-<div class="hero-ctas">
-    <a href="#work" class="btn btn-primary" data-cursor-label="View work">View selected work</a>
-    <a href="mailto:rakshandakolhe@yahoo.in" class="btn btn-secondary" data-cursor-label="Send email">Get in touch</a>
+  <div class="hero-split">
+
+    <!-- LEFT: folder + polaroid -->
+    <div class="hero-left" aria-hidden="true">
+      <div class="hero-folder-wrap">
+        <img src="assets/hero-portfolio-image.svg" alt="" class="hero-folder-img" />
+        <div class="hero-polaroid" id="heroPolaroid" role="img" aria-label="Photo of Rakshanda Kolhe">
+          <img src="assets/hero-polaroid-frame.svg" alt="Rakshanda Kolhe, Product Designer" class="polaroid-img" />
+          <img src="assets/hero-pin.svg" alt="" class="polaroid-pin" />
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: text -->
+    <div class="hero-right">
+      <p class="hero-eyebrow">Hey, I'm Rakshanda</p>
+      <h1 class="hero-title">I turn complex products into experiences that feel obvious.</h1>
+      <p class="hero-desc">Product Designer designing platform products, enterprise workflows, and consumer experiences used by millions. Passionate about systems thinking, accessibility, and exploring AI to build better products, faster.</p>
+      <p class="hero-previously">Previously at <strong><a href="https://business.ticketmaster.com/why-ticketmaster/our-story/" target="_blank" rel="noopener noreferrer">Ticketmaster.</a></strong></p>
+      <div class="hero-ctas">
+        <a href="#work" class="btn btn-primary" data-cursor-label="View work">View selected work</a>
+        <a href="mailto:rakshandakolhe@yahoo.in" class="btn btn-secondary" data-cursor-label="Send email">Get in touch</a>
+      </div>
+    </div>
+
   </div>
 </div>
+
+<script>
+  (function() {
+    var pol = document.getElementById('heroPolaroid');
+    if (!pol) return;
+    var img = pol.querySelector('.polaroid-img');
+    if (!img) return;
+    pol.addEventListener('click', function() {
+      img.classList.remove('wobbling');
+      void img.offsetWidth;
+      img.classList.add('wobbling');
+      img.addEventListener('animationend', function() {
+        img.classList.remove('wobbling');
+      }, { once: true });
+    });
+  })();
+
+  (function() {
+    var title = document.querySelector('.hero-title');
+    if (!title) return;
+    var text = title.textContent.trim();
+    var words = text.split(/\s+/);
+    title.innerHTML = words.map(function(word, i) {
+      return '<span class="hw" style="animation-delay:' + (i * 0.12) + 's">' + word + '</span>';
+    }).join(' ');
+  })();
+</script>
 
 <hr class="section-divider" />
 
@@ -104,8 +149,8 @@
 <section id="work" class="section" style="scroll-margin-top: 80px;">
   <div class="section-header reveal">
     <span class="label">Selected work</span>
-    <h2>Featured case studies</h2>
-    <p>End-to-end projects across B2B commerce, platform architecture, and scalable design systems — each built for complexity and designed to last.</p>
+    <h2>Check out some of my work</h2>
+    <p style="color: #7f7f80;">A few products I've helped shape, and the thinking behind them.</p>
   </div>
 
   <div class="work-grid">
@@ -121,18 +166,18 @@
       </div>
 
       <div class="work-card-body">
-        <div class="work-card-title-row">
-          <h3 class="work-card-title">Real-Time Seat Sales: Designing high-stakes B2B purchasing for inventory that disappears in minutes</h3>
+        <h3 class="work-card-title">Real-Time Seat Sales: Building Ticketmaster's first B2B purchasing platform</h3>
+        <p class="work-card-desc">Established a new transactional capability within the stakeholder platform, allowing corporate clients to discover, purchase, and manage Rugby World Cup 2027 inventory end-to-end.</p>
+        <div class="work-card-bottom">
+          <div class="work-card-pills">
+            <span class="wc-pill wcp-purple">Enterprise Products</span>
+            <span class="wc-pill wcp-purple">B2B</span>
+            <span class="wc-pill wcp-orange">Systems Thinking</span>
+            <span class="wc-pill wcp-green">Platform Design</span>
+          </div>
           <div class="work-card-arrow" aria-hidden="true">
             <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
           </div>
-        </div>
-        <p class="work-card-desc">Established a new transactional capability within the stakeholder platform, allowing corporate clients to discover, purchase, and manage Rugby World Cup 2027 inventory end-to-end.</p>
-        <div class="work-card-pills" style="padding: 0; margin-top: 0;">
-          <span class="wc-pill wcp-purple">Enterprise Products</span>
-          <span class="wc-pill wcp-purple">B2B</span>
-          <span class="wc-pill wcp-orange">Systems Thinking</span>
-          <span class="wc-pill wcp-green">Platform Design</span>
         </div>
       </div>
     </a>
@@ -148,18 +193,18 @@
       </div>
 
       <div class="work-card-body">
-        <div class="work-card-title-row">
-          <h3 class="work-card-title">Designed a configuration-driven component system to scale ticketing across every tournament format</h3>
+        <h3 class="work-card-title">Built a configuration-driven ticketing system that scales</h3>
+        <p class="work-card-desc">Created a flexible card architecture capable of supporting multiple tournament structures through a single reusable framework, reducing operational overhead and enabling future platform growth.</p>
+        <div class="work-card-bottom">
+          <div class="work-card-pills">
+            <span class="wc-pill wcp-blue">Design Systems</span>
+            <span class="wc-pill wcp-orange">Systems Thinking</span>
+            <span class="wc-pill wcp-purple">Enterprise Product</span>
+            <span class="wc-pill wcp-green">B2C</span>
+          </div>
           <div class="work-card-arrow" aria-hidden="true">
             <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
           </div>
-        </div>
-        <p class="work-card-desc">Created a flexible card architecture capable of supporting multiple tournament structures through a single reusable framework, reducing operational overhead and enabling future platform growth.</p>
-        <div class="work-card-pills">
-          <span class="wc-pill wcp-blue">Design Systems</span>
-          <span class="wc-pill wcp-orange">Systems Thinking</span>
-          <span class="wc-pill wcp-purple">Enterprise Product</span>
-          <span class="wc-pill wcp-green">B2C</span>
         </div>
       </div>
     </a>
@@ -171,22 +216,22 @@
        data-cursor-label="View case study">
 
       <div class="work-card-thumb" aria-hidden="true" style="padding: 0; overflow: hidden;">
-        <img src="assets/MultiTournament-filter-cover.svg" alt="Multi-Tournament Filter Cover" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+        <img src="assets/filter-cover.png" alt="Multi-Tournament Filter Cover" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
       </div>
 
       <div class="work-card-body">
-        <div class="work-card-title-row">
-          <h3 class="work-card-title">Redesigned Ticket Discovery Filters Into a Scalable Multi-Tournament System</h3>
+        <h3 class="work-card-title">Redesigned Ticket Discovery Filters Into a Scalable Multi-Tournament System</h3>
+        <p class="work-card-desc">Transformed filtering from a collection of platform-specific implementations into a systemized, accessible, and scalable capability that could evolve alongside future product requirements.</p>
+        <div class="work-card-bottom">
+          <div class="work-card-pills">
+            <span class="wc-pill wcp-blue">Information Architecture</span>
+            <span class="wc-pill wcp-green">Accessibility</span>
+            <span class="wc-pill wcp-orange">Systems Thinking</span>
+            <span class="wc-pill wcp-green">B2C</span>
+          </div>
           <div class="work-card-arrow" aria-hidden="true">
             <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
           </div>
-        </div>
-        <p class="work-card-desc">Transformed filtering from a collection of platform-specific implementations into a systemized, accessible, and scalable capability that could evolve alongside future product requirements.</p>
-        <div class="work-card-pills">
-          <span class="wc-pill wcp-blue">Information Architecture</span>
-          <span class="wc-pill wcp-green">Accessibility</span>
-          <span class="wc-pill wcp-orange">Systems Thinking</span>
-          <span class="wc-pill wcp-green">B2C</span>
         </div>
       </div>
     </a>
@@ -202,7 +247,8 @@
 <section class="section">
   <div class="section-header reveal">
     <span class="label">Independent work</span>
-    <h2>Independent Product Explorations</h2>
+    <h2>Independent Explorations</h2>
+    <p>A collection of ideas, experiments, and side projects where I explore new interactions, emerging technologies, and different ways of solving product problems.</p>
   </div>
 
   <div class="work-grid">
@@ -214,21 +260,21 @@
        data-cursor-label="Upcoming">
 
       <div class="work-card-thumb" aria-hidden="true">
-        <img src="assets/sign-to-text-cover.png" alt="Sign to Text Translator" style="width:100%;height:100%;object-fit:cover;display:block;" />
+        <img src="assets/sign-to-text-cover.svg" alt="Sign to Text Translator" style="width:100%;height:100%;object-fit:cover;display:block;" />
       </div>
 
       <div class="work-card-body">
-        <div class="work-card-title-row">
-          <h3 class="work-card-title">Sign to Text Translator</h3>
+        <h3 class="work-card-title">Sign to Text Translator</h3>
+        <p class="work-card-desc">Designing a real-time ASL recognition interface that translates sign language into text — bridging communication gaps for the Deaf and hard-of-hearing community.</p>
+        <div class="work-card-bottom">
+          <div class="work-card-pills">
+            <span class="wc-pill wcp-blue">Accessibility</span>
+            <span class="wc-pill wcp-purple">AI / ML</span>
+            <span class="wc-pill wcp-green">Interaction Design</span>
+          </div>
           <div class="work-card-arrow" aria-hidden="true">
             <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
           </div>
-        </div>
-        <p class="work-card-desc">Designing a real-time ASL recognition interface that translates sign language into text — bridging communication gaps for the Deaf and hard-of-hearing community.</p>
-        <div class="work-card-pills">
-          <span class="wc-pill wcp-blue">Accessibility</span>
-          <span class="wc-pill wcp-purple">AI / ML</span>
-          <span class="wc-pill wcp-green">Interaction Design</span>
         </div>
       </div>
     </a>
@@ -244,18 +290,18 @@
       </div>
 
       <div class="work-card-body">
-        <div class="work-card-title-row">
-          <h3 class="work-card-title">PhonePe: Gold SIP Onboarding</h3>
+        <h3 class="work-card-title">PhonePe: Gold SIP Onboarding</h3>
+        <p class="work-card-desc">Designed a trust-first onboarding flow for first-time digital gold investors on PhonePe, reducing drop-off at KYC and building confidence through progressive disclosure.</p>
+        <div class="work-card-bottom">
+          <div class="work-card-pills">
+            <span class="wc-pill wcp-orange">Interaction Design</span>
+            <span class="wc-pill wcp-blue">UI</span>
+            <span class="wc-pill wcp-green">B2C</span>
+            <span class="wc-pill wcp-pink">User Research</span>
+          </div>
           <div class="work-card-arrow" aria-hidden="true">
             <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
           </div>
-        </div>
-        <p class="work-card-desc">Designed a trust-first onboarding flow for first-time digital gold investors on PhonePe, reducing drop-off at KYC and building confidence through progressive disclosure.</p>
-        <div class="work-card-pills">
-          <span class="wc-pill wcp-orange">Interaction Design</span>
-          <span class="wc-pill wcp-blue">UI</span>
-          <span class="wc-pill wcp-green">B2C</span>
-          <span class="wc-pill wcp-pink">User Research</span>
         </div>
       </div>
     </a>
@@ -271,17 +317,17 @@
       </div>
 
       <div class="work-card-body">
-        <div class="work-card-title-row">
-          <h3 class="work-card-title">Improving Trust & Safety for Instagram Instants</h3>
+        <h3 class="work-card-title">Improving Trust & Safety for Instagram Instants</h3>
+        <p class="work-card-desc">Rebuilt trust and safety interactions for a time-sensitive sharing surface, balancing user protection with the low-friction experience ephemeral content demands.</p>
+        <div class="work-card-bottom">
+          <div class="work-card-pills">
+            <span class="wc-pill wcp-pink">Consumer Mobile</span>
+            <span class="wc-pill wcp-purple">Interaction Design</span>
+            <span class="wc-pill wcp-orange">UX Strategy</span>
+          </div>
           <div class="work-card-arrow" aria-hidden="true">
             <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
           </div>
-        </div>
-        <p class="work-card-desc">Rebuilt trust and safety interactions for a time-sensitive sharing surface, balancing user protection with the low-friction experience ephemeral content demands.</p>
-        <div class="work-card-pills">
-          <span class="wc-pill wcp-pink">Consumer Mobile</span>
-          <span class="wc-pill wcp-purple">Interaction Design</span>
-          <span class="wc-pill wcp-orange">UX Strategy</span>
         </div>
       </div>
     </a>
@@ -301,7 +347,8 @@
 <section id="about" class="section" style="scroll-margin-top: 80px;">
   <div class="about-strip">
     <div class="about-copy reveal">
-      <h2 style="margin-bottom: 16px;">About me</h2>
+      <span class="label" style="display: block; margin-bottom: 15px;">About me</span>
+      <h2 style="margin-bottom: 16px;">A little about me</h2>
       <p>
         Outside the cursor, I've always been fascinated by how things work behind the scenes. What began as an interest in visual design evolved into a curiosity about how people think, make decisions, and interact with technology.
       </p>
@@ -313,7 +360,6 @@
       </p>
 
       <div class="tools-section">
-        <h3 class="tools-heading">Tools</h3>
         <div class="tools-stack">
           <div class="tool-badge" style="--z: 5;">
             <img src="assets/figma.svg" alt="Figma" />
