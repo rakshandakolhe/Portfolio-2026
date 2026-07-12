@@ -1626,6 +1626,7 @@ p + p { margin-top: 1rem; }
 }
 .media-card-title strong {
   font-size: 20px;
+  font-weight: 600;
   color: #000000;
 }
 .media-card-descriptor {
@@ -1675,8 +1676,14 @@ p + p { margin-top: 1rem; }
   margin-bottom: 0;
 }
 .fd-chip::before {
-  content: '◆';
-  font-size: 28px !important;
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url('../assets/sparkle.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .fd-title {
   font-size: 20px !important;
