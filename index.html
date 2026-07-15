@@ -10,8 +10,43 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/portfolio.css" />
+  <style>
+    #loader-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #loader-overlay iframe {
+      width: 100vw;
+      height: 100vh;
+      border: 0;
+      display: block;
+    }
+    .loader-sr-only {
+      position: absolute;
+      width: 1px; height: 1px;
+      padding: 0; margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+  </style>
 </head>
 <body class="home">
+
+<!-- ══════════════════════════════════════
+     LOADING SCREEN
+     Plays on every page load.
+══════════════════════════════════════ -->
+<div id="loader-overlay" role="status" aria-live="polite">
+  <span class="loader-sr-only">Loading rakshanda kolhe's portfolio</span>
+  <iframe id="loaderFrame" src="https://lottie.host/embed/e8fc3191-e29a-4bd7-b1d6-afddc886fb8e/vT9W3jKawk.lottie" title="Loading animation" aria-hidden="true"></iframe>
+</div>
 
 <!-- ══════════════════════════════════════
      ISLAND NAVIGATION
@@ -545,6 +580,24 @@ if (window.matchMedia('(pointer: fine)').matches) {
   }
 
   setInterval(rotate, 2600);
+})();
+</script>
+
+<script>
+/* ── Loading screen: Lottie animation, plays every page load, no fade ── */
+(function () {
+  const overlay = document.getElementById('loader-overlay');
+  if (!overlay) return;
+
+  document.body.style.overflow = 'hidden';
+
+  function finish() {
+    document.body.style.overflow = '';
+    overlay.remove();
+  }
+
+  // Plays for exactly 5s 7f at 30fps (5233ms) on both desktop and mobile.
+  setTimeout(finish, 5233);
 })();
 </script>
 
